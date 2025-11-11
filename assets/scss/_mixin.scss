@@ -8,10 +8,10 @@
 }
 
 // flex
-@mixin flex($justifyContent: center, $alignItmes: stretch, $gap: null) {
+@mixin flex($justifyContent: center, $alignItems: center, $gap: null) {
     display: flex;
     justify-content: $justifyContent;
-    align-items: $alignItmes;
+    align-items: $alignItems;
     gap: $gap;
 }
 
