@@ -1,0 +1,32 @@
+@use 'sass:math'; // math.div 사용 시 필요.
+
+// font size를 rem으로 변환
+@function rem($size) {
+    // $size: calc($size / 16);
+    $size : math.div($size, 16);
+    @return #{$size}rem;
+}
+
+// flex
+@mixin flex($justifyContent: center, $alignItems: center, $gap: null) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    gap: $gap;
+}
+
+// font size
+@mixin defineFont($size: null, $weight: 400, $lineHeight: 1.2, $letterSpacing: 0) {
+
+    font-size: rem($size);
+    font-weight: $weight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+// media query
+@mixin media($breakpoint) {
+    @media(max-width: $breakpoint) {
+        @content;
+    }
+}

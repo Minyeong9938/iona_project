@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>듀얼소닉 스크롤 애니메이션</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="scroll-progress"></div>
+
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">
+        <a href="#">
+          <img src="./assets/images/IONA_logo.png" alt="">
+        </a>
+      </h1>
+      <nav class="header-nav">
+        <ul class="header-menu">
+          <li>
+            <a href="#">소개</a>
+          </li>
+          <li>
+            <a href="#">뷰티테크</a>
+          </li>
+          <li>
+            <a href="#">브랜드가치</a>
+          </li>
+          <li>
+            <a href="#">비전</a>
+          </li>
+          <li>
+            <a href="#">문의하기</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    kv영역
+    <section class="kv-sec margin-top">
+      <div class="kv-image"></div>
+      <div class="kv-image-sec">
+        <div class="container">
+          <div class="kv-text">
+            <h2 class="kv-title">
+              <span>BEAUTY</span><br>TECHNOLOGY
+            </h2>
+            <p class="kv-subtitle">
+              피부 속까지 집중케어, 스마트 뷰티 디바이스
+            </p>
+            <p class="kv-desc">
+              스마트 기술로 피부 속까지 집중 케어
+            </p>
+            <button class="kv-button">
+              MORE
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="side_sect mo_over">
+    <div class="scroll-section">
+      <div class="text-content">
+        <div class="product-item" data-product="alto">
+          <h2>알토</h2>
+          <p class="subtitle">7가지 주파수가 선사하는 맞춤고주파</p>
+          <p class="description">
+            페이스부터 바디까지! 다양한 부위의 피부 탄력 맞춤관리로 원하는
+            결과를 얻으세요. 집에서도 전문가 수준의 케어가 가능합니다.
+          </p>
+          <ul class="features">
+            <li>고주파 (RF) 탄력 관리</li>
+            <li>일렉트로 포레이션 영양 공급</li>
+            <li>IR / RED / YELLOW LED 피부 진정</li>
+            <li>페이스 & 바디 겸용</li>
+          </ul>
+        </div>
+
+        <div class="product-item" data-product="professional-alpha">
+          <h2>프로페셔널 알파</h2>
+          <p class="subtitle">더 빠르고 강력한 고밀도 탄력케어</p>
+          <p class="description">
+            피부 속부터 느껴지는 더욱 쫀쫀한 탄력 개선효과를 경험하세요. 더
+            정밀한 홈케어 기술의 혁신으로 프로페셔널한 결과를 만들어냅니다.
+          </p>
+          <ul class="features">
+            <li>고밀도 집중초음파 기술</li>
+            <li>더 빠른 탄력 개선 효과</li>
+            <li>정밀한 에너지 전달 시스템</li>
+            <li>즉각적인 리프팅 효과</li>
+          </ul>
+        </div>
+
+        <div class="product-item" data-product="maximum">
+          <h2>맥시멈</h2>
+          <p class="subtitle">단 하나로 완벽한 데일리 케어</p>
+          <p class="description">
+            7가지 기능을 하나의 기기에 담았습니다! 집중초음파부터 LED
+            케어까지, 매일매일 필요한 모든 피부 관리를 맥시멈 하나로
+            해결하세요.
+          </p>
+          <ul class="features">
+            <li>집중초음파 (HIFU) 탄력 케어</li>
+            <li>RF 고주파 주름 개선</li>
+            <li>EP (일렉트로 포레이션)</li>
+            <li>미세전류 & IR/RED/YELLOW LED</li>
+          </ul>
+        </div>
+
+        <div class="product-item" data-product="professional">
+          <h2>프로페셔널</h2>
+          <p class="subtitle">단 1회만에 느껴지는 깊은 탄력의 차이</p>
+          <p class="description">
+            듀얼소닉만의 집중초음파(HIFU) 에너지를 더 강력하게 피부 깊은
+            곳까지 전달합니다. 1회 사용으로도 느껴지는 즉각적인 탄력과
+            보습효과를 경험하세요.
+          </p>
+          <ul class="features">
+            <li>강력한 HIFU 에너지</li>
+            <li>1회 사용으로 즉각 효과</li>
+            <li>깊은 진피층까지 전달</li>
+            <li>장기적인 콜라겐 생성 촉진</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image-content">
+        <div class="image-wrapper">
+          <div class="product-image active" data-product="alto">
+            <img src="./images/device_slide01.jpg" alt="알토" />
+          </div>
+
+          <div class="product-image" data-product="professional-alpha">
+            <img src="./images/device_slide02.jpg" alt="프로페셔널 알파" />
+          </div>
+
+          <div class="product-image" data-product="maximum">
+            <img src="./images/device_slide03.jpg" alt="맥시멈" />
+          </div>
+
+          <div class="product-image" data-product="professional">
+            <img src="./images/device_slide04.jpg" alt="프로페셔널" />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="img-sec">
+      </div> -->
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 듀얼소닉 스크롤 애니메이션</p>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
