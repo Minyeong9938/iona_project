@@ -114,6 +114,7 @@ summary {
 body {
   font-family: "Pretendard";
   word-break: keep-all;
+  color: #121212;
 }
 
 .margin-top {
@@ -125,6 +126,20 @@ body {
   height: 60px;
   background: #1C2E4A;
   color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header .logo a {
+  display: block;
+  width: 80px;
+  height: 100%;
+}
+.header .logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .header .container {
   width: 100%;
@@ -200,114 +215,69 @@ body {
   color: #fff;
 }
 
-.side_sect.mo_over {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 100px 40px;
+.about-sec .side_sect.mo_over {
+  width: 100%;
+  padding: 6.25rem 0;
 }
-
-.scroll-section {
+.about-sec .scroll-section {
   display: flex;
-  gap: 80px;
+  gap: 9.375rem;
   align-items: flex-start;
 }
-
-.text-content {
+.about-sec .text-content {
   flex: 1;
-  padding-right: 40px;
 }
-
-.product-item {
-  min-height: 100vh;
+.about-sec .product-item {
+  min-height: 50vh;
   display: flex;
-  flex-direction: column;
   justify-content: start;
-  padding: 60px 0;
+  align-items: left;
+  flex-direction: column;
+  padding-top: 12.5rem;
   opacity: 0;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
-.product-item:first-child {
+.about-sec .product-item:first-child {
   box-sizing: content-box;
   margin-top: 100px;
 }
-
-.product-item:last-child {
+.about-sec .product-item:last-child {
   min-height: auto;
   padding-bottom: calc((100vh - 510px) / 5 * 2);
 }
-
-.product-item.active {
+.about-sec .product-item h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.875rem;
+  font-weight: 600;
+}
+.about-sec .product-item .desc {
+  font-weight: 300;
+}
+.about-sec .product-item.active {
   opacity: 1;
   transform: translateY(0);
 }
-
-.product-item.passed {
+.about-sec .product-item.passed {
   opacity: 0;
   transform: translateY(-100px);
 }
-
-.product-item h2 {
-  font-size: 3rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.product-item .subtitle {
-  font-size: 1.5rem;
-  color: #ff6b35;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-.product-item .description {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.product-item .features {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.product-item .features li {
-  font-size: 1rem;
-  color: #555;
-  padding: 8px 0;
-  padding-left: 25px;
-  position: relative;
-}
-
-.product-item .features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #ff6b35;
-  font-weight: bold;
-}
-
-.image-content {
+.about-sec .image-content {
   flex: 1;
   position: sticky;
   top: 0;
-  height: 600px;
-  top: calc((100vh - 600px) / 2);
+  height: 500px;
+  top: calc((100vh - 500px) / 2);
 }
-
-.image-wrapper {
+.about-sec .image-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
-  border-radius: 30px;
+  border-radius: 0 0 0 5rem;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.15);
 }
-
-.product-image {
+.about-sec .product-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -316,75 +286,110 @@ body {
   opacity: 0;
   transition: opacity 0.8s ease;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  align-items: center;
 }
-
-.product-image.active {
+.about-sec .product-image.active {
   opacity: 1;
 }
-
-.product-image img {
+.about-sec .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.scroll-progress {
+.cursor {
   position: fixed;
   top: 0;
   left: 0;
-  width: 0%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
-  z-index: 1000;
-  transition: width 0.1s ease;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(15, 26, 43, 0.8);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  /* 초기에는 안보이게 */
+  transition: opacity 0.2s ease;
 }
 
-@media (max-width: 1024px) {
-  .scroll-section {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .text-content {
-    padding-right: 0;
-  }
-  .image-content {
-    position: relative;
-    top: 0;
-    height: 400px;
-    order: -1;
-  }
-  .product-item {
-    min-height: auto;
-    padding: 40px 0;
-  }
-  .product-item h2 {
-    font-size: 2rem;
-  }
+/* Swiper 기본 */
+.tech-sec .swiper {
+  width: 100%;
 }
-@media (max-width: 768px) {
-  .side_sect.mo_over {
-    padding: 60px 20px;
-  }
-  header h1 {
-    font-size: 1.8rem;
-  }
-  header p {
-    font-size: 1rem;
-  }
-  .product-item h2 {
-    font-size: 1.8rem;
-  }
-  .product-item .subtitle {
-    font-size: 1.2rem;
-  }
-  .product-item .description {
-    font-size: 1rem;
-  }
-  .image-content {
-    height: 300px;
-  }
+.tech-sec .swiper-slide {
+  width: auto;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+.tech-sec .swiper-slide:hover {
+  transform: scale(1.05);
+}
+.tech-sec .swiper-slide:hover .card-info {
+  z-index: 10;
+}
+.tech-sec .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+.tech-sec .card-info .card01 {
+  width: 420px;
+  height: 560px;
+  object-fit: cover;
+}
+.tech-sec .card-info .card02 {
+  width: 590px;
+  height: 380px;
+  object-fit: cover;
+}
+.tech-sec .card-title {
+  margin-top: 0.625rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.video-sec {
+  position: relative;
+  width: 100%;
+}
+.video-sec .background {
+  position: relative;
+  width: 100%;
+}
+.video-sec .background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+.video-sec video {
+  width: 100%;
+  display: block;
+}
+.video-sec .video-text {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 2;
+  text-align: left;
+}
+.video-sec .video-text h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
 }
