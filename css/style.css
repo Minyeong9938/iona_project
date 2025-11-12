@@ -157,7 +157,7 @@ body {
 
 .kv-sec {
   width: 100%;
-  height: 48.3125rem;
+  height: 37.5rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -165,36 +165,37 @@ body {
 }
 .kv-sec .kv-image-sec {
   width: 100%;
-  height: 41.1875rem;
+  height: 33.125rem;
   background-image: url("../assets/images/main/kv_background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .kv-sec .kv-image {
-  width: 38.75rem;
-  height: 47.6875rem;
+  width: 31.25rem;
+  height: 37.5rem;
   background-image: url("../assets/images/main/kv_image.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
-  right: 3.125rem;
+  right: 9.375rem;
+  bottom: 0;
 }
 .kv-sec .kv-text {
   position: absolute;
-  top: 2.1875rem;
+  top: 0;
   color: #fff;
 }
 .kv-sec .kv-text span {
   color: #121212;
 }
 .kv-sec .kv-text .kv-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 .kv-sec .kv-text .kv-subtitle {
   font-size: 2.25rem;
-  margin-top: 17.6875rem;
+  margin-top: 8.125rem;
   font-weight: 600;
 }
 .kv-sec .kv-text .kv-desc {
@@ -228,7 +229,7 @@ body {
   flex: 1;
 }
 .about-sec .product-item {
-  min-height: 50vh;
+  min-height: 40vh;
   display: flex;
   justify-content: start;
   align-items: left;
@@ -266,8 +267,8 @@ body {
   flex: 1;
   position: sticky;
   top: 0;
-  height: 500px;
-  top: calc((100vh - 500px) / 2);
+  height: 400px;
+  top: calc((100vh - 400px) / 2);
 }
 .about-sec .image-wrapper {
   width: 100%;
@@ -323,6 +324,8 @@ body {
 /* Swiper 기본 */
 .tech-sec .swiper {
   width: 100%;
+  padding-left: 15.375rem;
+  padding-right: 15.375rem;
 }
 .tech-sec .swiper-slide {
   width: auto;
@@ -342,13 +345,13 @@ body {
   padding-bottom: 10px;
 }
 .tech-sec .card-info .card01 {
-  width: 420px;
-  height: 560px;
+  width: 320px;
+  height: 460px;
   object-fit: cover;
 }
 .tech-sec .card-info .card02 {
-  width: 590px;
-  height: 380px;
+  width: 490px;
+  height: 280px;
   object-fit: cover;
 }
 .tech-sec .card-title {
