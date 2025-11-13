@@ -182,8 +182,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+    width: rem(100);
+    height: rem(100);
     border-radius: 50%;
     background: rgb(15, 26, 43, 0.8);
     color: $whiteColor;
@@ -194,11 +194,9 @@ body {
     pointer-events: none;
     z-index: 10;
     opacity: 0;
-    /* 초기에는 안보이게 */
     transition: opacity 0.2s ease;
 }
 
-/* Swiper 기본 */
 .tech-sec {
     .container {
         h2 {
@@ -234,7 +232,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: 10px; // 글씨 여백
+        padding-bottom: 10px;
 
         img {
             display: block;
@@ -320,21 +318,22 @@ body {
         }
 
         .global-stats {
+            @include flex(space-between);
             gap: 80px;
             margin-top: 60px;
             flex-wrap: wrap;
 
             .stat-item {
-                h3 {
-                    font-size: rem(36);
-                    font-weight: 700;
-                    color: #fff;
-                }
-
                 p {
                     font-size: rem(16);
                     margin-top: 8px;
                     color: rgba(255, 255, 255, 0.7);
+
+                    .count {
+                        font-size: rem(36);
+                        font-weight: 700;
+                        color: #fff;
+                    }
                 }
             }
         }
