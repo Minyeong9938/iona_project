@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+// global
 // video
 const video = document.getElementById("bgVideo");
 video.playbackRate = 0.75;
