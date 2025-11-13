@@ -1,53 +1,14 @@
-// about section
-const productItems = document.querySelectorAll(".product-item");
-const productImages = document.querySelectorAll(".product-image");
-
-function updateActiveProduct() {
-    const scrollPosition = window.scrollY + window.innerHeight / 4 * 3;
-
-    productItems.forEach((item) => {
-        const itemTop = item.offsetTop;
-        const itemBottom = itemTop + item.offsetHeight;
-        const productId = item.getAttribute("data-product");
-
-        if (scrollPosition >= itemTop && scrollPosition <= itemBottom) {
-            item.classList.add("active");
-            item.classList.remove("passed");
-
-            productImages.forEach((img) => {
-                if (img.getAttribute("data-product") === productId) {
-                    img.classList.add("active");
-                } else {
-                    img.classList.remove("active");
-                }
-            });
-        } else if (scrollPosition > itemBottom) {
-            item.classList.remove("active");
-            item.classList.add("passed");
-        } else {
-            item.classList.remove("active");
-            item.classList.remove("passed");
-        }
-    });
-}
-
-window.addEventListener("scroll", updateActiveProduct);
-updateActiveProduct();
-
-
-
-
-
 // tech section
-// Swiper
 document.addEventListener("DOMContentLoaded", () => {
+
     const techSec = document.querySelector(".tech-sec");
     const cursor = document.querySelector(".cursor");
+
+    // 마우스 위치 추척========================
     let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
     let isDragging = false;
     let techActive = false;
 
-    // 마우스 위치 추적
     document.addEventListener("pointermove", e => {
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -56,47 +17,77 @@ document.addEventListener("DOMContentLoaded", () => {
     // tech-sec 진입/이탈 시 커서 표시 제어
     techSec.addEventListener("mouseenter", () => {
         techActive = true;
-        cursor.style.opacity = "1";  // tech-section 진입 시 보여줌
+        cursor.style.opacity = "1";
         document.body.style.cursor = "none";
-        currentX = mouseX; // 현재 마우스 위치로 초기화
+        currentX = mouseX;
         currentY = mouseY;
     });
 
     techSec.addEventListener("mouseleave", () => {
         techActive = false;
-        cursor.style.opacity = "0";  // tech-section 벗어나면 숨김
+        cursor.style.opacity = "0";
         document.body.style.cursor = "default";
         isDragging = false;
         cursor.textContent = "Drag";
     });
 
-    // Swiper 설정
-    const swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
+    // swiper 첫/마지막 슬라이드 여백
+    function updateSwiperOffsets() {
+        const container = document.querySelector('.container');
+        const swiperEl = document.querySelector('.mySwiper');
+
+        if (!container || !swiperEl) return;
+
+        const containerWidth = container.offsetWidth; // 1484px
+        const windowWidth = window.innerWidth;
+        const containerPaddingLeft = parseFloat(getComputedStyle(container).paddingLeft);
+
+        // 화면 넓이가 max-width보다 클 때, 컨테이너가 중앙 정렬되는 만큼 보정
+        const extraSpace = (windowWidth - containerWidth) / 2;
+
+        // offset = container padding + 중앙정렬 보정
+        const offset = containerPaddingLeft + extraSpace;
+
+        if (swiperEl.swiper) {
+            swiperEl.swiper.params.slidesOffsetBefore = offset;
+            swiperEl.swiper.params.slidesOffsetAfter = offset;
+            swiperEl.swiper.update(); // 업데이트
+        }
+    }
+
+    // swiper 슬라이더
+    const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 'auto',
         spaceBetween: 60,
+        watchOverflow: true,
+        centeredSlides: false,
         allowTouchMove: true,
     });
 
-    // ✅ Swiper DOM 요소에 직접 pointer 이벤트 등록
+    updateSwiperOffsets();
+    window.addEventListener('resize', updateSwiperOffsets);
+
+    // 커서 모양
     const swiperEl = swiper.el;
     swiperEl.addEventListener("pointerdown", () => {
         isDragging = true;
-        cursor.textContent = "< >";
+        cursor.innerHTML = '<i class="fa-solid fa-angle-left"></i>' + '<i class="fa-solid fa-chevron-right"></i>';
     });
 
     swiperEl.addEventListener("pointerup", () => {
         isDragging = false;
-        cursor.textContent = "Drag";
+        cursor.innerHTML = '<i class="fa-solid fa-angle-left"></i>' + "Drag" + '<i class="fa-solid fa-chevron-right"></i>';
     });
 
     swiperEl.addEventListener("pointerleave", () => {
         isDragging = false;
-        cursor.textContent = "Drag";
+        cursor.innerHTML = '<i class="fa-solid fa-angle-left"></i>' + "Drag" + '<i class="fa-solid fa-chevron-right"></i>';
     });
 
     // 커서 애니메이션
     function animateCursor() {
-        if (!techActive) { // tech-section 밖이면 애니메이션 건너뛰기
+        if (!techActive) {
+            // tech-section 밖이면 애니메이션 건너뛰기
             requestAnimationFrame(animateCursor);
             return;
         }

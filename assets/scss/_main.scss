@@ -48,51 +48,54 @@ body {
 // kv section
 .kv-sec {
     width: 100%;
-    height: rem(600);
-    @include flex(center, flex-end);
+    height: rem(770);
     position: relative;
 
     .kv-image-sec {
+        position: absolute;
+        bottom: 0;
+        left: 0;
         width: 100%;
-        height: rem(530);
+        height: rem(700);
         background-image: url("../assets/images/main/kv_background.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-    }
 
-    .kv-image {
-        width: rem(500);
-        height: rem(600);
-        background-image: url("../assets/images/main/kv_image.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        right: rem(150);
-        bottom: 0;
+        .kv-image {
+            position: absolute;
+            width: rem(750);
+            height: rem(770);
+            background-image: url("../assets/images/main/kv_image.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            right: 3%;
+            bottom: 0;
+        }
     }
 
     .kv-text {
         position: absolute;
-        top: 0;
+        top: rem(-25);
 
         span {
             color: $blackColor;
         }
 
         .kv-title {
-            font-size: rem(56);
+            font-size: rem(80);
         }
 
         .kv-subtitle {
-            font-size: rem(36);
-            margin-top: rem(130);
+            font-size: rem(40);
+            margin-top: rem(250);
             font-weight: 600;
         }
 
         .kv-desc {
-            font-size: rem(20);
+            font-size: rem(24);
             margin-top: rem(50);
         }
 
@@ -108,6 +111,7 @@ body {
         font-size: rem(20);
         margin-top: rem(50);
         border: 2px solid #fff;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
         &:hover {
             background-color: #ffffff00;
@@ -117,104 +121,63 @@ body {
 
 }
 
+// about section
 .about-sec {
+    .about-box {
+        @include flex(center, flex-start);
+        gap: rem(30);
 
-    .side_sect.mo_over {
-        width: 100%;
-        padding: rem(100) 0;
-    }
+        .about-text {
+            width: 45%;
+            padding: rem(30) 0;
 
-    .scroll-section {
-        display: flex;
-        gap: rem(150);
-        align-items: flex-start;
-    }
+            h2 {
+                font-size: rem(36);
+                font-weight: 600;
+                padding-bottom: rem(30);
+            }
 
-    .text-content {
-        flex: 1;
-    }
+            .desc {
+                font-size: rem(20);
+                font-weight: 300;
+                padding-bottom: rem(50);
+            }
 
-    .product-item {
-        min-height: 40vh;
-        @include flex (start, left);
-        flex-direction: column;
-        padding-top: rem(200);
-        opacity: 0;
-        transform: translateY(0);
-        transition: opacity 0.8s ease, transform 0.8s ease;
+            button {
+                padding: rem(10) rem(30);
+                font-size: rem(20);
+                background-color: $darkgrayColor;
+                color: $whiteColor;
+                transition: background-color 0.3s ease, color 0.3s ease;
 
-        &:first-child {
-            box-sizing: content-box;
-            margin-top: 100px;
+                &:hover {
+                    background-color: $navyColor;
+                }
+            }
         }
 
-        &:last-child {
-            min-height: auto;
-            padding-bottom: calc((100vh - 510px) / 5 * 2);
-        }
-
-        h2 {
-            font-size: rem(36);
-            margin-bottom: rem(30);
-            font-weight: 600;
-        }
-
-        .desc {
-            font-weight: 300;
+        .about-image {
+            width: 55%;
+            border-radius: 0 0 0 rem(80);
         }
     }
 
-    .product-item.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    .box2 {
+        margin-top: rem(100);
+        flex-direction: row-reverse;
 
-    .product-item.passed {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
+        .about-text {
+            text-align: right;
+        }
 
-    .image-content {
-        flex: 1;
-        position: sticky;
-        top: 0;
-        height: 400px;
-        top: calc((100vh - 400px) / 2);
-    }
-
-    .image-wrapper {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        border-radius: 0 0 0 rem(80);
-        overflow: hidden;
-        box-shadow: 0 rem(20) rem(60) rgba(0, 0, 0, 0.15);
-    }
-
-    .product-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.8s ease;
-        @include flex;
-    }
-
-    .product-image.active {
-        opacity: 1;
-    }
-
-    .product-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        .about-image {
+            width: 55%;
+            border-radius: 0 0 rem(80) 0;
+        }
     }
 }
 
-
-
+// tech section
 .cursor {
     position: fixed;
     top: 0;
@@ -237,15 +200,25 @@ body {
 
 /* Swiper 기본 */
 .tech-sec {
+    .container {
+        h2 {
+            font-size: rem(36);
+            margin-bottom: rem(50);
+        }
+    }
+
     .swiper {
         width: 100%;
-        padding-left: rem(246);
-        padding-right: rem(246);
+        overflow: hidden;
     }
+
+    // .swiper-wrapper {
+    //     display: flex;
+    // }
 
     .swiper-slide {
         width: auto;
-        overflow: visible;
+        flex-shrink: 0;
         transition: transform 0.3s ease;
     }
 
@@ -260,8 +233,15 @@ body {
     .card-info {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        align-items: flex-start;
         padding-bottom: 10px; // 글씨 여백
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
 
         .card01 {
             width: 320px;
@@ -289,10 +269,13 @@ body {
 .video-sec {
     position: relative;
     width: 100%;
+    height: 100vh;
 
     .background {
+        background-color: #000;
         position: relative;
         width: 100%;
+        height: 100%;
 
         &::after {
             content: "";
@@ -309,6 +292,7 @@ body {
 
     video {
         width: 100%;
+        height: 100%;
         display: block;
     }
 

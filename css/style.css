@@ -157,49 +157,50 @@ body {
 
 .kv-sec {
   width: 100%;
-  height: 37.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  height: 48.125rem;
   position: relative;
 }
 .kv-sec .kv-image-sec {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 33.125rem;
+  height: 43.75rem;
   background-image: url("../assets/images/main/kv_background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.kv-sec .kv-image {
-  width: 31.25rem;
-  height: 37.5rem;
+.kv-sec .kv-image-sec .kv-image {
+  position: absolute;
+  width: 46.875rem;
+  height: 48.125rem;
   background-image: url("../assets/images/main/kv_image.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: absolute;
-  right: 9.375rem;
+  right: 3%;
   bottom: 0;
 }
 .kv-sec .kv-text {
   position: absolute;
-  top: 0;
+  top: -1.5625rem;
   color: #fff;
 }
 .kv-sec .kv-text span {
   color: #121212;
 }
 .kv-sec .kv-text .kv-title {
-  font-size: 3.5rem;
+  font-size: 5rem;
 }
 .kv-sec .kv-text .kv-subtitle {
-  font-size: 2.25rem;
-  margin-top: 8.125rem;
+  font-size: 2.5rem;
+  margin-top: 15.625rem;
   font-weight: 600;
 }
 .kv-sec .kv-text .kv-desc {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-top: 3.125rem;
 }
 .kv-sec .kv-button {
@@ -210,93 +211,57 @@ body {
   font-size: 1.25rem;
   margin-top: 3.125rem;
   border: 2px solid #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .kv-sec .kv-button:hover {
   background-color: rgba(255, 255, 255, 0);
   color: #fff;
 }
 
-.about-sec .side_sect.mo_over {
-  width: 100%;
-  padding: 6.25rem 0;
-}
-.about-sec .scroll-section {
-  display: flex;
-  gap: 9.375rem;
-  align-items: flex-start;
-}
-.about-sec .text-content {
-  flex: 1;
-}
-.about-sec .product-item {
-  min-height: 40vh;
-  display: flex;
-  justify-content: start;
-  align-items: left;
-  flex-direction: column;
-  padding-top: 12.5rem;
-  opacity: 0;
-  transform: translateY(0);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.about-sec .product-item:first-child {
-  box-sizing: content-box;
-  margin-top: 100px;
-}
-.about-sec .product-item:last-child {
-  min-height: auto;
-  padding-bottom: calc((100vh - 510px) / 5 * 2);
-}
-.about-sec .product-item h2 {
-  font-size: 2.25rem;
-  margin-bottom: 1.875rem;
-  font-weight: 600;
-}
-.about-sec .product-item .desc {
-  font-weight: 300;
-}
-.about-sec .product-item.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-.about-sec .product-item.passed {
-  opacity: 0;
-  transform: translateY(-100px);
-}
-.about-sec .image-content {
-  flex: 1;
-  position: sticky;
-  top: 0;
-  height: 400px;
-  top: calc((100vh - 400px) / 2);
-}
-.about-sec .image-wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 0 0 0 5rem;
-  overflow: hidden;
-  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.15);
-}
-.about-sec .product-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease;
+.about-sec .about-box {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1.875rem;
 }
-.about-sec .product-image.active {
-  opacity: 1;
+.about-sec .about-box .about-text {
+  width: 45%;
+  padding: 1.875rem 0;
 }
-.about-sec .product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.about-sec .about-box .about-text h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  padding-bottom: 1.875rem;
+}
+.about-sec .about-box .about-text .desc {
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding-bottom: 3.125rem;
+}
+.about-sec .about-box .about-text button {
+  padding: 0.625rem 1.875rem;
+  font-size: 1.25rem;
+  background-color: #6b6b6b;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.about-sec .about-box .about-text button:hover {
+  background-color: #1C2E4A;
+}
+.about-sec .about-box .about-image {
+  width: 55%;
+  border-radius: 0 0 0 5rem;
+}
+.about-sec .box2 {
+  margin-top: 6.25rem;
+  flex-direction: row-reverse;
+}
+.about-sec .box2 .about-text {
+  text-align: right;
+}
+.about-sec .box2 .about-image {
+  width: 55%;
+  border-radius: 0 0 5rem 0;
 }
 
 .cursor {
@@ -322,14 +287,17 @@ body {
 }
 
 /* Swiper 기본 */
+.tech-sec .container h2 {
+  font-size: 2.25rem;
+  margin-bottom: 3.125rem;
+}
 .tech-sec .swiper {
   width: 100%;
-  padding-left: 15.375rem;
-  padding-right: 15.375rem;
+  overflow: hidden;
 }
 .tech-sec .swiper-slide {
   width: auto;
-  overflow: visible;
+  flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 .tech-sec .swiper-slide:hover {
@@ -341,8 +309,14 @@ body {
 .tech-sec .card-info {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
   padding-bottom: 10px;
+}
+.tech-sec .card-info img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .tech-sec .card-info .card01 {
   width: 320px;
@@ -363,10 +337,13 @@ body {
 .video-sec {
   position: relative;
   width: 100%;
+  height: 100vh;
 }
 .video-sec .background {
+  background-color: #000;
   position: relative;
   width: 100%;
+  height: 100%;
 }
 .video-sec .background::after {
   content: "";
@@ -381,6 +358,7 @@ body {
 }
 .video-sec video {
   width: 100%;
+  height: 100%;
   display: block;
 }
 .video-sec .video-text {

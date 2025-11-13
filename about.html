@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .about-sec {
+
+            .side_sect.mo_over {
+                width: 100%;
+                padding: rem(100) 0;
+            }
+
+            .scroll-section {
+                display: flex;
+                gap: rem(150);
+                align-items: flex-start;
+            }
+
+            .text-content {
+                flex: 1;
+            }
+
+            .product-item {
+                min-height: 40vh;
+                @include flex (start, left);
+                flex-direction: column;
+                padding-top: rem(200);
+                opacity: 0;
+                transform: translateY(0);
+                transition: opacity 0.8s ease, transform 0.8s ease;
+
+                &:first-child {
+                    box-sizing: content-box;
+                    margin-top: 100px;
+                }
+
+                &:last-child {
+                    min-height: auto;
+                    padding-bottom: calc((100vh - 510px) / 5 * 2);
+                }
+
+                h2 {
+                    font-size: rem(36);
+                    margin-bottom: rem(30);
+                    font-weight: 600;
+                }
+
+                .desc {
+                    font-weight: 300;
+                }
+            }
+
+            .product-item.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .product-item.passed {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+
+            .image-content {
+                flex: 1;
+                position: sticky;
+                top: 0;
+                height: 400px;
+                top: calc((100vh - 400px) / 2);
+            }
+
+            .image-wrapper {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                border-radius: 0 0 0 rem(80);
+                overflow: hidden;
+                box-shadow: 0 rem(20) rem(60) rgba(0, 0, 0, 0.15);
+            }
+
+            .product-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.8s ease;
+                @include flex;
+            }
+
+            .product-image.active {
+                opacity: 1;
+            }
+
+            .product-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- about section -->
+    <section class="about-sec margin-top">
+        <div class="container">
+
+            <div class="side_sect mo_over">
+                <div class="scroll-section">
+                    <div class="text-content">
+                        <div class="product-item" data-product="about1">
+                            <h2>IONA는 사람과 과학을 잇는 기업입니다</h2>
+                            <p class="desc">
+                                피부 과학 기반의 연구와 혁신적인 뷰티 디바이스 개발로<br>글로벌 시장에서 신뢰받는 파트너가 되고 있습니다
+                            </p>
+                        </div>
+
+                        <div class="product-item" data-product="about2">
+                            <h2>차별화된 기술, 입증된 결과</h2>
+                            <p class="desc">
+                                독자적인 R&D 플랫폼과 특허 기술, 임상 연구를 기반으로<br>안전하면서도 효과적인 제품을 제공합니다
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="image-content">
+                        <div class="image-wrapper">
+                            <div class="product-image active" data-product="about1">
+                                <img src="./assets/images/main/about01.jpg" alt="about1" />
+                            </div>
+
+                            <div class="product-image" data-product="about2">
+                                <img src="./assets/images/main/about02.jpg" alt="about2" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // about section
+        const productItems = document.querySelectorAll(".product-item");
+        const productImages = document.querySelectorAll(".product-image");
+
+        function updateActiveProduct() {
+            const scrollPosition = window.scrollY + window.innerHeight / 4 * 3;
+
+            productItems.forEach((item) => {
+                const itemTop = item.offsetTop;
+                const itemBottom = itemTop + item.offsetHeight;
+                const productId = item.getAttribute("data-product");
+
+                if (scrollPosition >= itemTop && scrollPosition <= itemBottom) {
+                    item.classList.add("active");
+                    item.classList.remove("passed");
+
+                    productImages.forEach((img) => {
+                        if (img.getAttribute("data-product") === productId) {
+                            img.classList.add("active");
+                        } else {
+                            img.classList.remove("active");
+                        }
+                    });
+                } else if (scrollPosition > itemBottom) {
+                    item.classList.remove("active");
+                    item.classList.add("passed");
+                } else {
+                    item.classList.remove("active");
+                    item.classList.remove("passed");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", updateActiveProduct);
+        updateActiveProduct();
+
+    </script>
+</body>
+
+</html>
