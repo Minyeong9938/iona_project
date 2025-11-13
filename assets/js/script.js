@@ -116,3 +116,41 @@ document.addEventListener("DOMContentLoaded", () => {
 // video
 const video = document.getElementById("bgVideo");
 video.playbackRate = 0.75;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".count");
+    let hasRun = false; // 한 번만 실행되게
+
+    const runCounter = () => {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute("data-target");
+            let current = 0;
+            const duration = 2000; // 총 지속시간 (ms)
+            const stepTime = 10; // 숫자 증가 간격
+            const increment = target / (duration / stepTime);
+
+            const update = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current).toLocaleString();
+                    setTimeout(update, stepTime);
+                } else {
+                    counter.textContent = target.toLocaleString();
+                }
+            };
+            update();
+        });
+    };
+
+    // 화면에 들어올 때 실행
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasRun) {
+                hasRun = true;
+                runCounter();
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(document.querySelector(".global-stats"));
+});

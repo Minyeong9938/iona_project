@@ -369,6 +369,7 @@ body {
                     font-size: rem(36);
                     font-weight: 700;
                     color: #fff;
+                    transition: color 0.3s;
                 }
             }
         }
@@ -423,35 +424,8 @@ body {
     }
 }
 
-// footer section
-// .footer {
-//     width: 100%;
-//     height: 150px;
-//     background: $blackColor;
-//     color: $whiteColor;
 
-//     .logo {
-//         a {
-//             display: block;
-//             width: 80px;
-//             height: 100%;
-
-//             img {
-//                 width: 100%;
-//                 height: 100%;
-//                 object-fit: contain;
-//                 display: block;
-//             }
-//         }
-//     }
-
-//     .container {
-//         width: 100%;
-//         height: 100%;
-//         // @include flex(space-between, center);
-//     }
-// }
-
+// footer
 .iona-footer {
     background-color: #111;
     color: #fff;
