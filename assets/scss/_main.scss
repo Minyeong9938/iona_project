@@ -263,17 +263,27 @@ body {
 
 
 
-// video section
+// global section
 .global-sec {
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 
     .background {
         background-color: #000;
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        z-index: 1;
+
+        video {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+        }
 
         &::after {
             content: "";
@@ -283,63 +293,64 @@ body {
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.4);
-            pointer-events: none;
-            z-index: 1;
         }
     }
 
-    video {
-        width: 100%;
-        height: 100%;
-        display: block;
-    }
-
-    .global-text {
+    .container {
         position: absolute;
         top: rem(100);
         left: 50%;
         transform: translate(-50%);
+        width: 100%;
+        max-width: 1200px;
         z-index: 2;
 
-        h2 {
-            font-size: rem(40);
-            color: $whiteColor;
+        .global-text {
+            margin-bottom: rem(300);
 
-            span {
-                color: $primaryColor;
+            h2 {
+                font-size: rem(40);
+                color: $whiteColor;
+
+                span {
+                    color: $primaryColor;
+                }
+            }
+
+            .desc {
+                margin-top: 20px;
+                font-size: rem(18);
+                line-height: 1.6;
+                color: rgba(255, 255, 255, 0.85);
             }
         }
 
-        .desc {
-            margin-top: 20px;
-            font-size: rem(18);
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
         .global-stats {
-            @include flex(space-between);
-            gap: 80px;
-            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
             flex-wrap: wrap;
 
             .stat-item {
+                flex: 1;
+                text-align: center;
+
                 p {
                     font-size: rem(16);
+                    color: $primaryColor;
                     margin-top: 8px;
-                    color: rgba(255, 255, 255, 0.7);
+                }
 
-                    .count {
-                        font-size: rem(36);
-                        font-weight: 700;
-                        color: #fff;
-                    }
+                .count {
+                    font-size: rem(36);
+                    font-weight: 700;
+                    color: #fff;
                 }
             }
         }
     }
-
 }
+
 
 // banner section
 .banner-sec {
