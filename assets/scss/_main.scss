@@ -41,7 +41,33 @@ body {
     }
 
     .header-menu {
-        @include flex(center, center, rem(120))
+        @include flex(center, center, rem(120));
+
+        li {
+            position: relative;
+
+            a {
+                text-decoration: none;
+                color: $whiteColor;
+                position: relative;
+                padding: rem(5) 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $whiteColor;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -268,45 +294,43 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 
     .background {
+        width: 100%;
+        height: 100%;
         background-color: #000;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
         z-index: 1;
 
         video {
             width: 100%;
             height: 100%;
-            // object-fit: cover;
         }
 
         &::after {
             content: "";
+            width: 100%;
+            height: 100%;
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
             background: rgba(0, 0, 0, 0.4);
         }
     }
 
     .container {
+        width: 100%;
+        max-width: 1484px;
         position: absolute;
         top: rem(100);
         left: 50%;
         transform: translate(-50%);
-        width: 100%;
-        max-width: 1200px;
         z-index: 2;
 
         .global-text {
-            margin-bottom: rem(300);
+            margin-bottom: rem(400);
 
             h2 {
                 font-size: rem(40);
@@ -332,7 +356,7 @@ body {
             flex-wrap: wrap;
 
             .stat-item {
-                flex: 1;
+                // flex: 1;
                 text-align: center;
 
                 p {
@@ -400,30 +424,124 @@ body {
 }
 
 // footer section
-.footer {
-    width: 100%;
-    height: 150px;
-    background: $blackColor;
-    color: $whiteColor;
+// .footer {
+//     width: 100%;
+//     height: 150px;
+//     background: $blackColor;
+//     color: $whiteColor;
 
-    .logo {
-        a {
-            display: block;
-            width: 80px;
-            height: 100%;
+//     .logo {
+//         a {
+//             display: block;
+//             width: 80px;
+//             height: 100%;
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                display: block;
-            }
-        }
-    }
+//             img {
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: contain;
+//                 display: block;
+//             }
+//         }
+//     }
 
-    .container {
-        width: 100%;
-        height: 100%;
-        @include flex(space-between, center);
+//     .container {
+//         width: 100%;
+//         height: 100%;
+//         // @include flex(space-between, center);
+//     }
+// }
+
+.iona-footer {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 20px;
+    font-size: 14px;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* 모바일에서 아래로 쌓이게 */
+}
+
+/* 왼쪽 영역 */
+.footer-left {
+    flex: 1;
+    // min-width: 250px;
+}
+
+.footer-left .footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.footer-left .footer-brand p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer-left .footer-contact p {
+    margin: 5px 0;
+}
+
+/* 오른쪽 영역 */
+.footer-right {
+    flex: 1;
+    text-align: right;
+    // min-width: 250px;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: right;
+}
+
+.footer-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-menu li a:hover {
+    color: #f7c08a;
+}
+
+.footer-sns {
+    margin-bottom: 20px;
+}
+
+.footer-sns a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.footer-sns img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-legal {
+    font-size: 12px;
+    color: #777;
+}
+
+.footer-legal a {
+    color: #777;
+    text-decoration: underline;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .footer-flex {
+        flex-direction: column;
+        gap: 30px;
     }
 }

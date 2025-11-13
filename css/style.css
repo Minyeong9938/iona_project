@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2") format("woff2");
@@ -152,6 +153,28 @@ body {
   justify-content: center;
   align-items: center;
   gap: 7.5rem;
+}
+.header .header-menu li {
+  position: relative;
+}
+.header .header-menu li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  padding: 0.3125rem 0;
+}
+.header .header-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+.header .header-menu li a:hover::after {
+  width: 100%;
 }
 
 .kv-sec {
@@ -335,15 +358,14 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 .global-sec .background {
+  width: 100%;
+  height: 100%;
   background-color: #000;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 1;
 }
 .global-sec .background video {
@@ -352,24 +374,24 @@ body {
 }
 .global-sec .background::after {
   content: "";
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
 .global-sec .container {
+  width: 100%;
+  max-width: 1484px;
   position: absolute;
   top: 6.25rem;
   left: 50%;
   transform: translate(-50%);
-  width: 100%;
-  max-width: 1200px;
   z-index: 2;
 }
 .global-sec .container .global-text {
-  margin-bottom: 18.75rem;
+  margin-bottom: 25rem;
 }
 .global-sec .container .global-text h2 {
   font-size: 2.5rem;
@@ -391,7 +413,6 @@ body {
   flex-wrap: wrap;
 }
 .global-sec .container .global-stats .stat-item {
-  flex: 1;
   text-align: center;
 }
 .global-sec .container .global-stats .stat-item p {
@@ -446,27 +467,94 @@ body {
   font-size: 1.5rem;
 }
 
-.footer {
-  width: 100%;
-  height: 150px;
-  background: #121212;
+.iona-footer {
+  background-color: #111;
   color: #fff;
+  padding: 60px 20px;
+  font-size: 14px;
 }
-.footer .logo a {
-  display: block;
-  width: 80px;
-  height: 100%;
-}
-.footer .logo a img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-.footer .container {
-  width: 100%;
-  height: 100%;
+
+.footer-flex {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  gap: 40px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* 모바일에서 아래로 쌓이게 */
+}
+
+/* 왼쪽 영역 */
+.footer-left {
+  flex: 1;
+}
+
+.footer-left .footer-brand h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.footer-left .footer-brand p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-left .footer-contact p {
+  margin: 5px 0;
+}
+
+/* 오른쪽 영역 */
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: right;
+}
+
+.footer-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-menu li a:hover {
+  color: #f7c08a;
+}
+
+.footer-sns {
+  margin-bottom: 20px;
+}
+
+.footer-sns a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.footer-sns img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-legal {
+  font-size: 12px;
+  color: #777;
+}
+
+.footer-legal a {
+  color: #777;
+  text-decoration: underline;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
