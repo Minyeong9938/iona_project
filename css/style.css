@@ -423,18 +423,22 @@ body {
 .global-sec .container .global-stats .stat-item .count-wrap {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  gap: 5px;
 }
 .global-sec .container .global-stats .stat-item .count-wrap .count {
   font-size: 2.25rem;
   font-weight: 700;
   color: #fff;
   transition: color 0.3s;
+  min-width: 120px;
+  text-align: right;
 }
 .global-sec .container .global-stats .stat-item .count-wrap span {
   font-size: 2.25rem;
   font-weight: 700;
   color: #fff;
+  white-space: nowrap;
 }
 
 .banner-sec {
@@ -478,93 +482,70 @@ body {
   font-size: 1.5rem;
 }
 
-.iona-footer {
-  background-color: #111;
+.footer {
+  background-color: #121212;
   color: #fff;
-  padding: 60px 20px;
-  font-size: 14px;
+  padding: 2.5rem 0;
+  font-size: 1rem;
+  /* 왼쪽 영역 */
+  /* 오른쪽 영역 */
+  /* 모바일 반응형 */
 }
-
-.footer-flex {
+.footer .footer-flex {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  align-items: center;
+  gap: 1.25rem;
   margin: 0 auto;
   flex-wrap: wrap;
-  /* 모바일에서 아래로 쌓이게 */
 }
-
-/* 왼쪽 영역 */
-.footer-left {
+.footer .footer-left {
   flex: 1;
 }
-
-.footer-left .footer-brand h2 {
-  font-size: 24px;
-  margin-bottom: 8px;
+.footer .footer-left .footer-brand p {
+  margin-top: 0.625rem;
+  color: #777;
 }
-
-.footer-left .footer-brand p {
-  font-size: 14px;
-  color: #bbb;
+.footer .footer-left .footer-contact p {
+  margin: 0.625rem 0;
 }
-
-.footer-left .footer-contact p {
-  margin: 5px 0;
-}
-
-/* 오른쪽 영역 */
-.footer-right {
+.footer .footer-right {
   flex: 1;
   text-align: right;
 }
-
-.footer-menu {
-  list-style: none;
-  padding: 0;
+.footer .footer-right .footer-menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
   justify-content: right;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
 }
-
-.footer-menu li a {
-  color: #fff;
-  text-decoration: none;
+.footer .footer-right .footer-menu li a:hover {
+  color: #FFA347;
 }
-
-.footer-menu li a:hover {
-  color: #f7c08a;
+.footer .footer-right .footer-sns {
+  margin: 1.25rem 0;
 }
-
-.footer-sns {
-  margin-bottom: 20px;
-}
-
-.footer-sns a {
-  margin-right: 10px;
+.footer .footer-right .footer-sns a {
+  margin-right: 0.9375rem;
   display: inline-block;
 }
-
-.footer-sns img {
-  width: 24px;
-  height: 24px;
+.footer .footer-right .footer-sns a:last-child {
+  margin-right: 0;
 }
-
-.footer-legal {
-  font-size: 12px;
+.footer .footer-right .footer-sns img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.footer .footer-right .footer-text {
+  font-size: 0.875rem;
   color: #777;
 }
-
-.footer-legal a {
-  color: #777;
+.footer .footer-right .footer-text a {
   text-decoration: underline;
 }
-
-/* 모바일 반응형 */
 @media (max-width: 768px) {
-  .footer-flex {
+  .footer .footer-flex {
     flex-direction: column;
     gap: 30px;
   }

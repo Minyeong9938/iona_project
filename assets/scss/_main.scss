@@ -368,19 +368,23 @@ body {
                 .count-wrap {
                     display: flex;
                     justify-content: center;
-                    align-items: baseline;
+                    align-items: center;
+                    gap: 5px;
 
                     .count {
                         font-size: rem(36);
                         font-weight: 700;
                         color: #fff;
                         transition: color 0.3s;
+                        min-width: 120px;
+                        text-align: right;
                     }
 
                     span {
                         font-size: rem(36);
                         font-weight: 700;
                         color: #fff;
+                        white-space: nowrap;
                     }
                 }
             }
@@ -438,96 +442,82 @@ body {
 
 
 // footer
-.iona-footer {
-    background-color: #111;
-    color: #fff;
-    padding: 60px 20px;
-    font-size: 14px;
-}
+.footer {
+    background-color: $blackColor;
+    color: $whiteColor;
+    padding: rem(40) 0;
+    font-size: rem(16);
 
-.footer-flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    /* 모바일에서 아래로 쌓이게 */
-}
-
-/* 왼쪽 영역 */
-.footer-left {
-    flex: 1;
-    // min-width: 250px;
-}
-
-.footer-left .footer-brand h2 {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.footer-left .footer-brand p {
-    font-size: 14px;
-    color: #bbb;
-}
-
-.footer-left .footer-contact p {
-    margin: 5px 0;
-}
-
-/* 오른쪽 영역 */
-.footer-right {
-    flex: 1;
-    text-align: right;
-    // min-width: 250px;
-}
-
-.footer-menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 20px;
-    justify-content: right;
-}
-
-.footer-menu li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-menu li a:hover {
-    color: #f7c08a;
-}
-
-.footer-sns {
-    margin-bottom: 20px;
-}
-
-.footer-sns a {
-    margin-right: 10px;
-    display: inline-block;
-}
-
-.footer-sns img {
-    width: 24px;
-    height: 24px;
-}
-
-.footer-legal {
-    font-size: 12px;
-    color: #777;
-}
-
-.footer-legal a {
-    color: #777;
-    text-decoration: underline;
-}
-
-/* 모바일 반응형 */
-@media (max-width: 768px) {
     .footer-flex {
-        flex-direction: column;
-        gap: 30px;
+        @include flex(space-between);
+        gap: rem(20);
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    /* 왼쪽 영역 */
+    .footer-left {
+        flex: 1;
+
+        .footer-brand p {
+            margin-top: rem(10);
+            color: #777;
+        }
+
+        .footer-contact p {
+            margin: rem(10) 0;
+        }
+    }
+
+    /* 오른쪽 영역 */
+    .footer-right {
+        flex: 1;
+        text-align: right;
+
+        .footer-menu {
+            // padding: 0;
+            @include flex(right);
+            flex-wrap: wrap;
+            gap: rem(15);
+
+            li a:hover {
+                color: $primaryColor;
+            }
+        }
+
+        .footer-sns {
+            margin: rem(20) 0;
+
+            a {
+                margin-right: rem(15);
+                display: inline-block;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            img {
+                width: rem(25);
+                height: rem(25);
+            }
+        }
+
+        .footer-text {
+            font-size: rem(14);
+            color: #777;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* 모바일 반응형 */
+    @media (max-width: 768px) {
+        .footer-flex {
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 }
