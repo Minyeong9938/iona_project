@@ -130,18 +130,54 @@ body {
     }
 
     .kv-button {
-        color: $blackColor;
-        background-color: $whiteColor;
-        padding: rem(10) rem(30);
-        border-radius: rem(30);
-        font-size: rem(20);
-        margin-top: rem(50);
         border: 2px solid #fff;
         transition: background-color 0.3s ease, color 0.3s ease;
 
         &:hover {
             background-color: #ffffff00;
             color: $whiteColor;
+        }
+    }
+
+    .more-btn {
+        font-size: rem(20);
+        position: relative;
+        display: inline-block;
+        color: $whiteColor;
+        padding: rem(10) rem(30);
+        box-sizing: border-box;
+        width: auto;
+        border: 2px solid $whiteColor;
+        border-radius: rem(30);
+        background: transparent;
+        transition: all 0.3s ease;
+        margin-top: rem(50);
+
+        span {
+            color: $whiteColor;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            right: rem(25);
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            background-color: $whiteColor;
+            padding-right: rem(60);
+            color: $blackColor;
+
+            span {
+                color: $blackColor;
+            }
+
+            i {
+                opacity: 1;
+            }
         }
     }
 
@@ -330,7 +366,7 @@ body {
         z-index: 2;
 
         .global-text {
-            margin-bottom: rem(400);
+            margin-bottom: rem(350);
 
             h2 {
                 font-size: rem(40);
@@ -342,11 +378,44 @@ body {
             }
 
             .desc {
-                margin-top: 20px;
+                margin-top: rem(20);
                 font-size: rem(18);
                 line-height: 1.6;
                 color: rgba(255, 255, 255, 0.85);
             }
+
+            .more-btn {
+                font-size: rem(14);
+                position: relative;
+                display: inline-block;
+                color: $whiteColor;
+                padding: rem(10) rem(30);
+                box-sizing: border-box;
+                width: auto;
+                border: 1px solid $whiteColor;
+                border-radius: rem(30);
+                background: transparent;
+                transition: all 0.3s ease;
+                margin-top: rem(20);
+
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: rem(25); // 버튼 오른쪽 끝
+                    transform: translateY(-50%);
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover {
+                    padding-right: rem(60); // 오른쪽 여백 늘려서 화살표 공간 확보
+
+                    i {
+                        opacity: 1;
+                    }
+                }
+            }
+
         }
 
         .global-stats {
@@ -360,30 +429,27 @@ body {
                 text-align: center;
 
                 p {
-                    font-size: rem(16);
+                    font-size: rem(18);
                     color: $primaryColor;
-                    margin-top: 8px;
                 }
 
                 .count-wrap {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 5px;
 
                     .count {
-                        font-size: rem(36);
-                        font-weight: 700;
-                        color: #fff;
-                        transition: color 0.3s;
-                        min-width: 120px;
-                        text-align: right;
+                        font-size: rem(64);
+                        // font-weight: 700;
+                        color: $whiteColor;
+                        min-width: rem(178);
+                        text-align: center;
                     }
 
                     span {
-                        font-size: rem(36);
-                        font-weight: 700;
-                        color: #fff;
+                        font-size: rem(64);
+                        // font-weight: 700;
+                        color: $whiteColor;
                         white-space: nowrap;
                     }
                 }

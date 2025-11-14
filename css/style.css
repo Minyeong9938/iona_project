@@ -226,18 +226,48 @@ body {
   margin-top: 3.125rem;
 }
 .kv-sec .kv-button {
-  color: #121212;
-  background-color: #fff;
-  padding: 0.625rem 1.875rem;
-  border-radius: 1.875rem;
-  font-size: 1.25rem;
-  margin-top: 3.125rem;
   border: 2px solid #fff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .kv-sec .kv-button:hover {
   background-color: rgba(255, 255, 255, 0);
   color: #fff;
+}
+.kv-sec .more-btn {
+  font-size: 1.25rem;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 0.625rem 1.875rem;
+  box-sizing: border-box;
+  width: auto;
+  border: 2px solid #fff;
+  border-radius: 1.875rem;
+  background: transparent;
+  transition: all 0.3s ease;
+  margin-top: 3.125rem;
+}
+.kv-sec .more-btn span {
+  color: #fff;
+}
+.kv-sec .more-btn i {
+  position: absolute;
+  top: 50%;
+  right: 1.5625rem;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.kv-sec .more-btn:hover {
+  background-color: #fff;
+  padding-right: 3.75rem;
+  color: #121212;
+}
+.kv-sec .more-btn:hover span {
+  color: #121212;
+}
+.kv-sec .more-btn:hover i {
+  opacity: 1;
 }
 
 .about-sec .about-box {
@@ -391,7 +421,7 @@ body {
   z-index: 2;
 }
 .global-sec .container .global-text {
-  margin-bottom: 25rem;
+  margin-bottom: 21.875rem;
 }
 .global-sec .container .global-text h2 {
   font-size: 2.5rem;
@@ -401,10 +431,38 @@ body {
   color: #FFA347;
 }
 .global-sec .container .global-text .desc {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   font-size: 1.125rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
+}
+.global-sec .container .global-text .more-btn {
+  font-size: 0.875rem;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 0.625rem 1.875rem;
+  box-sizing: border-box;
+  width: auto;
+  border: 1px solid #fff;
+  border-radius: 1.875rem;
+  background: transparent;
+  transition: all 0.3s ease;
+  margin-top: 1.25rem;
+}
+.global-sec .container .global-text .more-btn i {
+  position: absolute;
+  top: 50%;
+  right: 1.5625rem;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.global-sec .container .global-text .more-btn:hover {
+  padding-right: 3.75rem;
+}
+.global-sec .container .global-text .more-btn:hover i {
+  opacity: 1;
 }
 .global-sec .container .global-stats {
   display: flex;
@@ -416,27 +474,22 @@ body {
   text-align: center;
 }
 .global-sec .container .global-stats .stat-item p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #FFA347;
-  margin-top: 8px;
 }
 .global-sec .container .global-stats .stat-item .count-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
 }
 .global-sec .container .global-stats .stat-item .count-wrap .count {
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-size: 4rem;
   color: #fff;
-  transition: color 0.3s;
-  min-width: 120px;
-  text-align: right;
+  min-width: 11.125rem;
+  text-align: center;
 }
 .global-sec .container .global-stats .stat-item .count-wrap span {
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-size: 4rem;
   color: #fff;
   white-space: nowrap;
 }
