@@ -119,7 +119,7 @@ video.playbackRate = 0.75;
 
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".count");
-    let hasRun = false; // 한 번만 실행되게
+    let hasRun = false;
 
     const runCounter = () => {
         counters.forEach(counter => {

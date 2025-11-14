@@ -365,11 +365,23 @@ body {
                     margin-top: 8px;
                 }
 
-                .count {
-                    font-size: rem(36);
-                    font-weight: 700;
-                    color: #fff;
-                    transition: color 0.3s;
+                .count-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+
+                    .count {
+                        font-size: rem(36);
+                        font-weight: 700;
+                        color: #fff;
+                        transition: color 0.3s;
+                    }
+
+                    span {
+                        font-size: rem(36);
+                        font-weight: 700;
+                        color: #fff;
+                    }
                 }
             }
         }
