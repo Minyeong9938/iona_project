@@ -349,6 +349,8 @@ body {
   width: auto;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  opacity: 1;
+  transform: none;
 }
 .tech-sec .swiper-slide:hover {
   transform: scale(1.05);
@@ -522,7 +524,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 .banner-sec .banner-bg .banner-text {
@@ -560,6 +562,8 @@ body {
 }
 .banner-sec .banner-bg .banner-text p {
   font-size: 1.5rem;
+  font-weight: 300;
+  color: #D1CFC9;
   /* p 활성화 시 애니메이션 및 딜레이 설정 (h2보다 늦게 시작) */
 }
 .banner-sec .banner-bg .banner-text p.animated span {

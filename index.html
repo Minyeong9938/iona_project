@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IONA</title>
 
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -48,16 +50,16 @@
       </div>
       <div class="container">
         <div class="kv-text">
-          <h2 class="kv-title">
+          <h2 class="kv-title" data-aos="fade-up" data-aos-delay="300">
             <span>BEAUTY</span><br>TECHNOLOGY
           </h2>
-          <p class="kv-subtitle">
+          <p class="kv-subtitle" data-aos="fade-up" data-aos-delay="500">
             피부 속까지 집중케어, 스마트 뷰티 디바이스
           </p>
-          <p class="kv-desc">
+          <p class="kv-desc" data-aos="fade-up" data-aos-delay="500">
             스마트 기술로 피부 속까지 집중 케어
           </p>
-          <button class="more-btn">
+          <button class="more-btn" data-aos="fade-up" data-aos-delay="700">
             <span class="btn-text">More</span>
             <i>-></i>
           </button>
@@ -70,7 +72,7 @@
     <section class="about-sec margin-top">
       <div class="container">
         <div class="about-wrap">
-          <div class="about-box box1">
+          <div class="about-box box1" data-aos="fade-left">
             <div class="about-text">
               <h2>IONA는 사람과 과학을 잇는<br>기업입니다</h2>
               <p class="desc">
@@ -81,7 +83,7 @@
             <img class="about-image" src="./assets/images/main/about01.jpg" alt="about1">
           </div>
 
-          <div class="about-box box2">
+          <div class="about-box box2" data-aos="fade-right">
             <div class="about-text">
               <h2>차별화된 기술, 입증된 결과</h2>
               <p class="desc">
@@ -254,7 +256,12 @@
 
 
 
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
   <script src="https://kit.fontawesome.com/76f79174b9.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
