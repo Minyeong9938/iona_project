@@ -154,3 +154,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(document.querySelector(".global-stats"));
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. 관찰 대상 요소 설정
+    const bannerSec = document.querySelector('.banner-sec');
+
+    // 2. Intersection Observer 콜백 함수 정의
+    const textObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const h2 = entry.target.querySelector('h2');
+                const p = entry.target.querySelector('p');
+
+                if (h2) h2.classList.add('animated');
+                if (p) p.classList.add('animated');
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null, // 뷰포트 기준
+        // ⭐ 수정된 부분: threshold를 0.6으로 변경 (섹션이 60% 이상 보여야 실행)
+        threshold: 0.6
+    });
+
+    // 3. 관찰 시작
+    if (bannerSec) {
+        textObserver.observe(bannerSec);
+    }
+});
