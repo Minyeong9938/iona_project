@@ -129,16 +129,6 @@ body {
 
     }
 
-    .kv-button {
-        border: 2px solid #fff;
-        transition: background-color 0.3s ease, color 0.3s ease;
-
-        &:hover {
-            background-color: #ffffff00;
-            color: $whiteColor;
-        }
-    }
-
     .more-btn {
         font-size: rem(20);
         position: relative;
