@@ -123,7 +123,7 @@ body {
 
 .header {
   width: 100%;
-  height: 60px;
+  height: 4.6875rem;
   background: #1C2E4A;
   color: #fff;
   position: sticky;
@@ -132,7 +132,7 @@ body {
 }
 .header .logo a {
   display: block;
-  width: 80px;
+  width: 5rem;
   height: 100%;
 }
 .header .logo a img {
@@ -153,6 +153,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 7.5rem;
+  font-size: 1.25rem;
 }
 .header .header-menu li {
   position: relative;
@@ -169,7 +170,7 @@ body {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 2px;
+  height: 0.125rem;
   background-color: #fff;
   transition: width 0.3s ease;
 }
@@ -183,21 +184,20 @@ body {
   position: relative;
 }
 .kv-sec .kv-image-sec {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 43.75rem;
-  background-image: url("../assets/images/main/kv_background.jpg");
+  background-image: url("../images/main/kv_background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .kv-sec .kv-image-sec .kv-image {
-  position: absolute;
   width: 46.875rem;
   height: 48.125rem;
-  background-image: url("../assets/images/main/kv_image.png");
+  background-image: url("../images/main/kv_image.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -211,63 +211,63 @@ body {
   color: #fff;
 }
 .kv-sec .kv-text span {
+  display: block;
+}
+.kv-sec .kv-text span.first {
   color: #121212;
 }
 .kv-sec .kv-text .kv-title {
   font-size: 5rem;
+  overflow: hidden;
 }
 .kv-sec .kv-text .kv-subtitle {
   font-size: 2.5rem;
   margin-top: 15.625rem;
   font-weight: 700;
+  overflow: hidden;
 }
 .kv-sec .kv-text .kv-desc {
   font-size: 1.5rem;
-  margin-top: 3.125rem;
+  margin-top: 0.625rem;
+  overflow: hidden;
 }
-.kv-sec .kv-button {
-  border: 2px solid #fff;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.kv-sec .kv-button:hover {
-  background-color: rgba(255, 255, 255, 0);
-  color: #fff;
+.kv-sec .kv-text .btn-wrap {
+  overflow: hidden;
+  margin-top: 1.5625rem;
 }
 .kv-sec .more-btn {
+  width: 9.375rem;
   font-size: 1.25rem;
-  position: relative;
-  display: inline-block;
   color: #fff;
-  padding: 0.625rem 1.875rem;
+  padding: 0.75rem 1.875rem;
   box-sizing: border-box;
-  width: auto;
-  border: 2px solid #fff;
+  border: 0.0625rem solid #fff;
   border-radius: 1.875rem;
   background: transparent;
-  transition: all 0.3s ease;
-  margin-top: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
 }
 .kv-sec .more-btn span {
   color: #fff;
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
 }
 .kv-sec .more-btn i {
-  position: absolute;
-  top: 50%;
-  right: 1.5625rem;
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: all 0.3s ease;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
 }
 .kv-sec .more-btn:hover {
-  background-color: #fff;
-  padding-right: 3.75rem;
   color: #121212;
 }
 .kv-sec .more-btn:hover span {
-  color: #121212;
+  transform: translateX(0.25rem);
 }
 .kv-sec .more-btn:hover i {
-  opacity: 1;
+  color: #fff;
+  transform: translateX(-0.25rem);
 }
 
 .about-sec .about-box {
@@ -279,25 +279,34 @@ body {
 .about-sec .about-box .about-text {
   width: 45%;
   padding: 1.875rem 0;
+  overflow: hidden;
+}
+.about-sec .about-box .about-text span {
+  display: block;
 }
 .about-sec .about-box .about-text h2 {
   font-size: 2.25rem;
   font-weight: 700;
   padding-bottom: 1.875rem;
+  overflow: hidden;
 }
 .about-sec .about-box .about-text .desc {
   font-size: 1.25rem;
   font-weight: 300;
   padding-bottom: 3.125rem;
+  overflow: hidden;
 }
-.about-sec .about-box .about-text button {
+.about-sec .about-box .about-text .btn-wrap .btn-inner {
+  display: inline-block;
+}
+.about-sec .about-box .about-text .btn-wrap button {
   padding: 0.625rem 1.875rem;
   font-size: 1.25rem;
   background-color: #6b6b6b;
   color: #fff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.about-sec .about-box .about-text button:hover {
+.about-sec .about-box .about-text .btn-wrap button:hover {
   background-color: #1C2E4A;
 }
 .about-sec .about-box .about-image {
@@ -483,6 +492,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 .global-sec .container .global-stats .stat-item .count-wrap .count {
   font-size: 4rem;
@@ -512,7 +523,7 @@ body {
 .banner-sec .banner-bg {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/main/banner.jpg");
+  background-image: url("../images/main/banner.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -524,7 +535,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 .banner-sec .banner-bg .banner-text {
@@ -542,7 +553,7 @@ body {
   overflow: hidden;
   /* 텍스트를 자르는 마스크 역할 */
   position: relative;
-  line-height: 1.3;
+  line-height: 1.5;
   /* 줄 높이 설정 */
 }
 .banner-sec .banner-bg .banner-text .text-clip span {
@@ -561,9 +572,9 @@ body {
   animation-delay: 0.3s;
 }
 .banner-sec .banner-bg .banner-text p {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 300;
-  color: #D1CFC9;
+  color: #fff;
   /* p 활성화 시 애니메이션 및 딜레이 설정 (h2보다 늦게 시작) */
 }
 .banner-sec .banner-bg .banner-text p.animated span {
@@ -602,16 +613,6 @@ body {
 .footer .footer-right {
   flex: 1;
   text-align: right;
-}
-.footer .footer-right .footer-menu {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.9375rem;
-}
-.footer .footer-right .footer-menu li a:hover {
-  color: #FFA347;
 }
 .footer .footer-right .footer-sns {
   margin: 1.25rem 0;

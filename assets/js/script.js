@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         scale: 1,
 
                         // ⭐ 급발진 및 주춤거림 해결: duration, ease 재조정
-                        duration: 0.9, // 부드러운 느낌을 위해 0.9초로 복원
+                        duration: 0.7, // 부드러운 느낌을 위해 0.9초로 복원
                         ease: "power2.out", // 깔끔하고 부드러운 아웃 효과 적용
 
                         // stagger 속성은 제거되어 카드가 동시에 펼쳐집니다.

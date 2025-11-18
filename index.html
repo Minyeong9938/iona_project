@@ -9,7 +9,7 @@
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -50,19 +50,22 @@
       </div>
       <div class="container">
         <div class="kv-text">
-          <h2 class="kv-title" data-aos="fade-up" data-aos-delay="300">
-            <span>BEAUTY</span><br>TECHNOLOGY
+          <h2 class="kv-title">
+            <span class="first" data-aos="fade-up" data-aos-duration="1000">BEAUTY</span>
+            <span data-aos="fade-up" data-aos-duration="1000">TECHNOLOGY</span>
           </h2>
-          <p class="kv-subtitle" data-aos="fade-up" data-aos-delay="500">
-            피부 속까지 집중케어, 스마트 뷰티 디바이스
+          <p class="kv-subtitle">
+            <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">피부 속까지 집중케어, 스마트 뷰티 디바이스</span>
           </p>
-          <p class="kv-desc" data-aos="fade-up" data-aos-delay="500">
-            스마트 기술로 피부 속까지 집중 케어
+          <p class="kv-desc">
+            <span data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">스마트 기술로 피부 속까지 집중 케어</span>
           </p>
-          <button class="more-btn">
-            <span class="btn-text">More</span>
-            <i>-></i>
-          </button>
+          <div class="btn-wrap">
+            <button class="more-btn" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+              <span class="btn-text">More</span>
+              <i>-></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -72,24 +75,40 @@
     <section class="about-sec margin-top">
       <div class="container">
         <div class="about-wrap">
-          <div class="about-box box1" data-aos="fade-left">
+          <div class="about-box box1" data-aos="fade-left" data-aos-duration="1000">
             <div class="about-text">
-              <h2>IONA는 사람과 과학을 잇는<br>기업입니다</h2>
+              <h2>
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">IONA는 사람과 과학을 잇는<br>기업입니다</span>
+              </h2>
               <p class="desc">
-                피부 과학 기반의 연구와 혁신적인 뷰티 디바이스 개발로<br>글로벌 시장에서 신뢰받는 파트너가 되고 있습니다
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                  피부 과학 기반의 연구와 혁신적인 뷰티 디바이스 개발로<br>글로벌 시장에서 신뢰받는 파트너가 되고 있습니다
+                </span>
               </p>
-              <button>더보기 -></button>
+              <div class="btn-wrap">
+                <div class="btn-inner" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                  <button><span>더보기 -></span></button>
+                </div>
+              </div>
             </div>
             <img class="about-image" src="./assets/images/main/about01.jpg" alt="about1">
           </div>
 
-          <div class="about-box box2" data-aos="fade-right">
+          <div class="about-box box2" data-aos="fade-right" data-aos-duration="1000">
             <div class="about-text">
-              <h2>차별화된 기술, 입증된 결과</h2>
+              <h2>
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">차별화된 기술, 입증된 결과</span>
+              </h2>
               <p class="desc">
-                독자적인 R&D 플랫폼과 특허 기술, 임상 연구를 기반으로<br>안전하면서도 효과적인 제품을 제공합니다
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                  독자적인 R&D 플랫폼과 특허 기술, 임상 연구를 기반으로<br>안전하면서도 효과적인 제품을 제공합니다
+                </span>
               </p>
-              <button>더보기 -></button>
+              <div class="btn-wrap">
+                <div class="btn-inner" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                  <button><span>더보기 -></span></button>
+                </div>
+              </div>
             </div>
             <img class="about-image" src="./assets/images/main/about02.jpg" alt="about1">
           </div>
@@ -230,15 +249,6 @@
       </div>
 
       <div class="footer-right">
-        <ul class="footer-menu">
-          <li><a href="#">about</a></li>
-          <li><a href="#">beauty-tech</a></li>
-          <li><a href="#">
-              brand-value</a></li>
-          <li><a href="#">vision</a></li>
-          <li><a href="#">contact us</a></li>
-        </ul>
-
         <div class="footer-sns">
           <a href="#"><img src="./assets/images/facebook.png" alt="facebook"></a>
           <a href="#"><img src="./assets/images/instargram.png" alt="instargram"></a>

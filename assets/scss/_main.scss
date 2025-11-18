@@ -12,7 +12,7 @@ body {
 // header
 .header {
     width: 100%;
-    height: 60px;
+    height: rem(75);
     background: $navyColor;
     color: $whiteColor;
     position: sticky;
@@ -22,7 +22,7 @@ body {
     .logo {
         a {
             display: block;
-            width: 80px;
+            width: rem(80);
             height: 100%;
 
             img {
@@ -42,6 +42,7 @@ body {
 
     .header-menu {
         @include flex(center, center, rem(120));
+        font-size: rem(20);
 
         li {
             position: relative;
@@ -58,7 +59,7 @@ body {
                     left: 0;
                     bottom: 0;
                     width: 0;
-                    height: 2px;
+                    height: rem(2);
                     background-color: $whiteColor;
                     transition: width 0.3s ease;
                 }
@@ -78,21 +79,20 @@ body {
     position: relative;
 
     .kv-image-sec {
-        position: absolute;
-        bottom: 0;
-        left: 0;
         width: 100%;
         height: rem(700);
-        background-image: url("../assets/images/main/kv_background.jpg");
+        background-image: url("../images/main/kv_background.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: absolute;
+        bottom: 0;
+        left: 0;
 
         .kv-image {
-            position: absolute;
             width: rem(750);
             height: rem(770);
-            background-image: url("../assets/images/main/kv_image.png");
+            background-image: url("../images/main/kv_image.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -105,68 +105,75 @@ body {
     .kv-text {
         position: absolute;
         top: rem(-25);
+        color: $whiteColor;
 
         span {
-            color: $blackColor;
+            display: block;
+
+            &.first {
+                color: $blackColor;
+            }
         }
 
         .kv-title {
             font-size: rem(80);
+            overflow: hidden;
         }
 
         .kv-subtitle {
             font-size: rem(40);
             margin-top: rem(250);
             font-weight: 700;
+            overflow: hidden;
         }
 
         .kv-desc {
             font-size: rem(24);
-            margin-top: rem(50);
+            margin-top: rem(10);
+            overflow: hidden;
         }
 
-        color: $whiteColor;
+        .btn-wrap {
+            overflow: hidden;
+            margin-top: rem(25);
+        }
 
     }
 
     .more-btn {
+        width: rem(150);
         font-size: rem(20);
-        position: relative;
-        display: inline-block;
         color: $whiteColor;
-        padding: rem(10) rem(30);
+        padding: rem(12) rem(30);
         box-sizing: border-box;
-        width: auto;
-        border: 2px solid $whiteColor;
+        border: rem(1) solid $whiteColor;
         border-radius: rem(30);
         background: transparent;
-        transition: all 0.3s ease;
-        margin-top: rem(50);
+        @include flex;
+        gap: rem(20);
 
         span {
             color: $whiteColor;
+            display: inline-block;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
         }
 
         i {
-            position: absolute;
-            top: 50%;
-            right: rem(25);
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: all 0.3s ease;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
         }
 
         &:hover {
-            background-color: $whiteColor;
-            padding-right: rem(60);
             color: $blackColor;
 
             span {
-                color: $blackColor;
+                transform: translateX(rem(4));
             }
 
             i {
-                opacity: 1;
+                color: $whiteColor;
+                transform: translateX(rem(-4));
             }
         }
     }
@@ -182,30 +189,45 @@ body {
         .about-text {
             width: 45%;
             padding: rem(30) 0;
+            overflow: hidden;
+
+            span {
+                display: block;
+            }
 
             h2 {
                 font-size: rem(36);
                 font-weight: 700;
                 padding-bottom: rem(30);
+                overflow: hidden;
             }
 
             .desc {
                 font-size: rem(20);
                 font-weight: 300;
                 padding-bottom: rem(50);
+                overflow: hidden;
             }
 
-            button {
-                padding: rem(10) rem(30);
-                font-size: rem(20);
-                background-color: $darkgrayColor;
-                color: $whiteColor;
-                transition: background-color 0.3s ease, color 0.3s ease;
+            .btn-wrap {
+                .btn-inner {
+                    display: inline-block;
+                }
 
-                &:hover {
-                    background-color: $navyColor;
+
+                button {
+                    padding: rem(10) rem(30);
+                    font-size: rem(20);
+                    background-color: $darkgrayColor;
+                    color: $whiteColor;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+
+                    &:hover {
+                        background-color: $navyColor;
+                    }
                 }
             }
+
         }
 
         .about-image {
@@ -429,10 +451,11 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    font-weight: 700;
+                    letter-spacing: -1px;
 
                     .count {
                         font-size: rem(64);
-                        // font-weight: 700;
                         color: $whiteColor;
                         min-width: rem(178);
                         text-align: center;
@@ -470,7 +493,7 @@ body {
     .banner-bg {
         width: 100%;
         height: 100%;
-        background-image: url("../assets/images/main/banner.jpg");
+        background-image: url("../images/main/banner.jpg");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -482,7 +505,7 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.25);
             z-index: 1;
         }
 
@@ -501,7 +524,7 @@ body {
                 overflow: hidden;
                 /* 텍스트를 자르는 마스크 역할 */
                 position: relative;
-                line-height: 1.3;
+                line-height: 1.5;
                 /* 줄 높이 설정 */
 
                 span {
@@ -524,9 +547,9 @@ body {
             }
 
             p {
-                font-size: rem(24);
+                font-size: rem(18);
                 font-weight: 300;
-                color: $grayColor;
+                color: $whiteColor;
 
                 /* p 활성화 시 애니메이션 및 딜레이 설정 (h2보다 늦게 시작) */
                 &.animated span {
@@ -572,17 +595,6 @@ body {
     .footer-right {
         flex: 1;
         text-align: right;
-
-        .footer-menu {
-            // padding: 0;
-            @include flex(right);
-            flex-wrap: wrap;
-            gap: rem(15);
-
-            li a:hover {
-                color: $primaryColor;
-            }
-        }
 
         .footer-sns {
             margin: rem(20) 0;
