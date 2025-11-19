@@ -61,8 +61,8 @@
     font-display: swap;
 }
 
-@import './reset';
-@import './variables';
-@import './mixin';
-@import './extend';
-@import './main';
+@import './base/reset';
+@import './base/variables';
+@import './base/mixin';
+@import './components/extend';
+@import './pages/main';
