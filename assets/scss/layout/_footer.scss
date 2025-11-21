@@ -1,0 +1,69 @@
+// footer
+.footer {
+    background-color: $blackColor;
+    color: $whiteColor;
+    padding: rem(40) 0;
+    font-size: rem(16);
+
+    .footer-flex {
+        @include flex(space-between);
+        gap: rem(20);
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    /* 왼쪽 영역 */
+    .footer-left {
+        flex: 1;
+
+        .footer-brand p {
+            margin-top: rem(10);
+            color: #777;
+        }
+
+        .footer-contact p {
+            margin: rem(10) 0;
+        }
+    }
+
+    /* 오른쪽 영역 */
+    .footer-right {
+        flex: 1;
+        text-align: right;
+
+        .footer-sns {
+            margin: rem(20) 0;
+
+            a {
+                margin-right: rem(15);
+                display: inline-block;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            img {
+                width: rem(25);
+                height: rem(25);
+            }
+        }
+
+        .footer-text {
+            font-size: rem(14);
+            color: #777;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* 모바일 반응형 */
+    @media (max-width: 768px) {
+        .footer-flex {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}

@@ -12,20 +12,28 @@ document.addEventListener("DOMContentLoaded", () => {
             import('./pages/main.js').then(module => module.default());
             break;
 
-        // case "about":
-        //     import('./pages/sub-about.js').then(module => module.default());
-        //     break;
+        case "about":
+            import('./pages/sub-about.js').then(m => m.default());
+            break;
 
-        // case "tech":
-        //     import('./pages/sub-tech.js').then(module => module.default());
-        //     break;
+        case "tech":
+            import('./pages/sub-tech.js').then(module => module.default());
+            break;
 
-        // case "product":
-        //     import('./pages/sub-product.js').then(module => module.default());
-        //     break;
+        case "value":
+            import('').then(module => module.default());
+            break;
 
-        // default:
-        //     // 아무 페이지도 해당 안 될 때
-        //     break;
+        case "vision":
+            import('').then(module => module.default());
+            break;
+
+        case "contact":
+            import('').then(module => module.default());
+            break;
+
+        default:
+            // 아무 페이지도 해당 안 될 때
+            break;
     }
 });

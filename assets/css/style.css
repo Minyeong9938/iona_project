@@ -103,24 +103,6 @@ summary {
   cursor: pointer;
 }
 
-.container {
-  width: 100%;
-  max-width: 1484px;
-  margin: 0 auto;
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
-body {
-  font-family: "Pretendard";
-  word-break: keep-all;
-  color: #121212;
-}
-
-.margin-top {
-  margin-top: 6.25rem;
-}
-
 .header {
   width: 100%;
   height: 4.6875rem;
@@ -176,6 +158,127 @@ body {
 }
 .header .header-menu li a:hover::after {
   width: 100%;
+}
+
+.header-spacer {
+  height: 6.25rem;
+}
+
+.footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 2.5rem 0;
+  font-size: 1rem;
+  /* 왼쪽 영역 */
+  /* 오른쪽 영역 */
+  /* 모바일 반응형 */
+}
+.footer .footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.footer .footer-left {
+  flex: 1;
+}
+.footer .footer-left .footer-brand p {
+  margin-top: 0.625rem;
+  color: #777;
+}
+.footer .footer-left .footer-contact p {
+  margin: 0.625rem 0;
+}
+.footer .footer-right {
+  flex: 1;
+  text-align: right;
+}
+.footer .footer-right .footer-sns {
+  margin: 1.25rem 0;
+}
+.footer .footer-right .footer-sns a {
+  margin-right: 0.9375rem;
+  display: inline-block;
+}
+.footer .footer-right .footer-sns a:last-child {
+  margin-right: 0;
+}
+.footer .footer-right .footer-sns img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.footer .footer-right .footer-text {
+  font-size: 0.875rem;
+  color: #777;
+}
+.footer .footer-right .footer-text a {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .footer .footer-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1484px;
+  margin: 0 auto;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.my-kv-sec {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.my-kv-sec .image-sec {
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.my-kv-sec .image-sec::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.my-kv-sec .image-sec .text-sec {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+.my-kv-sec .image-sec .text-sec h2 {
+  margin-bottom: 1.25rem;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.my-kv-sec .image-sec .text-sec p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+body {
+  font-family: "Pretendard";
+  word-break: keep-all;
+  color: #121212;
+}
+
+.margin-top {
+  margin-top: 6.25rem;
 }
 
 .kv-sec {
@@ -583,120 +686,66 @@ body {
   animation-delay: 0.6s;
 }
 
-.footer {
-  background-color: #121212;
-  color: #fff;
-  padding: 2.5rem 0;
-  font-size: 1rem;
-  /* 왼쪽 영역 */
-  /* 오른쪽 영역 */
-  /* 모바일 반응형 */
-}
-.footer .footer-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.25rem;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-.footer .footer-left {
-  flex: 1;
-}
-.footer .footer-left .footer-brand p {
-  margin-top: 0.625rem;
-  color: #777;
-}
-.footer .footer-left .footer-contact p {
-  margin: 0.625rem 0;
-}
-.footer .footer-right {
-  flex: 1;
-  text-align: right;
-}
-.footer .footer-right .footer-sns {
-  margin: 1.25rem 0;
-}
-.footer .footer-right .footer-sns a {
-  margin-right: 0.9375rem;
-  display: inline-block;
-}
-.footer .footer-right .footer-sns a:last-child {
-  margin-right: 0;
-}
-.footer .footer-right .footer-sns img {
-  width: 1.5625rem;
-  height: 1.5625rem;
-}
-.footer .footer-right .footer-text {
-  font-size: 0.875rem;
-  color: #777;
-}
-.footer .footer-right .footer-text a {
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .footer .footer-flex {
-    flex-direction: column;
-    gap: 30px;
-  }
+.about-kv-sec .image-sec {
+  background-image: url("../images/sub1/kv_image.jpg");
 }
 
-.about-sec .side_sect.mo_over {
+.about-company-sec .side_sect.mo_over {
   width: 100%;
-  padding: 6.25rem 0;
 }
-.about-sec .scroll-section {
+.about-company-sec .scroll-section {
   display: flex;
-  gap: 9.375rem;
   align-items: flex-start;
 }
-.about-sec .text-content {
+.about-company-sec .text-content {
   flex: 1;
 }
-.about-sec .product-item {
+.about-company-sec .product-item {
   min-height: 40vh;
   display: flex;
   justify-content: start;
   align-items: left;
   flex-direction: column;
-  padding-top: 12.5rem;
   opacity: 0;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.about-sec .product-item:first-child {
+.about-company-sec .product-item:first-child {
   box-sizing: content-box;
-  margin-top: 100px;
+  margin-top: 18.75rem;
 }
-.about-sec .product-item:last-child {
+.about-company-sec .product-item:last-child {
   min-height: auto;
   padding-bottom: calc((100vh - 510px) / 5 * 2);
 }
-.about-sec .product-item h2 {
+.about-company-sec .product-item h2 {
   font-size: 2.25rem;
   margin-bottom: 1.875rem;
   font-weight: 600;
 }
-.about-sec .product-item .desc {
+.about-company-sec .product-item .desc {
   font-weight: 300;
 }
-.about-sec .product-item.active {
+.about-company-sec .product-item.active {
   opacity: 1;
   transform: translateY(0);
 }
-.about-sec .product-item.passed {
+.about-company-sec .product-item.passed {
   opacity: 0;
   transform: translateY(-100px);
 }
-.about-sec .image-content {
+.about-company-sec .product-item.passed:last-child {
+  opacity: 1;
+  transform: translateY(-100px);
+}
+.about-company-sec .image-content {
   flex: 1;
   position: sticky;
   top: 0;
-  height: 400px;
+  height: 500px;
   top: calc((100vh - 400px) / 2);
 }
-.about-sec .image-wrapper {
+.about-company-sec .image-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
@@ -704,7 +753,7 @@ body {
   overflow: hidden;
   box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.15);
 }
-.about-sec .product-image {
+.about-company-sec .product-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -716,10 +765,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-.about-sec .product-image.active {
+.about-company-sec .product-image.active {
   opacity: 1;
 }
-.about-sec .product-image img {
+.about-company-sec .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;

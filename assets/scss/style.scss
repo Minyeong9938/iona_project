@@ -64,6 +64,14 @@
 @import './base/reset';
 @import './base/variables';
 @import './base/mixin';
+
+@import './layout/header';
+@import './layout/footer';
+
 @import './components/extend';
 @import './pages/main';
-@import './pages/about'
+@import './pages/sub-about';
+@import './pages/sub-tech';
+@import './pages/sub-brand-value';
+@import './pages/sub-vision';
+@import './pages/sub-contact';
