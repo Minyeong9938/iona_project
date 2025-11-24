@@ -11,13 +11,9 @@
     .swiper {
         width: 100%;
         position: relative;
-        /* 버튼의 절대 위치 기준이 됩니다 */
         margin-left: auto;
         margin-right: auto;
-
-        /* ⭐ 수정: 버튼 높이(44px) + 원하는 여백(20px) = 64px */
-        /* 슬라이드는 이 64px 아래에서 시작합니다. */
-        padding-top: rem(64);
+        padding-top: rem(60);
     }
 
     .swiper-slide {
@@ -25,83 +21,63 @@
         aspect-ratio: 1 / 1;
         background: $grayColor;
         @include flex;
-        /* @include flex는 정의된 mixin이라고 가정합니다. */
         border-radius: rem(20);
     }
 
-    // --- Swiper Navigation Customization (버튼 위치 조정) ---
-
-    /* 공통 버튼 디자인 및 위치 기준 설정 */
+    // arrow
     .swiper-button-prev,
     .swiper-button-next {
-        /* ⭐ 수정: top: 0으로 설정하여 상단 여백 제거 (컨테이너 상단에 붙음) */
         top: 0;
-        /* ⭐ 수정: margin-top: 0으로 초기화 */
         margin-top: 0;
-
         transform: translateY(0);
-        /* 기본 중앙 정렬 효과 제거 */
         z-index: 10;
-
-        /* 버튼 디자인 (예시) */
-        width: rem(44);
-        height: rem(44);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
+        width: rem(40);
+        height: rem(40);
+        background-color: transparent;
+        color: $blackColor;
         border-radius: 50%;
+        border: 1px solid $grayColor;
 
         &::after {
             font-size: rem(16);
+            font-weight: 800;
         }
     }
 
     /* 다음 버튼: 오른쪽 상단 가장 오른쪽 */
     .swiper-button-next {
-        right: rem(10);
+        right: 0;
         left: auto;
     }
 
     /* 이전 버튼: 다음 버튼 왼쪽에 배치 */
     .swiper-button-prev {
-        right: rem(64);
+        right: rem(60);
         left: auto;
     }
 
-    // --- Slide Individual Background Images ---
-    .slide01 {
-        background-image: url("../images/sub2/device_v-ems.png");
+    .swiper-slide {
         width: 100%;
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+
+    .slide01 {
+        background-image: url("../images/sub2/device_v-ems.png");
     }
 
     .slide02 {
         background-image: url("../images/sub2/device_plusepro.png");
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
     }
 
     .slide03 {
         background-image: url("../images/sub2/device_neotune.png");
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
     }
 
     .slide04 {
         background-image: url("../images/sub2/device_hisonic.png");
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
     }
 
     .slide05,
@@ -110,11 +86,5 @@
     .slide08,
     .slide09 {
         background-image: url("../images/sub2/device_v-ems.png");
-        /* 05~09는 동일한 이미지 사용 */
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
     }
 }
