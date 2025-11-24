@@ -779,10 +779,6 @@ body {
   background-position: center;
 }
 
-.device-wrap {
-  /* 다음 버튼: 오른쪽 상단 가장 오른쪽 */
-  /* 이전 버튼: 다음 버튼 왼쪽에 배치 */
-}
 .device-wrap .swiper {
   width: 100%;
   position: relative;
@@ -850,6 +846,90 @@ body {
 .device-wrap .slide08,
 .device-wrap .slide09 {
   background-image: url("../images/sub2/device_v-ems.png");
+}
+
+.inno-sec {
+  background-image: url("../images/sub2/tech01.jpg");
+  border-radius: 10rem 10rem 0 0;
+  padding: 6.25rem 0;
+}
+.inno-sec .text-sec {
+  text-align: center;
+  color: #fff;
+}
+.inno-sec .text-sec h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.inno-sec .text-sec .sub-title {
+  color: #FFA347;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.inno-sec .text-sec p {
+  font-weight: 300;
+  margin-bottom: 3.125rem;
+}
+.inno-sec .inno-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.inno-sec .inno-text-wrap {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("../images/sub2/Polygon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.inno-sec .inno-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+.inno-sec .inno-text h4 {
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.inno-sec .inno-text p {
+  font-weight: 300;
+}
+
+.video-sec {
+  position: relative;
+  height: 250vh;
+}
+.video-sec video {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.video-sec .video-text {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  padding: 0 20px;
+  transform: translate(-50%, 50%);
+  transition: transform 0.5s ease-out, opacity 0.5s linear;
+  z-index: 1;
+}
+.video-sec .text02 {
+  top: 70%;
 }
 
 .value-kv-sec .image-sec {
