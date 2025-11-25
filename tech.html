@@ -106,22 +106,22 @@
             </div>
         </section>
 
-        <!-- video section -->
-        <section class="video-sec pin-video">
-            <video src="./assets/images/sub2/tech_video.mp4" autoplay loop muted></video>
+        <!-- tech-about section -->
+        <section id="tech-about" class="parallax__item">
+            <video class="tech-about-video" src="./assets/images/sub2/tech_video.mp4" autoplay loop muted></video>
 
-            <div class="video-text text01">
-                <h3>ABC는 첨단 기술과 철저한 연구를 바탕으로, <br>일상 속에서도 전문적인 뷰티케어를 가능하게 합니다.</h3>
+            <div class="parallax__item__text t1">
+                ABC는 첨단 기술과 철저한 연구를 바탕으로,<br>일상 속에서도 전문적인 뷰티케어를 가능하게 합니다.
             </div>
-
-            <div class="video-text text02">
-                <h3>IONA의 기술은 집에서도 병원 수준의 효과를 제공합니다.</h3>
+            <div class="parallax__item__text t2">
+                글로벌 기준의 안전성과 실사용 검증을 갖춘 혁신 디바이스를 제공하기 위해<br>
+                독자적 R&D 센터를 운영하고 있습니다.
             </div>
         </section>
 
         <!-- device-tech section -->
         <section class="device-tech-sec">
-            <div class="device01">
+            <div class="device-bg device01">
                 <div class="device01-image"></div>
                 <div class="device01-text">
                     <h3>기기명</h3>
@@ -129,12 +129,28 @@
                     <div class="device01-video"></div>
                 </div>
             </div>
-            <div class="device02">
+            <div class="device-bg device02">
                 <div class="device02-image"></div>
                 <div class="device02-text">
                     <h3>기기명</h3>
                     <p>설명</p>
                     <div class="device02-video"></div>
+                </div>
+            </div>
+            <div class="device-bg device03">
+                <div class="device03-image"></div>
+                <div class="device03-text">
+                    <h3>기기명</h3>
+                    <p>설명</p>
+                    <div class="device03-video"></div>
+                </div>
+            </div>
+            <div class="device-bg device04">
+                <div class="device04-image"></div>
+                <div class="device04-text">
+                    <h3>기기명</h3>
+                    <p>설명</p>
+                    <div class="device04-video"></div>
                 </div>
             </div>
         </section>
@@ -175,21 +191,9 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 5,
-            spaceBetween: 30,
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="./assets/js/app.js"></script>
 </body>
