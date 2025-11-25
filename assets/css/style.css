@@ -1035,6 +1035,68 @@ body {
   background-position: bottom;
 }
 
+.value-text-area {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+.value-text-area .value-title {
+  font-size: 1.75rem;
+}
+.value-text-area .value-title span {
+  font-weight: 700;
+  font-size: rme(36);
+}
+
+.value-card-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: stretch;
+}
+.value-card-wrap .value-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #D1CFC9;
+  border-radius: 1.25rem;
+  padding: 3.125rem 0;
+  min-height: 21.875rem;
+}
+.value-card-wrap .value-card h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.value-card-wrap .value-card h5 span {
+  font-weight: 300;
+  font-size: 1rem;
+}
+.value-card-wrap .value-card p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  margin-top: 0.9375rem;
+  padding: 0 1.25rem;
+}
+.value-card-wrap .value-card:hover {
+  border-color: #1C2E4A;
+  background-color: #1C2E4A;
+}
+.value-card-wrap .value-card:hover h5 {
+  color: #fff;
+}
+.value-card-wrap .value-card:hover p {
+  color: #fff;
+  opacity: 1;
+  max-height: 31.25rem;
+}
+
 .vision-kv-sec .image-sec {
   background-image: url("../images/sub4/kv_image.jpg");
   background-position: center;
