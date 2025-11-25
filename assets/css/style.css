@@ -921,7 +921,6 @@ body {
   display: block;
 }
 .parallax__item .parallax__item__text {
-  font-size: 3rem;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -930,29 +929,105 @@ body {
   width: 100%;
   text-align: center;
 }
+.parallax__item .parallax__item__text h3 {
+  font-size: 2.25rem;
+  line-height: 1.5;
+}
 
 .device-bg {
   width: 100%;
   height: 100vh;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.device-tech-sec .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.device-tech-sec .container .device-image {
+  width: 60%;
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.device-tech-sec .container .device-text {
+  width: 40%;
+  text-align: center;
+}
+.device-tech-sec .container-re {
+  flex-direction: row-reverse;
+  color: #fff;
 }
 
 .device01 {
   background-image: url("../images/sub2/tech02.jpg");
 }
+.device01 .device01-image {
+  background-image: url("../images/sub2/device_v-ems.png");
+}
 
 .device02 {
   background-image: url("../images/sub2/tech03.jpg");
+}
+.device02 .device02-image {
+  background-image: url("../images/sub2/device_plusepro.png");
 }
 
 .device03 {
   background-image: url("../images/sub2/tech04.jpg");
 }
+.device03 .device03-image {
+  background-image: url("../images/sub2/device_neotune.png");
+}
 
 .device04 {
   background-image: url("../images/sub2/tech02.jpg");
+}
+.device04 .device04-image {
+  background-image: url("../images/sub2/device_hisonic.png");
+}
+
+.research-sec {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/sub2/tech05.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.research-sec::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.research-sec .parallax__item__text {
+  z-index: 2;
+}
+.research-sec .parallax__item__text h3 {
+  font-size: 4rem;
+  margin-bottom: 1.25rem;
+}
+.research-sec .parallax__item__text p {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+.research-sec .parallax__item__text p:last-child {
+  margin-bottom: 0;
 }
 
 .value-kv-sec .image-sec {
