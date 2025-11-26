@@ -6,6 +6,8 @@
 
 }
 
+
+// value section
 .value-text-area {
     text-align: center;
     margin-bottom: rem(50);
@@ -22,7 +24,7 @@
 
 .value-card-wrap {
     @include flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: rem(24);
     width: 100%;
     align-items: stretch;
@@ -69,6 +71,82 @@
                 opacity: 1;
                 max-height: rem(500);
             }
+        }
+    }
+}
+
+// achievement section
+.achieve-sec {
+    background-image: url("../images/sub3/value01.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 80vh;
+    position: relative;
+    padding: rem(100);
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .container {
+        @include flex(center, stretch);
+        position: relative;
+        z-index: 3;
+    }
+
+    .achieve-left {
+        width: 45%;
+        @include flex;
+        flex-direction: column;
+        gap: rem(24);
+    }
+
+    .achieve-right {
+        width: 55%;
+        color: #fff;
+        text-align: right;
+
+        h3 {
+            font-size: rem(36);
+            font-weight: 700;
+            margin-bottom: rem(30);
+        }
+
+        p {
+            font-size: rem(20);
+        }
+    }
+
+    .achieve-box {
+        background-color: $whiteColor;
+        clip-path: polygon(0% 0%,
+                100% 0%,
+                100% 70%,
+                95% 100%,
+                0% 100%);
+        width: 100%;
+        @include flex(left);
+        position: relative;
+        overflow: hidden;
+        color: $blackColor;
+    }
+
+    .achieve-box p {
+        padding: rem(30) rem(30);
+        font-size: rem(28);
+        font-weight: 500;
+
+        span {
+            color: $primaryColor;
+            font-weight: 700;
         }
     }
 }

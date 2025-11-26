@@ -21,15 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
             break;
 
         case "value":
-            import('').then(module => module.default());
+            import('./pages/sub-brand-value.js').then(module => module.default());
             break;
 
         case "vision":
-            import('').then(module => module.default());
+            import('./pages/sub-vision.js').then(module => module.default());
             break;
 
         case "contact":
-            import('').then(module => module.default());
+            import('./pages/sub-contact.js').then(module => module.default());
             break;
 
         default:

@@ -63,6 +63,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  word-break: keep-all;
+}
+
 h1,
 h2,
 h3,
@@ -1051,7 +1055,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1.5rem;
   width: 100%;
   align-items: stretch;
@@ -1097,11 +1100,221 @@ body {
   max-height: 31.25rem;
 }
 
+.achieve-sec {
+  background-image: url("../images/sub3/value01.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 80vh;
+  position: relative;
+  padding: 6.25rem;
+}
+.achieve-sec::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.achieve-sec .container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  z-index: 3;
+}
+.achieve-sec .achieve-left {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.achieve-sec .achieve-right {
+  width: 55%;
+  color: #fff;
+  text-align: right;
+}
+.achieve-sec .achieve-right h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+}
+.achieve-sec .achieve-right p {
+  font-size: 1.25rem;
+}
+.achieve-sec .achieve-box {
+  background-color: #fff;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 95% 100%, 0% 100%);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #121212;
+}
+.achieve-sec .achieve-box p {
+  padding: 1.875rem 1.875rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.achieve-sec .achieve-box p span {
+  color: #FFA347;
+  font-weight: 700;
+}
+
 .vision-kv-sec .image-sec {
   background-image: url("../images/sub4/kv_image.jpg");
   background-position: center;
 }
 
+.vision-sec .container h4 {
+  margin-bottom: 1.875rem;
+}
+.vision-sec .container .vision-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vision-sec .container .vision-left,
+.vision-sec .container .vision-right {
+  flex: 1;
+}
+
+.growth-sec {
+  background-image: url("../images/sub4/vision01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 6.25rem 0;
+}
+.growth-sec::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.growth-sec .container {
+  position: relative;
+  z-index: 3;
+}
+.growth-sec .growth-box-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.growth-sec .growth-box-wrap .growth-box {
+  background: #fff;
+  text-align: center;
+  padding: 3.125rem 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.growth-sec .growth-box-wrap h4 {
+  margin-bottom: 1.25rem;
+}
+.growth-sec .growth-box-wrap img {
+  margin-bottom: 1.25rem;
+}
+
+.timeline-wrap {
+  position: relative;
+}
+
+.roadmap-step-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 15vh;
+  align-items: flex-start;
+}
+
+.roadmap-step-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 0;
+  width: 0.125rem;
+  height: 100%;
+  background-color: #D1CFC9;
+  z-index: 10;
+}
+
+.year-pin {
+  position: sticky;
+  top: 6.25rem;
+  z-index: 20;
+  flex-shrink: 0;
+  margin-right: 30%;
+  color: #121212;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.roadmap-content {
+  flex-grow: 1;
+  display: block;
+  min-height: 40vh;
+}
+
+.content-block {
+  width: 100%;
+}
+
+.content-block h4 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.content-block p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #6b6b6b;
+  margin-bottom: 1.25rem;
+}
+
+.content-block img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0.625rem;
+}
+
+@media (max-width: 767px) {
+  .roadmap-step-wrapper::before {
+    display: none;
+  }
+  .roadmap-step-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+  .year-pin {
+    position: relative;
+    top: auto;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .roadmap-content {
+    padding-left: 0;
+    border-left: none;
+  }
+}
 .contact-kv-sec .image-sec {
   background-image: url("../images/sub5/kv_image.png");
   background-position: center;
