@@ -4,3 +4,16 @@
         background-position: center;
     }
 }
+
+.wrap {
+    display: flex;
+    gap: rem(24);
+}
+
+.contact-sec {
+    width: 50%;
+}
+
+.map {
+    width: 50%;
+}

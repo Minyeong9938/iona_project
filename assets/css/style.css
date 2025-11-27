@@ -1319,3 +1319,16 @@ body {
   background-image: url("../images/sub5/kv_image.png");
   background-position: center;
 }
+
+.wrap {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-sec {
+  width: 50%;
+}
+
+.map {
+  width: 50%;
+}
