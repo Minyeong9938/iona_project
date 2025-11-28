@@ -93,7 +93,8 @@ button {
 
 input,
 select,
-button {
+button,
+textarea {
   font-family: inherit;
   color: inherit;
 }
@@ -1320,15 +1321,113 @@ body {
   background-position: center;
 }
 
+.connect {
+  width: 100%;
+}
+.connect p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+.connect h3 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
 .wrap {
   display: flex;
+  gap: 3rem;
+}
+.wrap .contact-sec {
+  width: 50%;
+}
+.wrap .contact-sec .form-title {
+  margin-bottom: 1.25rem;
+}
+.wrap .contact-sec .form-title h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.wrap .contact-sec .form-row {
+  display: flex;
+  flex-direction: row;
   gap: 1.5rem;
+  margin-bottom: 1.875rem;
 }
-
-.contact-sec {
+.wrap .contact-sec .company,
+.wrap .contact-sec .person,
+.wrap .contact-sec .phone,
+.wrap .contact-sec .email,
+.wrap .contact-sec .message {
+  width: 100%;
+  padding: 0.9375rem;
+  border: 1px solid #D1CFC9;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: border-color 0.15s;
+  outline: none;
+}
+.wrap .contact-sec input:focus,
+.wrap .contact-sec textarea:focus {
+  border-color: #1C2E4A;
+}
+.wrap .contact-sec .message {
+  min-height: 11.875rem;
+  max-height: 18.75rem;
+}
+.wrap .contact-sec .submit-button {
+  background-color: #1C2E4A;
+  color: #fff;
+  padding: 0.9375rem 3.125rem;
+  border-radius: 2.5rem;
+  transition: background-color 0.2s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.wrap .contact-sec .submit-button:hover {
+  background-color: #0F1A2B;
+}
+.wrap .map {
   width: 50%;
 }
+.wrap .map h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.wrap .map .map-list {
+  padding: 1.875rem 0;
+  border-bottom: 1px solid #D1CFC9;
+}
+.wrap .map .map-list p {
+  font-size: 1rem;
+  padding: 0.625rem 0;
+}
+.wrap .map .sns-list {
+  display: flex;
+  padding: 1.875rem 0 0 0;
+  gap: 1.25rem;
+}
 
-.map {
-  width: 50%;
+@media (max-width: 1024px) {
+  .wrap {
+    flex-direction: column;
+  }
+  .wrap .contact-sec {
+    width: 100%;
+  }
+  .wrap .contact-sec .form-row {
+    flex-direction: column;
+  }
+  .wrap .contact-sec .form-row input[type=text],
+  .wrap .contact-sec .form-row input[type=email],
+  .wrap .contact-sec .form-row input[type=tel] {
+    flex: 1;
+  }
+  .wrap .map {
+    width: 100%;
+  }
 }
