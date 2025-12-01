@@ -607,25 +607,6 @@ body {
             }
         }
     }
-
-    .banner-sec {
-        height: 60vh;
-
-        .banner-bg {
-            .banner-text {
-                padding: 0 rem(20);
-
-                h2 {
-                    font-size: rem(28);
-                    margin-bottom: rem(30);
-                }
-
-                p {
-                    font-size: rem(16);
-                }
-            }
-        }
-    }
 }
 
 @media(max-width: 768px) {

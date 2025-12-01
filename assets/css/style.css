@@ -835,19 +835,6 @@ body {
   .global-sec .container .global-stats .stat-item .count-wrap span {
     font-size: 2.8125rem;
   }
-  .banner-sec {
-    height: 60vh;
-  }
-  .banner-sec .banner-bg .banner-text {
-    padding: 0 1.25rem;
-  }
-  .banner-sec .banner-bg .banner-text h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.875rem;
-  }
-  .banner-sec .banner-bg .banner-text p {
-    font-size: 1rem;
-  }
 }
 @media (max-width: 768px) {
   .cursor {
@@ -1096,10 +1083,35 @@ body {
   color: #fff;
   width: 100%;
   text-align: center;
+  /* 1. 움직임을 정의하는 @keyframes 규칙 생성 */
 }
 .parallax__item .parallax__item__text h3 {
   font-size: 2.25rem;
   line-height: 1.5;
+  margin-bottom: 3.125rem;
+}
+.parallax__item .parallax__item__text .scroll {
+  animation: scroll-bounce 1.5s ease-in-out infinite;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.parallax__item .parallax__item__text .scroll i {
+  font-size: 1.875rem;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+@keyframes scroll-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .device-bg {
