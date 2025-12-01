@@ -169,6 +169,80 @@ summary {
   height: 6.25rem;
 }
 
+.hamburger-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.875rem;
+}
+
+.close-btn {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  body.menu-open {
+    overflow: hidden;
+    height: 100vh;
+  }
+  /* header */
+  body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 8;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .hamburger-btn {
+    display: block;
+  }
+  .header-nav {
+    position: absolute;
+    top: 4.6875rem;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    background-color: #0F1A2B;
+    display: none;
+    z-index: 10;
+    padding: 100px 0;
+  }
+  .header-nav.on {
+    display: block;
+  }
+  .header-menu {
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    width: 100%;
+  }
+  .header-menu li {
+    width: 100%;
+  }
+  .header-menu li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+  .header-menu li a::after {
+    display: none;
+  }
+  .header-menu li a:hover::after {
+    width: 0;
+  }
+}
 .footer {
   background-color: #121212;
   color: #fff;
@@ -290,6 +364,7 @@ body {
   width: 100%;
   height: 48.125rem;
   position: relative;
+  margin-top: 0;
 }
 .kv-sec .kv-image-sec {
   width: 100%;
@@ -302,7 +377,7 @@ body {
   bottom: 0;
   left: 0;
 }
-.kv-sec .kv-image-sec .kv-image {
+.kv-sec .kv-image {
   width: 46.875rem;
   height: 48.125rem;
   background-image: url("../images/main/kv_image.png");
@@ -691,6 +766,121 @@ body {
   animation-delay: 0.6s;
 }
 
+@media (max-width: 1300px) {
+  .kv-sec {
+    margin-top: 6.25rem;
+    height: 40.625rem;
+  }
+  .kv-sec .kv-image {
+    display: none;
+  }
+  .kv-sec .kv-text {
+    width: 100%;
+    text-align: center;
+    top: -8.125rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .kv-sec .kv-text .kv-title {
+    font-size: 4.375rem;
+  }
+  .kv-sec .kv-text .kv-subtitle {
+    font-size: 2.25rem;
+    margin-top: 21.875rem;
+  }
+  .kv-sec .kv-text .btn-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 1024px) {
+  .about-sec .about-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .about-sec .about-box .about-text {
+    width: 100%;
+    text-align: center;
+  }
+  .about-sec .about-box .about-image {
+    width: 100%;
+    border-radius: 0.625rem;
+    height: 15.625rem;
+    object-fit: cover;
+  }
+  .about-sec .box2 {
+    margin-top: 3.75rem;
+  }
+  .tech-sec .card-info .card01 {
+    width: 280px;
+    height: 400px;
+  }
+  .tech-sec .card-info .card02 {
+    width: 400px;
+    height: 250px;
+  }
+  .tech-sec .card-info .card-title {
+    font-size: 1.25rem;
+  }
+  .global-sec {
+    height: auto;
+    padding: 3.125rem 0;
+  }
+  .global-sec .container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 0 1.25rem;
+  }
+  .global-sec .container .global-text {
+    margin-bottom: 3.125rem;
+  }
+  .global-sec .container .global-text h2 {
+    font-size: 1.75rem;
+  }
+  .global-sec .container .global-text .desc {
+    font-size: 1rem;
+  }
+  .global-sec .container .global-text .more-btn {
+    padding: 0.625rem 1.25rem;
+  }
+  .global-sec .container .global-text .more-btn i {
+    right: 0.9375rem;
+  }
+  .global-sec .container .global-text .more-btn:hover {
+    padding-right: 2.8125rem;
+  }
+  .global-sec .container .global-stats {
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+  .global-sec .container .global-stats .stat-item {
+    width: 100%;
+  }
+  .global-sec .container .global-stats .stat-item .count-wrap .count {
+    font-size: 3rem;
+    min-width: auto;
+  }
+  .global-sec .container .global-stats .stat-item .count-wrap span {
+    font-size: 3rem;
+  }
+  .banner-sec {
+    height: 60vh;
+  }
+  .banner-sec .banner-bg .banner-text {
+    padding: 0 1.25rem;
+  }
+  .banner-sec .banner-bg .banner-text h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.875rem;
+  }
+  .banner-sec .banner-bg .banner-text p {
+    font-size: 1rem;
+  }
+}
 .about-kv-sec .image-sec {
   background-image: url("../images/sub1/kv_image.jpg");
 }
@@ -1233,18 +1423,16 @@ body {
   margin-bottom: 1.25rem;
 }
 
-.timeline-wrap {
+.roadmap-sec .timeline-wrap {
   position: relative;
 }
-
-.roadmap-step-wrapper {
+.roadmap-sec .roadmap-step-wrapper {
   position: relative;
   display: flex;
   margin-bottom: 15vh;
   align-items: flex-start;
 }
-
-.roadmap-step-wrapper::before {
+.roadmap-sec .roadmap-step-wrapper::before {
   content: "";
   position: absolute;
   left: 20%;
@@ -1254,8 +1442,7 @@ body {
   background-color: #D1CFC9;
   z-index: 10;
 }
-
-.year-pin {
+.roadmap-sec .year-pin {
   position: sticky;
   top: 6.25rem;
   z-index: 20;
@@ -1265,33 +1452,27 @@ body {
   font-size: 3rem;
   font-weight: 700;
 }
-
-.roadmap-content {
+.roadmap-sec .roadmap-content {
   flex-grow: 1;
   display: block;
   min-height: 40vh;
 }
-
-.content-block {
+.roadmap-sec .content-block {
   width: 100%;
 }
-
-.content-block h4 {
+.roadmap-sec .content-block h4 {
   font-size: 2.25rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
-
-.content-block p {
+.roadmap-sec .content-block p {
   font-size: 1.25rem;
   line-height: 1.5;
   color: #6b6b6b;
   margin-bottom: 1.25rem;
 }
-
-.content-block img {
+.roadmap-sec .content-block img {
   width: 100%;
-  max-width: 800px;
   height: auto;
   border-radius: 0.625rem;
 }

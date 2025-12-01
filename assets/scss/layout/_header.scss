@@ -64,3 +64,88 @@
 .header-spacer {
     height: rem(100);
 }
+
+.hamburger-btn {
+    display: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    color: $whiteColor;
+    font-size: rem(30);
+}
+
+.close-btn {
+    display: none;
+}
+
+@media(max-width: 1024px) {
+    body.menu-open {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    /* header */
+    body.menu-open::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 8;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: rem(75);
+        right: 0;
+        width: 60vw;
+        height: 100vh;
+        background-color: $darknavyColor;
+        display: none;
+        z-index: 10;
+        padding: 100px 0;
+    }
+
+    .header-nav.on {
+        display: block;
+    }
+
+    .header-menu {
+        flex-direction: column;
+        font-size: 20px;
+        align-items: center;
+        width: 100%;
+
+        li {
+            width: 100%;
+
+            a {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+
+                &::after {
+                    display: none;
+                }
+
+                &:hover::after {
+                    width: 0;
+                }
+            }
+        }
+    }
+}

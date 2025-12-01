@@ -73,68 +73,72 @@
 }
 
 // roadmap-sec
-.timeline-wrap {
-    position: relative;
+.roadmap-sec {
+    .timeline-wrap {
+        position: relative;
+    }
+
+    .roadmap-step-wrapper {
+        position: relative;
+        display: flex;
+        margin-bottom: 15vh;
+        align-items: flex-start;
+    }
+
+    .roadmap-step-wrapper::before {
+        content: '';
+        position: absolute;
+        left: 20%;
+        top: 0;
+        width: rem(2);
+        height: 100%;
+        background-color: $grayColor;
+        z-index: 10;
+    }
+
+    .year-pin {
+        position: sticky;
+        top: rem(100);
+        z-index: 20;
+        flex-shrink: 0;
+        margin-right: 30%;
+        color: $blackColor;
+        font-size: rem(48);
+        font-weight: 700;
+    }
+
+    .roadmap-content {
+        flex-grow: 1;
+        display: block;
+        min-height: 40vh;
+    }
+
+    .content-block {
+        width: 100%;
+    }
+
+    .content-block h4 {
+        font-size: rem(36);
+        font-weight: 600;
+        margin-bottom: rem(20);
+    }
+
+    .content-block p {
+        font-size: rem(20);
+        line-height: 1.5;
+        color: $darkgrayColor;
+        margin-bottom: rem(20);
+    }
+
+    .content-block img {
+        width: 100%;
+        // max-width: 800px;
+        height: auto;
+        border-radius: rem(10);
+    }
 }
 
-.roadmap-step-wrapper {
-    position: relative;
-    display: flex;
-    margin-bottom: 15vh;
-    align-items: flex-start;
-}
 
-.roadmap-step-wrapper::before {
-    content: '';
-    position: absolute;
-    left: 20%;
-    top: 0;
-    width: rem(2);
-    height: 100%;
-    background-color: $grayColor;
-    z-index: 10;
-}
-
-.year-pin {
-    position: sticky;
-    top: rem(100);
-    z-index: 20;
-    flex-shrink: 0;
-    margin-right: 30%;
-    color: $blackColor;
-    font-size: rem(48);
-    font-weight: 700;
-}
-
-.roadmap-content {
-    flex-grow: 1;
-    display: block;
-    min-height: 40vh;
-}
-
-.content-block {
-    width: 100%;
-}
-
-.content-block h4 {
-    font-size: rem(36);
-    font-weight: 600;
-    margin-bottom: rem(20);
-}
-
-.content-block p {
-    font-size: rem(20);
-    line-height: 1.5;
-    color: $darkgrayColor;
-    margin-bottom: rem(20);
-}
-
-.content-block img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: rem(10);
-}
 
 @media (max-width: 767px) {
     .roadmap-step-wrapper::before {

@@ -14,6 +14,7 @@ body {
     width: 100%;
     height: rem(770);
     position: relative;
+    margin-top: 0;
 
     .kv-image-sec {
         width: 100%;
@@ -26,17 +27,18 @@ body {
         bottom: 0;
         left: 0;
 
-        .kv-image {
-            width: rem(750);
-            height: rem(770);
-            background-image: url("../images/main/kv_image.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            right: 3%;
-            bottom: 0;
-        }
+    }
+
+    .kv-image {
+        width: rem(750);
+        height: rem(770);
+        background-image: url("../images/main/kv_image.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 3%;
+        bottom: 0;
     }
 
     .kv-text {
@@ -493,6 +495,170 @@ body {
                     /* duration을 1.5초로 증가 */
                     animation: slideUpClip 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
                     animation-delay: 0.6s;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1300px) {
+    .kv-sec {
+        margin-top: rem(100);
+        height: rem(650);
+
+        .kv-image {
+            display: none;
+        }
+
+        .kv-text {
+            width: 100%;
+            text-align: center;
+            top: rem(-130);
+            left: 50%;
+            transform: translateX(-50%);
+
+            .kv-title {
+                font-size: rem(70);
+            }
+
+            .kv-subtitle {
+                font-size: rem(36);
+                margin-top: rem(350);
+            }
+
+            .btn-wrap {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .about-sec {
+        .about-box {
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+
+            .about-text {
+                width: 100%;
+                text-align: center;
+
+                h2 {
+                    // font-size: rem(28);
+                }
+
+                .desc {
+                    // font-size: rem(16);
+                }
+            }
+
+            .about-image {
+                width: 100%;
+                border-radius: rem(10);
+                height: rem(250);
+                object-fit: cover;
+            }
+        }
+
+        .box2 {
+            margin-top: rem(60);
+        }
+    }
+
+    .tech-sec {
+
+        .card-info {
+            .card01 {
+                width: 280px;
+                height: 400px;
+            }
+
+            .card02 {
+                width: 400px;
+                height: 250px;
+            }
+
+            .card-title {
+                font-size: rem(20);
+            }
+        }
+    }
+
+
+    .global-sec {
+        height: auto;
+        padding: rem(50) 0;
+
+        .container {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            padding: 0 rem(20);
+
+            .global-text {
+                margin-bottom: rem(50);
+
+                h2 {
+                    font-size: rem(28);
+                }
+
+                .desc {
+                    font-size: rem(16);
+                }
+
+                .more-btn {
+                    padding: rem(10) rem(20);
+
+                    i {
+                        right: rem(15);
+                    }
+
+                    &:hover {
+                        padding-right: rem(45);
+                    }
+                }
+            }
+
+            .global-stats {
+                flex-direction: column;
+                gap: rem(30);
+
+                .stat-item {
+                    width: 100%;
+
+                    .count-wrap {
+                        .count {
+                            font-size: rem(48);
+                            min-width: auto;
+                        }
+
+                        span {
+                            font-size: rem(48);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-sec {
+        height: 60vh;
+
+        .banner-bg {
+            .banner-text {
+                padding: 0 rem(20);
+
+                h2 {
+                    font-size: rem(28);
+                    margin-bottom: rem(30);
+                }
+
+                p {
+                    font-size: rem(16);
                 }
             }
         }

@@ -20,6 +20,10 @@
           <img src="./assets/images/IONA_logo.png" alt="">
         </a>
       </h1>
+
+      <button type="button" class="hamburger-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <nav class="header-nav">
         <ul class="header-menu">
           <li>
@@ -45,10 +49,9 @@
 
   <main>
     <!-- kv section -->
-    <section class="kv-sec">
-      <div class="kv-image-sec">
-        <div class="kv-image"></div>
-      </div>
+    <section class="kv-sec margin-top">
+      <div class="kv-image-sec"></div>
+      <div class="kv-image"></div>
       <div class="container">
         <div class="kv-text">
           <h2 class="kv-title">
@@ -281,12 +284,13 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({ once: true });
   </script>
   <script src="https://kit.fontawesome.com/76f79174b9.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/header.js"></script>
   <script src="./assets/js/pages/main.js"></script>
 </body>
 
