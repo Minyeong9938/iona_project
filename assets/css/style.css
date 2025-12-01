@@ -793,6 +793,13 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+  .global-sec .container .global-stats .stat-item .count-wrap .count {
+    font-size: 2.8125rem;
+    min-width: 8.125rem;
+  }
+  .global-sec .container .global-stats .stat-item .count-wrap span {
+    font-size: 2.8125rem;
+  }
 }
 @media (max-width: 1024px) {
   .about-sec .about-box {
@@ -821,6 +828,13 @@ body {
     width: 400px;
     height: 250px;
   }
+  .global-sec .container .global-stats .stat-item .count-wrap .count {
+    font-size: 2.8125rem;
+    min-width: 8.125rem;
+  }
+  .global-sec .container .global-stats .stat-item .count-wrap span {
+    font-size: 2.8125rem;
+  }
   .banner-sec {
     height: 60vh;
   }
@@ -833,6 +847,11 @@ body {
   }
   .banner-sec .banner-bg .banner-text p {
     font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
   }
 }
 .about-kv-sec .image-sec {

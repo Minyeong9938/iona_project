@@ -529,6 +529,25 @@ body {
             }
         }
     }
+
+    .global-sec {
+        .container {
+            .global-stats {
+                .stat-item {
+                    .count-wrap {
+                        .count {
+                            font-size: rem(45);
+                            min-width: rem(130);
+                        }
+
+                        span {
+                            font-size: rem(45);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 1024px) {
@@ -541,14 +560,6 @@ body {
             .about-text {
                 width: 100%;
                 text-align: center;
-
-                h2 {
-                    // font-size: rem(28);
-                }
-
-                .desc {
-                    // font-size: rem(16);
-                }
             }
 
             .about-image {
@@ -578,8 +589,24 @@ body {
         }
     }
 
+    .global-sec {
+        .container {
+            .global-stats {
+                .stat-item {
+                    .count-wrap {
+                        .count {
+                            font-size: rem(45);
+                            min-width: rem(130);
+                        }
 
-    .global-sec {}
+                        span {
+                            font-size: rem(45);
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .banner-sec {
         height: 60vh;
@@ -598,5 +625,11 @@ body {
                 }
             }
         }
+    }
+}
+
+@media(max-width: 768px) {
+    .cursor {
+        display: none;
     }
 }
