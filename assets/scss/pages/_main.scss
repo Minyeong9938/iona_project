@@ -223,10 +223,6 @@ body {
         overflow: hidden;
     }
 
-    // .swiper-wrapper {
-    //     display: flex;
-    // }
-
     .swiper-slide {
         width: auto;
         flex-shrink: 0;
@@ -247,7 +243,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: 10px;
+        padding-bottom: rem(10);
 
         img {
             display: block;
@@ -569,7 +565,6 @@ body {
     }
 
     .tech-sec {
-
         .card-info {
             .card01 {
                 width: 280px;
@@ -580,70 +575,11 @@ body {
                 width: 400px;
                 height: 250px;
             }
-
-            .card-title {
-                font-size: rem(20);
-            }
         }
     }
 
 
-    .global-sec {
-        height: auto;
-        padding: rem(50) 0;
-
-        .container {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none;
-            padding: 0 rem(20);
-
-            .global-text {
-                margin-bottom: rem(50);
-
-                h2 {
-                    font-size: rem(28);
-                }
-
-                .desc {
-                    font-size: rem(16);
-                }
-
-                .more-btn {
-                    padding: rem(10) rem(20);
-
-                    i {
-                        right: rem(15);
-                    }
-
-                    &:hover {
-                        padding-right: rem(45);
-                    }
-                }
-            }
-
-            .global-stats {
-                flex-direction: column;
-                gap: rem(30);
-
-                .stat-item {
-                    width: 100%;
-
-                    .count-wrap {
-                        .count {
-                            font-size: rem(48);
-                            min-width: auto;
-                        }
-
-                        span {
-                            font-size: rem(48);
-                        }
-                    }
-                }
-            }
-        }
-    }
+    .global-sec {}
 
     .banner-sec {
         height: 60vh;

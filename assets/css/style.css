@@ -554,7 +554,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 }
 .tech-sec .card-info img {
   display: block;
@@ -820,52 +820,6 @@ body {
   .tech-sec .card-info .card02 {
     width: 400px;
     height: 250px;
-  }
-  .tech-sec .card-info .card-title {
-    font-size: 1.25rem;
-  }
-  .global-sec {
-    height: auto;
-    padding: 3.125rem 0;
-  }
-  .global-sec .container {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    padding: 0 1.25rem;
-  }
-  .global-sec .container .global-text {
-    margin-bottom: 3.125rem;
-  }
-  .global-sec .container .global-text h2 {
-    font-size: 1.75rem;
-  }
-  .global-sec .container .global-text .desc {
-    font-size: 1rem;
-  }
-  .global-sec .container .global-text .more-btn {
-    padding: 0.625rem 1.25rem;
-  }
-  .global-sec .container .global-text .more-btn i {
-    right: 0.9375rem;
-  }
-  .global-sec .container .global-text .more-btn:hover {
-    padding-right: 2.8125rem;
-  }
-  .global-sec .container .global-stats {
-    flex-direction: column;
-    gap: 1.875rem;
-  }
-  .global-sec .container .global-stats .stat-item {
-    width: 100%;
-  }
-  .global-sec .container .global-stats .stat-item .count-wrap .count {
-    font-size: 3rem;
-    min-width: auto;
-  }
-  .global-sec .container .global-stats .stat-item .count-wrap span {
-    font-size: 3rem;
   }
   .banner-sec {
     height: 60vh;
