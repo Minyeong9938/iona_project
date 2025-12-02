@@ -1130,19 +1130,37 @@ body {
   align-items: center;
 }
 .device-tech-sec .container .device-image {
-  width: 60%;
+  width: 50%;
   height: 80%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
-.device-tech-sec .container .device-text {
-  width: 40%;
-  text-align: center;
-}
 .device-tech-sec .container-re {
   flex-direction: row-reverse;
   color: #fff;
+}
+.device-tech-sec .device-text {
+  text-align: right;
+  width: 50%;
+}
+.device-tech-sec .device-text h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 3.125rem;
+}
+.device-tech-sec .device-text p {
+  font-size: 1.5rem;
+  margin-bottom: 3.125rem;
+}
+.device-tech-sec .device-text .desc {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 3.125rem;
+}
+.device-tech-sec .device-video img {
+  width: 30%;
+  height: auto;
 }
 
 .device01 {
@@ -1158,12 +1176,18 @@ body {
 .device02 .device02-image {
   background-image: url("../images/sub2/device_plusepro.png");
 }
+.device02 .device-text {
+  text-align: left;
+}
 
 .device03 {
   background-image: url("../images/sub2/tech04.jpg");
 }
 .device03 .device03-image {
   background-image: url("../images/sub2/device_neotune.png");
+}
+.device03 .device-text {
+  text-align: left;
 }
 
 .device04 {
@@ -1208,6 +1232,12 @@ body {
 }
 .research-sec .parallax__item__text p:last-child {
   margin-bottom: 0;
+}
+.research-sec .parallax__item__text .scroll i {
+  font-size: 1.25rem;
+}
+.research-sec .parallax__item__text .scroll p {
+  font-size: 1.25rem;
 }
 
 .value-kv-sec .image-sec {
