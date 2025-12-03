@@ -503,9 +503,9 @@ body {
         }
 
         .kv-text {
-            top: rem(-10);
             width: 100%;
             text-align: center;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
 
@@ -515,7 +515,7 @@ body {
 
             .kv-subtitle {
                 font-size: rem(36);
-                margin-top: rem(350);
+                margin-top: rem(300);
             }
 
             .btn-wrap {
@@ -605,8 +605,38 @@ body {
     }
 }
 
+@media(max-width: 870px) {
+    .global-sec {
+        .container {
+            .global-stats {
+                .stat-item {
+                    .count-wrap {
+                        .count {
+                            font-size: rem(36);
+                            min-width: rem(100);
+                        }
+
+                        span {
+                            font-size: rem(36);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media(max-width: 768px) {
     .cursor {
         display: none;
+    }
+
+    .global-sec {
+        .container {
+            .global-stats {
+                flex-direction: column;
+                gap: rem(20);
+            }
+        }
     }
 }

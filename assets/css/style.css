@@ -773,9 +773,9 @@ body {
     display: none;
   }
   .kv-sec .kv-text {
-    top: -0.625rem;
     width: 100%;
     text-align: center;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -784,7 +784,7 @@ body {
   }
   .kv-sec .kv-text .kv-subtitle {
     font-size: 2.25rem;
-    margin-top: 21.875rem;
+    margin-top: 18.75rem;
   }
   .kv-sec .kv-text .btn-wrap {
     position: absolute;
@@ -834,9 +834,22 @@ body {
     font-size: 2.8125rem;
   }
 }
+@media (max-width: 870px) {
+  .global-sec .container .global-stats .stat-item .count-wrap .count {
+    font-size: 2.25rem;
+    min-width: 6.25rem;
+  }
+  .global-sec .container .global-stats .stat-item .count-wrap span {
+    font-size: 2.25rem;
+  }
+}
 @media (max-width: 768px) {
   .cursor {
     display: none;
+  }
+  .global-sec .container .global-stats {
+    flex-direction: column;
+    gap: 1.25rem;
   }
 }
 .about-kv-sec .image-sec {
