@@ -12,13 +12,12 @@ body {
 // kv section
 .kv-sec {
     width: 100%;
-    height: rem(770);
+    height: 85vh;
     position: relative;
-    margin-top: 0;
 
     .kv-image-sec {
         width: 100%;
-        height: rem(700);
+        height: 75vh;
         background-image: url("../images/main/kv_background.jpg");
         background-position: center;
         background-repeat: no-repeat;
@@ -43,7 +42,7 @@ body {
 
     .kv-text {
         position: absolute;
-        top: rem(-25);
+        top: rem(-15);
         color: $whiteColor;
 
         span {
@@ -499,17 +498,14 @@ body {
 
 @media(max-width: 1300px) {
     .kv-sec {
-        margin-top: rem(100);
-        height: rem(650);
-
         .kv-image {
             display: none;
         }
 
         .kv-text {
+            top: rem(-10);
             width: 100%;
             text-align: center;
-            top: rem(-130);
             left: 50%;
             transform: translateX(-50%);
 
