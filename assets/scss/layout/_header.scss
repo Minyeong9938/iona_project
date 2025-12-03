@@ -107,7 +107,7 @@
             flex-direction: column;
             font-size: 20px;
             width: 100%;
-            gap: rem(60);
+            gap: rem(90);
 
             li {
                 width: 100%;
@@ -142,6 +142,46 @@
         display: none;
         z-index: 10;
         padding: 100px 0;
+    }
+
+    .header-nav.on {
+        display: block;
+    }
+
+    .header-spacer {
+        height: rem(175);
+    }
+}
+
+@media(max-width: 768px) {
+    .header {
+
+        .header-menu {
+            font-size: 18px;
+            gap: rem(60);
+        }
+    }
+
+    .header-nav {
+        width: 60vw;
+        padding: 80px 0;
+    }
+
+    .header-spacer {
+        height: rem(175);
+    }
+}
+
+@media(max-width: 480px) {
+    .header {
+        .header-menu {
+            font-size: 16px;
+            gap: rem(30);
+        }
+    }
+
+    .header-nav {
+        padding: 30px 0;
     }
 
     .header-nav.on {
