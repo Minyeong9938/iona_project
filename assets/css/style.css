@@ -254,7 +254,7 @@ summary {
     padding: 80px 0;
   }
   .header-spacer {
-    height: 7.8125rem;
+    height: 9.6875rem;
   }
 }
 @media (max-width: 480px) {
@@ -266,7 +266,7 @@ summary {
     padding: 50px 0;
   }
   .header-spacer {
-    height: 7.8125rem;
+    height: 8.4375rem;
   }
 }
 .footer {
@@ -915,14 +915,18 @@ body {
     background-color: aliceblue;
   }
   .margin-top {
-    margin-top: 3.125rem;
+    margin-top: 5rem;
   }
   .cursor {
     display: none;
   }
+  .global-sec .container .global-text {
+    text-align: center;
+    margin-bottom: 6.25rem;
+  }
   .global-sec .container .global-stats {
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 3.125rem;
   }
 }
 .about-kv-sec .image-sec {
