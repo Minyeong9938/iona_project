@@ -157,7 +157,6 @@
     .header {
 
         .header-menu {
-            font-size: 18px;
             gap: rem(60);
         }
     }
@@ -168,13 +167,14 @@
     }
 
     .header-spacer {
-        height: rem(175);
+        height: rem(125);
     }
 }
 
 @media(max-width: 480px) {
     .header {
         .header-menu {
+            font-size: 18px;
             gap: rem(50);
         }
     }

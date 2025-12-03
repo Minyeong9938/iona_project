@@ -247,7 +247,6 @@ summary {
 }
 @media (max-width: 768px) {
   .header .header-menu {
-    font-size: 18px;
     gap: 3.75rem;
   }
   .header-nav {
@@ -255,11 +254,12 @@ summary {
     padding: 80px 0;
   }
   .header-spacer {
-    height: 10.9375rem;
+    height: 7.8125rem;
   }
 }
 @media (max-width: 480px) {
   .header .header-menu {
+    font-size: 18px;
     gap: 3.125rem;
   }
   .header-nav {
@@ -845,11 +845,12 @@ body {
   .about-sec .about-box {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.875rem;
   }
   .about-sec .about-box .about-text {
     width: 100%;
     text-align: center;
+    padding: 0;
   }
   .about-sec .about-box .about-text h2 {
     font-size: 2rem;
@@ -912,6 +913,9 @@ body {
 @media (max-width: 768px) {
   body {
     background-color: aliceblue;
+  }
+  .margin-top {
+    margin-top: 3.125rem;
   }
   .cursor {
     display: none;

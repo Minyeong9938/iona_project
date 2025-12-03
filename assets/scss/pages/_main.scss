@@ -581,11 +581,12 @@ body {
         .about-box {
             display: flex;
             flex-direction: column;
-            gap: rem(20);
+            gap: rem(30);
 
             .about-text {
                 width: 100%;
                 text-align: center;
+                padding: 0;
 
                 h2 {
                     font-size: rem(32);
@@ -706,6 +707,10 @@ body {
 @media(max-width: 768px) {
     body {
         background-color: aliceblue;
+    }
+
+    .margin-top {
+        margin-top: rem(50);
     }
 
     .cursor {
