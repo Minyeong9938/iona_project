@@ -242,6 +242,9 @@ summary {
   .header-menu li a:hover::after {
     width: 0;
   }
+  .header-spacer {
+    height: 10.9375rem;
+  }
 }
 .footer {
   background-color: #121212;
