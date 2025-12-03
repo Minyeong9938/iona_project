@@ -205,6 +205,25 @@ summary {
     top: 0;
     left: 0;
   }
+  .header .header-menu {
+    flex-direction: column;
+    font-size: 20px;
+    width: 100%;
+    gap: 5rem;
+  }
+  .header .header-menu li {
+    width: 100%;
+  }
+  .header .header-menu li a {
+    display: block;
+    text-align: center;
+  }
+  .header .header-menu li a::after {
+    display: none;
+  }
+  .header .header-menu li a:hover::after {
+    width: 0;
+  }
   .hamburger-btn {
     display: block;
   }
@@ -212,7 +231,7 @@ summary {
     position: absolute;
     top: 4.6875rem;
     right: 0;
-    width: 60vw;
+    width: 40vw;
     height: 100vh;
     background-color: #0F1A2B;
     display: none;
@@ -221,26 +240,6 @@ summary {
   }
   .header-nav.on {
     display: block;
-  }
-  .header-menu {
-    flex-direction: column;
-    font-size: 20px;
-    align-items: center;
-    width: 100%;
-  }
-  .header-menu li {
-    width: 100%;
-  }
-  .header-menu li a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-  }
-  .header-menu li a::after {
-    display: none;
-  }
-  .header-menu li a:hover::after {
-    width: 0;
   }
   .header-spacer {
     height: 10.9375rem;
@@ -791,15 +790,34 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+  .global-sec .container .global-text h2 {
+    font-size: 2.25rem;
+  }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
-    font-size: 2.8125rem;
-    min-width: 8.125rem;
+    font-size: 3rem;
+    min-width: 6.875rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
-    font-size: 2.8125rem;
+    font-size: 3rem;
   }
 }
 @media (max-width: 1024px) {
+  .kv-sec {
+    height: 75vh;
+  }
+  .kv-sec .kv-image-sec {
+    height: 66vh;
+  }
+  .kv-sec .kv-text .kv-title {
+    font-size: 4rem;
+  }
+  .kv-sec .kv-text .kv-subtitle {
+    font-size: 1.75rem;
+  }
+  .kv-sec .more-btn {
+    width: 8.125rem;
+    font-size: 1.125rem;
+  }
   .about-sec .about-box {
     display: flex;
     flex-direction: column;
@@ -809,6 +827,18 @@ body {
     width: 100%;
     text-align: center;
   }
+  .about-sec .about-box .about-text h2 {
+    font-size: 2rem;
+  }
+  .about-sec .about-box .about-text h2 br {
+    display: none;
+  }
+  .about-sec .about-box .about-text .desc {
+    font-size: 1.125rem;
+  }
+  .about-sec .about-box .about-text .btn-wrap button {
+    font-size: 1.125rem;
+  }
   .about-sec .about-box .about-image {
     width: 100%;
     border-radius: 0.625rem;
@@ -816,7 +846,10 @@ body {
     object-fit: cover;
   }
   .about-sec .box2 {
-    margin-top: 3.75rem;
+    margin-top: 3.125rem;
+  }
+  .tech-sec .container h2 {
+    font-size: 2rem;
   }
   .tech-sec .card-info .card01 {
     width: 280px;
@@ -826,12 +859,21 @@ body {
     width: 400px;
     height: 250px;
   }
+  .tech-sec .card-title {
+    font-size: 1.25rem;
+  }
+  .global-sec .container .global-text h2 {
+    font-size: 1.75rem;
+  }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
-    font-size: 2.8125rem;
-    min-width: 8.125rem;
+    font-size: 2.5rem;
+    min-width: 7.5rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
-    font-size: 2.8125rem;
+    font-size: 2.5rem;
+  }
+  .banner-sec .banner-bg .banner-text h2 {
+    font-size: 2.25rem;
   }
 }
 @media (max-width: 870px) {
@@ -844,6 +886,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  body {
+    background-color: aliceblue;
+  }
   .cursor {
     display: none;
   }

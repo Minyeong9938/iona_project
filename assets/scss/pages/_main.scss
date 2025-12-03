@@ -528,16 +528,22 @@ body {
 
     .global-sec {
         .container {
+            .global-text {
+                h2 {
+                    font-size: rem(36);
+                }
+            }
+
             .global-stats {
                 .stat-item {
                     .count-wrap {
                         .count {
-                            font-size: rem(45);
-                            min-width: rem(130);
+                            font-size: rem(48);
+                            min-width: rem(110);
                         }
 
                         span {
-                            font-size: rem(45);
+                            font-size: rem(48);
                         }
                     }
                 }
@@ -547,6 +553,30 @@ body {
 }
 
 @media(max-width: 1024px) {
+
+    .kv-sec {
+        height: 75vh;
+
+        .kv-image-sec {
+            height: 66vh;
+        }
+
+        .kv-text {
+            .kv-title {
+                font-size: rem(64);
+            }
+
+            .kv-subtitle {
+                font-size: rem(28);
+            }
+        }
+
+        .more-btn {
+            width: rem(130);
+            font-size: rem(18);
+        }
+    }
+
     .about-sec {
         .about-box {
             display: flex;
@@ -556,7 +586,26 @@ body {
             .about-text {
                 width: 100%;
                 text-align: center;
+
+                h2 {
+                    font-size: rem(32);
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                .desc {
+                    font-size: rem(18);
+                }
+
+                .btn-wrap {
+                    button {
+                        font-size: rem(18);
+                    }
+                }
             }
+
 
             .about-image {
                 width: 100%;
@@ -567,11 +616,17 @@ body {
         }
 
         .box2 {
-            margin-top: rem(60);
+            margin-top: rem(50);
         }
     }
 
     .tech-sec {
+        .container {
+            h2 {
+                font-size: rem(32);
+            }
+        }
+
         .card-info {
             .card01 {
                 width: 280px;
@@ -583,27 +638,49 @@ body {
                 height: 250px;
             }
         }
+
+        .card-title {
+            font-size: rem(20);
+        }
     }
 
     .global-sec {
         .container {
+
+            .global-text {
+                h2 {
+                    font-size: rem(28);
+                }
+            }
+
             .global-stats {
                 .stat-item {
                     .count-wrap {
                         .count {
-                            font-size: rem(45);
-                            min-width: rem(130);
+                            font-size: rem(40);
+                            min-width: rem(120);
                         }
 
                         span {
-                            font-size: rem(45);
+                            font-size: rem(40);
                         }
                     }
                 }
             }
         }
     }
+
+    .banner-sec {
+        .banner-bg {
+            .banner-text {
+                h2 {
+                    font-size: rem(36);
+                }
+            }
+        }
+    }
 }
+
 
 @media(max-width: 870px) {
     .global-sec {
@@ -627,6 +704,10 @@ body {
 }
 
 @media(max-width: 768px) {
+    body {
+        background-color: aliceblue;
+    }
+
     .cursor {
         display: none;
     }

@@ -102,6 +102,30 @@
         position: fixed;
         top: 0;
         left: 0;
+
+        .header-menu {
+            flex-direction: column;
+            font-size: 20px;
+            width: 100%;
+            gap: rem(80);
+
+            li {
+                width: 100%;
+
+                a {
+                    display: block;
+                    text-align: center;
+
+                    &::after {
+                        display: none;
+                    }
+
+                    &:hover::after {
+                        width: 0;
+                    }
+                }
+            }
+        }
     }
 
     .hamburger-btn {
@@ -112,7 +136,7 @@
         position: absolute;
         top: rem(75);
         right: 0;
-        width: 60vw;
+        width: 40vw;
         height: 100vh;
         background-color: $darknavyColor;
         display: none;
@@ -122,31 +146,6 @@
 
     .header-nav.on {
         display: block;
-    }
-
-    .header-menu {
-        flex-direction: column;
-        font-size: 20px;
-        align-items: center;
-        width: 100%;
-
-        li {
-            width: 100%;
-
-            a {
-                display: block;
-                text-align: center;
-                text-decoration: none;
-
-                &::after {
-                    display: none;
-                }
-
-                &:hover::after {
-                    width: 0;
-                }
-            }
-        }
     }
 
     .header-spacer {
