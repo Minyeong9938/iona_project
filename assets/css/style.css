@@ -910,7 +910,7 @@ body {
 }
 @media (max-width: 870px) {
   .kv-sec .kv-text {
-    top: 10%;
+    top: 2%;
   }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 2.25rem;
