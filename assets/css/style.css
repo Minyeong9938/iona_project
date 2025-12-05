@@ -839,9 +839,6 @@ body {
   .kv-sec .kv-image-sec {
     height: 66vh;
   }
-  .kv-sec .kv-text {
-    top: 10%;
-  }
   .kv-sec .kv-text .kv-title {
     font-size: 4rem;
   }
@@ -912,6 +909,9 @@ body {
   }
 }
 @media (max-width: 870px) {
+  .kv-sec .kv-text {
+    top: 10%;
+  }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 2.25rem;
     min-width: 6.25rem;

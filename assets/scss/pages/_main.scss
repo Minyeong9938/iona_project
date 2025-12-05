@@ -562,8 +562,6 @@ body {
         }
 
         .kv-text {
-            top: 10%;
-
             .kv-title {
                 font-size: rem(64);
             }
@@ -686,6 +684,12 @@ body {
 
 
 @media(max-width: 870px) {
+    .kv-sec {
+        .kv-text {
+            top: 10%;
+        }
+    }
+
     .global-sec {
         .container {
             .global-stats {
