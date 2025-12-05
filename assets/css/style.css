@@ -897,6 +897,9 @@ body {
   .tech-sec .card-title {
     font-size: 1.25rem;
   }
+  .global-sec {
+    height: 70vh;
+  }
   .global-sec .container .global-text h2 {
     font-size: 1.75rem;
   }
