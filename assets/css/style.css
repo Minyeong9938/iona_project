@@ -910,6 +910,9 @@ body {
   .global-sec .container .global-stats .stat-item .count-wrap span {
     font-size: 2.5rem;
   }
+  .banner-sec {
+    height: 60vh;
+  }
   .banner-sec .banner-bg .banner-text h2 {
     font-size: 2.25rem;
   }
