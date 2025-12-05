@@ -1734,4 +1734,7 @@ body {
   .wrap .map {
     width: 100%;
   }
+  .wrap .map #map {
+    min-height: 350px;
+  }
 }
