@@ -422,7 +422,7 @@ body {
 }
 .kv-sec .kv-text {
   position: absolute;
-  top: -0.9375rem;
+  top: 0;
   color: #fff;
 }
 .kv-sec .kv-text span {
