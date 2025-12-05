@@ -839,6 +839,9 @@ body {
   .kv-sec .kv-image-sec {
     height: 66vh;
   }
+  .kv-sec .kv-text {
+    top: 10%;
+  }
   .kv-sec .kv-text .kv-title {
     font-size: 4rem;
   }
