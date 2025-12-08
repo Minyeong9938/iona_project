@@ -8,21 +8,49 @@
 // vision section
 .vision-sec {
     .container {
+
+        .vision-wrap {
+            display: flex;
+        }
+
         h4 {
             margin-bottom: rem(30);
+            font-size: rem(20);
+            font-weight: 300;
         }
 
         .vision-wrap {
             @include flex;
         }
 
-        .vision-left,
+        .vision-left {
+            width: 60%;
+
+            h3 {
+                font-size: rem(36);
+                font-weight: 600;
+            }
+        }
+
         .vision-right {
-            flex: 1;
+            width: 40%;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: -30%;
+                left: -5%;
+            }
+
+            p {
+                font-size: rem(20);
+                font-weight: 300;
+            }
         }
     }
 }
 
+// growth section
 .growth-sec {
     background-image: url("../images/sub4/vision01.jpg");
     background-size: cover;
@@ -147,6 +175,21 @@
 
 
 @media (max-width: 767px) {
+    .growth-box {
+        background: $whiteColor;
+        text-align: center;
+        padding: rem(50) 0;
+        flex: 1;
+        @include flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background: $whiteColor !important;
+            color: $blackColor !important;
+        }
+    }
+
     .roadmap-step-wrapper::before {
         display: none;
     }
@@ -158,8 +201,8 @@
     }
 
     .year-pin {
-        position: relative;
-        top: auto;
+        position: relative !important;
+        top: auto !important;
         margin-right: 0;
         margin-bottom: 1rem;
     }

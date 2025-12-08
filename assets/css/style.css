@@ -1384,6 +1384,7 @@ body {
   border-radius: 1.25rem;
   padding: 3.125rem 0;
   min-height: 21.875rem;
+  transition: all 0.4s ease-in-out;
 }
 .value-card-wrap .value-card h5 {
   font-size: 1.5rem;
@@ -1432,6 +1433,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 .achieve-sec .container {
   display: flex;
@@ -1487,17 +1489,38 @@ body {
   background-position: center;
 }
 
+.vision-sec .container .vision-wrap {
+  display: flex;
+}
 .vision-sec .container h4 {
   margin-bottom: 1.875rem;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 .vision-sec .container .vision-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.vision-sec .container .vision-left,
+.vision-sec .container .vision-left {
+  width: 60%;
+}
+.vision-sec .container .vision-left h3 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
 .vision-sec .container .vision-right {
-  flex: 1;
+  width: 40%;
+  position: relative;
+}
+.vision-sec .container .vision-right img {
+  position: absolute;
+  top: -30%;
+  left: -5%;
+}
+.vision-sec .container .vision-right p {
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .growth-sec {
@@ -1606,6 +1629,21 @@ body {
 }
 
 @media (max-width: 767px) {
+  .growth-box {
+    background: #fff;
+    text-align: center;
+    padding: 3.125rem 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+  }
+  .growth-box:hover {
+    background: #fff !important;
+    color: #121212 !important;
+  }
   .roadmap-step-wrapper::before {
     display: none;
   }
@@ -1615,8 +1653,8 @@ body {
     margin-bottom: 5vh;
   }
   .year-pin {
-    position: relative;
-    top: auto;
+    position: relative !important;
+    top: auto !important;
     margin-right: 0;
     margin-bottom: 1rem;
   }

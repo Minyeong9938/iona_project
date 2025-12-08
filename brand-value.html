@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IONA</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -59,9 +60,9 @@
         <section class="value-sec margin-top">
             <div class="container">
                 <div class="value-text-area">
-                    <img src="./assets/images/sub3/quotes.png" alt="">
                     <div class="value-title">
                         <p>
+                            <img src="./assets/images/sub3/quotes.png" alt="">
                             <span>아이오나</span>는 끊임없는 연구와 혁신, 철저한 검증을 바탕으로<br>
                             고객에게 신뢰할 수 있는 기술과 솔루션을 제공하며, 지속가능한 발전을 추구하는 것입니다.
                         </p>
@@ -137,33 +138,38 @@
         <section class="achieve-sec margin-top">
             <div class="container">
                 <div class="achieve-left">
-                    <div class="achieve-box">
+                    <div class="achieve-box" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000">
                         <p>
                             4종 핵심 디바이스, 개발 <span>25건</span> 특허
                         </p>
                     </div>
-                    <div class="achieve-box">
+                    <div class="achieve-box" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000">
                         <p>
                             95% 사용자 만족, <span>320건</span> 임상
                         </p>
                     </div>
-                    <div class="achieve-box">
+                    <div class="achieve-box" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000">
                         <p>
                             8주 사용 후, <span>85%</span> 피부개선
                         </p>
                     </div>
-                    <div class="achieve-box">
+                    <div class="achieve-box" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000">
                         <p>
                             15개 기능 업그레이드, <span>30개국</span> 진출
                         </p>
                     </div>
-                    <div class="achieve-box">
+                    <div class="achieve-box" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000">
                         <p>
                             친환경 100% 도입, 탄소 중립 생산 <span>70%</span> 달성
                         </p>
                     </div>
                 </div>
-                <div class="achieve-right">
+                <div class="achieve-right" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1000">
                     <h3>아이오나의 가치로 이뤄낸<br>성취를 소개합니다</h3>
                     <p>고객을 위한 더 나은 제품을 위해 <br>아이오나는 계속 성장합니다</p>
                 </div>
@@ -207,6 +213,11 @@
 
     <script src="https://kit.fontawesome.com/76f79174b9.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
     <script src="./assets/js/header.js"></script>
     <script type="module" src="./assets/js/pages/sub-brand-value.js"></script>
 </body>
