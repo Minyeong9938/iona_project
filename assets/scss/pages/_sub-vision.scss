@@ -59,6 +59,12 @@
             flex: 1;
             @include flex;
             flex-direction: column;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $navyColor;
+                color: $whiteColor;
+            }
         }
 
         h4 {

@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IONA</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body data-page="vision">
+<body>
 
     <header class="header">
         <div class="container">
@@ -76,28 +77,28 @@
         <!-- growth section -->
         <section class="growth-sec margin-top">
             <div class="container">
-                <div class="growth-box-wrap">
+                <div class="growth-box-wrap" data-aos="fade-up" data-aos-duration="1000">
                     <div class="growth-box">
                         <h4>새로운 가능성 개척</h4>
-                        <img src="./assets/images/sub4/icon01.png" alt="">
+                        <img src="./assets/images/sub4/icon01_primary.png" alt="">
                         <p>끊임없이 연구하고 도전하여<br>
                             뷰티테크 산업의 새로운 기준을 세웁니다</p>
                     </div>
                     <div class="growth-box">
                         <h4>새로운 가능성 개척</h4>
-                        <img src="./assets/images/sub4/icon02.png" alt="">
+                        <img src="./assets/images/sub4/icon02_primary.png" alt="">
                         <p>끊임없이 연구하고 도전하여<br>
                             뷰티테크 산업의 새로운 기준을 세웁니다</p>
                     </div>
                     <div class="growth-box">
                         <h4>새로운 가능성 개척</h4>
-                        <img src="./assets/images/sub4/icon03.png" alt="">
+                        <img src="./assets/images/sub4/icon03_primary.png" alt="">
                         <p>끊임없이 연구하고 도전하여<br>
                             뷰티테크 산업의 새로운 기준을 세웁니다</p>
                     </div>
                     <div class="growth-box">
                         <h4>새로운 가능성 개척</h4>
-                        <img src="./assets/images/sub4/icon04.png" alt="">
+                        <img src="./assets/images/sub4/icon04_primary.png" alt="">
                         <p>끊임없이 연구하고 도전하여<br>
                             뷰티테크 산업의 새로운 기준을 세웁니다</p>
                     </div>
@@ -221,10 +222,14 @@
 
 
     <script src="https://kit.fontawesome.com/76f79174b9.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
     <script src="./assets/js/header.js"></script>
-    <script type="module" src="./assets/js/pages/sub-vision.js"></script>
+    <script src="./assets/js/pages/sub-vision.js"></script>
 </body>
 
 </html>
