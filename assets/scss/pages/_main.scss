@@ -4,75 +4,64 @@ body {
     color: $blackColor;
 }
 
+.header {
+    background-color: transparent;
+    color: $blackColor;
+
+    &.scrolled {
+        background-color: $navyColor;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+}
 
 .margin-top {
-    margin-top: rem(100);
+    margin-top: rem(150);
 }
 
 // kv section
 .kv-sec {
+    margin-top: rem(-75);
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     position: relative;
+    background-image: url("../images/main/kv_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
 
-    .kv-image-sec {
-        width: 100%;
-        height: 75vh;
-        background-image: url("../images/main/kv_background.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    &::after {
+        content: '';
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
-
-    }
-
-    .kv-image {
-        width: rem(750);
-        height: rem(770);
-        background-image: url("../images/main/kv_image.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        right: 3%;
-        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 2;
     }
 
     .kv-text {
-        position: absolute;
-        top: 0;
+        position: relative;
+        z-index: 3;
+        padding-top: 230px;
         color: $whiteColor;
 
-        span {
-            display: block;
-
-            &.first {
-                color: $blackColor;
-            }
-        }
-
         .kv-title {
-            font-size: rem(80);
-            overflow: hidden;
+            font-size: rem(64);
         }
 
         .kv-subtitle {
-            font-size: rem(40);
-            margin-top: rem(250);
+            font-size: rem(36);
             font-weight: 700;
-            overflow: hidden;
         }
 
         .kv-desc {
             font-size: rem(24);
-            margin-top: rem(10);
-            overflow: hidden;
         }
 
         .btn-wrap {
-            overflow: hidden;
             margin-top: rem(25);
         }
 
@@ -170,6 +159,7 @@ body {
 
         .about-image {
             width: 55%;
+            height: rem(500);
             border-radius: 0 0 0 rem(80);
         }
     }
@@ -497,35 +487,6 @@ body {
 }
 
 @media(max-width: 1300px) {
-    .kv-sec {
-        .kv-image {
-            display: none;
-        }
-
-        .kv-text {
-            width: 100%;
-            text-align: center;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-
-            .kv-title {
-                font-size: rem(70);
-            }
-
-            .kv-subtitle {
-                font-size: rem(36);
-                margin-top: rem(300);
-            }
-
-            .btn-wrap {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-    }
-
     .global-sec {
         .container {
             .global-text {
@@ -553,33 +514,6 @@ body {
 }
 
 @media(max-width: 1024px) {
-
-    .kv-sec {
-        height: 75vh;
-
-        .kv-image-sec {
-            height: 66vh;
-        }
-
-        .kv-text {
-            top: 4%;
-
-            .kv-title {
-                font-size: rem(64);
-            }
-
-            .kv-subtitle {
-                font-size: rem(28);
-                margin-top: rem(500);
-            }
-        }
-
-        .more-btn {
-            width: rem(130);
-            font-size: rem(18);
-        }
-    }
-
     .about-sec {
         .about-box {
             display: flex;
@@ -691,12 +625,6 @@ body {
 
 
 @media(max-width: 870px) {
-    .kv-sec {
-        .kv-text {
-            top: 10%;
-        }
-    }
-
     .global-sec {
         .container {
             .global-stats {

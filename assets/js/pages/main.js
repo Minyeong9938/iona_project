@@ -1,3 +1,25 @@
+// --- main.js 파일에 추가할 코드 ---
+
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.header');
+    const kvSec = document.querySelector('.kv-sec');
+
+    if (!header || !kvSec) return;
+
+    function handleHeaderScroll() {
+        const kvBottom = kvSec.offsetTop + kvSec.offsetHeight;
+
+        if (window.scrollY > kvBottom) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    handleHeaderScroll();
+    window.addEventListener('scroll', handleHeaderScroll);
+});
+
 // tech section
 const techSec = document.querySelector(".tech-sec");
 const cursor = document.querySelector(".cursor");

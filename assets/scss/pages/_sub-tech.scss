@@ -90,6 +90,9 @@
 // innovation section
 .inno-sec {
     background-image: url("../images/sub2/tech01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: rem(160) rem(160) 0 0;
     padding: rem(100) 0;
 
@@ -178,36 +181,6 @@
             font-size: rem(36);
             line-height: 1.5;
             margin-bottom: rem(50);
-        }
-
-        .scroll {
-            animation: scroll-bounce 1.5s ease-in-out infinite;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            i {
-                font-size: rem(30);
-                display: block;
-                margin-bottom: rem(20);
-            }
-        }
-
-
-        /* 1. 움직임을 정의하는 @keyframes 규칙 생성 */
-        @keyframes scroll-bounce {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(rem(20));
-            }
-
-            100% {
-                transform: translateY(0);
-            }
         }
     }
 }
@@ -349,16 +322,6 @@
 
             &:last-child {
                 margin-bottom: 0;
-            }
-        }
-
-        .scroll {
-            i {
-                font-size: rem(20);
-            }
-
-            p {
-                font-size: rem(20);
             }
         }
     }

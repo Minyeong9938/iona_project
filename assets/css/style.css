@@ -165,10 +165,6 @@ summary {
   width: 100%;
 }
 
-.header-spacer {
-  height: 6.25rem;
-}
-
 .hamburger-btn {
   display: none;
   border: none;
@@ -389,65 +385,58 @@ body {
   color: #121212;
 }
 
+.header {
+  background-color: transparent;
+  color: #121212;
+}
+.header.scrolled {
+  background-color: #1C2E4A;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .margin-top {
-  margin-top: 6.25rem;
+  margin-top: 9.375rem;
 }
 
 .kv-sec {
+  margin-top: -4.6875rem;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   position: relative;
-}
-.kv-sec .kv-image-sec {
-  width: 100%;
-  height: 75vh;
-  background-image: url("../images/main/kv_background.jpg");
+  background-image: url("../images/main/kv_image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  z-index: 1;
 }
-.kv-sec .kv-image {
-  width: 46.875rem;
-  height: 48.125rem;
-  background-image: url("../images/main/kv_image.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  right: 3%;
-  bottom: 0;
-}
-.kv-sec .kv-text {
+.kv-sec::after {
+  content: "";
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.kv-sec .kv-text {
+  position: relative;
+  z-index: 3;
+  padding-top: 230px;
   color: #fff;
 }
-.kv-sec .kv-text span {
-  display: block;
-}
-.kv-sec .kv-text span.first {
-  color: #121212;
-}
 .kv-sec .kv-text .kv-title {
-  font-size: 5rem;
-  overflow: hidden;
+  font-size: 4rem;
 }
 .kv-sec .kv-text .kv-subtitle {
-  font-size: 2.5rem;
-  margin-top: 15.625rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  overflow: hidden;
 }
 .kv-sec .kv-text .kv-desc {
   font-size: 1.5rem;
-  margin-top: 0.625rem;
-  overflow: hidden;
 }
 .kv-sec .kv-text .btn-wrap {
-  overflow: hidden;
   margin-top: 1.5625rem;
 }
 .kv-sec .more-btn {
@@ -526,6 +515,7 @@ body {
 }
 .about-sec .about-box .about-image {
   width: 55%;
+  height: 31.25rem;
   border-radius: 0 0 0 5rem;
 }
 .about-sec .box2 {
@@ -799,28 +789,6 @@ body {
 }
 
 @media (max-width: 1300px) {
-  .kv-sec .kv-image {
-    display: none;
-  }
-  .kv-sec .kv-text {
-    width: 100%;
-    text-align: center;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .kv-sec .kv-text .kv-title {
-    font-size: 4.375rem;
-  }
-  .kv-sec .kv-text .kv-subtitle {
-    font-size: 2.25rem;
-    margin-top: 18.75rem;
-  }
-  .kv-sec .kv-text .btn-wrap {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .global-sec .container .global-text h2 {
     font-size: 2.25rem;
   }
@@ -833,26 +801,6 @@ body {
   }
 }
 @media (max-width: 1024px) {
-  .kv-sec {
-    height: 75vh;
-  }
-  .kv-sec .kv-image-sec {
-    height: 66vh;
-  }
-  .kv-sec .kv-text {
-    top: 4%;
-  }
-  .kv-sec .kv-text .kv-title {
-    font-size: 4rem;
-  }
-  .kv-sec .kv-text .kv-subtitle {
-    font-size: 1.75rem;
-    margin-top: 31.25rem;
-  }
-  .kv-sec .more-btn {
-    width: 8.125rem;
-    font-size: 1.125rem;
-  }
   .about-sec .about-box {
     display: flex;
     flex-direction: column;
@@ -919,9 +867,6 @@ body {
   }
 }
 @media (max-width: 870px) {
-  .kv-sec .kv-text {
-    top: 10%;
-  }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 2.25rem;
     min-width: 6.25rem;
@@ -1113,6 +1058,9 @@ body {
 
 .inno-sec {
   background-image: url("../images/sub2/tech01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10rem 10rem 0 0;
   padding: 6.25rem 0;
 }
@@ -1191,35 +1139,11 @@ body {
   color: #fff;
   width: 100%;
   text-align: center;
-  /* 1. 움직임을 정의하는 @keyframes 규칙 생성 */
 }
 .parallax__item .parallax__item__text h3 {
   font-size: 2.25rem;
   line-height: 1.5;
   margin-bottom: 3.125rem;
-}
-.parallax__item .parallax__item__text .scroll {
-  animation: scroll-bounce 1.5s ease-in-out infinite;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.parallax__item .parallax__item__text .scroll i {
-  font-size: 1.875rem;
-  display: block;
-  margin-bottom: 1.25rem;
-}
-@keyframes scroll-bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(1.25rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .device-bg {
@@ -1340,12 +1264,6 @@ body {
 }
 .research-sec .parallax__item__text p:last-child {
   margin-bottom: 0;
-}
-.research-sec .parallax__item__text .scroll i {
-  font-size: 1.25rem;
-}
-.research-sec .parallax__item__text .scroll p {
-  font-size: 1.25rem;
 }
 
 .value-kv-sec .image-sec {
