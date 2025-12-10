@@ -103,10 +103,26 @@ if (techSec && cursor) {
 
     const swiper = new Swiper('.mySwiper', {
         slidesPerView: 'auto',
-        spaceBetween: 60,
+        spaceBetween: 20,
         watchOverflow: true,
         centeredSlides: false,
         allowTouchMove: true,
+
+        breakpoints: {
+            480: {
+                spaceBetween: 60,
+            },
+
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
 
         on: {
             init: function () {
