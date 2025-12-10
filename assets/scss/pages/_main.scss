@@ -996,7 +996,7 @@ body {
                 }
 
                 .desc {
-                    font-size: rem(16);
+                    font-size: rem(14);
                 }
             }
 
@@ -1005,18 +1005,18 @@ body {
 
                 .stat-item {
                     p {
-                        font-size: rem(16);
+                        font-size: rem(14);
                         color: $primaryColor;
                     }
 
                     .count-wrap {
                         .count {
-                            font-size: rem(28);
-                            min-width: rem(80);
+                            font-size: rem(24);
+                            min-width: rem(70);
                         }
 
                         span {
-                            font-size: rem(28);
+                            font-size: rem(24);
                         }
                     }
                 }

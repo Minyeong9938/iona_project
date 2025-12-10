@@ -1116,21 +1116,21 @@ body {
     font-size: 1.5rem;
   }
   .global-sec .container .global-text .desc {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   .global-sec .container .global-stats {
     bottom: 30%;
   }
   .global-sec .container .global-stats .stat-item p {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: #FFA347;
   }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
-    font-size: 1.75rem;
-    min-width: 5rem;
+    font-size: 1.5rem;
+    min-width: 4.375rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .banner-sec .banner-bg .banner-text h2 {
     font-size: 1.5rem;
