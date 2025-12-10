@@ -952,7 +952,7 @@ body {
     font-size: 1.25rem;
   }
   .global-sec {
-    height: 70vh;
+    height: 80vh;
     position: relative;
   }
   .global-sec .container .global-text h2 {
@@ -960,7 +960,7 @@ body {
   }
   .global-sec .container .global-stats {
     position: absolute;
-    bottom: 20%;
+    bottom: 5%;
   }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 2.5rem;
