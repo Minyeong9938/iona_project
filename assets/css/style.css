@@ -733,10 +733,10 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap;
+  text-align: center;
 }
 .global-sec .container .global-stats .stat-item {
-  text-align: center;
+  width: 100%;
 }
 .global-sec .container .global-stats .stat-item p {
   font-size: 1.125rem;
@@ -961,11 +961,10 @@ body {
   .global-sec .container .global-text {
     margin-bottom: 0;
   }
-  .global-sec .container .global-text h2 {
-    font-size: 1.75rem;
-  }
   .global-sec .global-stats {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 20%;
   }
   .global-sec .global-stats .stat-item .count-wrap .count {
@@ -976,7 +975,7 @@ body {
     font-size: 2.5rem;
   }
   .banner-sec {
-    height: 60vh;
+    height: 80vh;
   }
   .banner-sec .banner-bg .banner-text h2 {
     font-size: 2.25rem;
