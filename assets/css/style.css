@@ -849,10 +849,41 @@ body {
   .kv-sec {
     height: 90vh;
   }
+  .kv-sec .kv-swiper {
+    width: 100%;
+    height: 100%;
+  }
   .kv-sec .kv-swiper .swiper-wrapper .swiper-slide {
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: contain;
+  }
+  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide.slide01 {
+    background: url("../images/main/kv_image01.jpg") no-repeat bottom/contain, linear-gradient(to right, #A8A6CD, #D9D2E4);
+  }
+  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide.slide02 {
+    background: url("../images/main/kv_image02.jpg") no-repeat bottom/contain, linear-gradient(to right, #E8C5C3, #FFEEEC);
+  }
+  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide.slide03 {
+    background: url("../images/main/kv_image03.jpg") no-repeat bottom/contain, linear-gradient(to right, #8EB1AA, #C9D8D3);
+  }
+  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide.slide04 {
+    background: url("../images/main/kv_image04.jpg") no-repeat bottom/contain, linear-gradient(to right, #5E7292, #BFCADB);
   }
   .kv-sec .kv-text {
     position: relative;
