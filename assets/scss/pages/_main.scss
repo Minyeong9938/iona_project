@@ -569,10 +569,21 @@ body {
 
 @media(max-width: 1024px) {
     .kv-sec {
+        .kv-swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+
         .kv-text {
             position: relative;
             z-index: 3;
-            padding-top: rem(250);
+            top: 50%;
+            transform: translateY(-50%);
 
             .kv-title {
                 font-size: rem(36);

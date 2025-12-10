@@ -846,10 +846,16 @@ body {
   }
 }
 @media (max-width: 1024px) {
+  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .kv-sec .kv-text {
     position: relative;
     z-index: 3;
-    padding-top: 15.625rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .kv-sec .kv-text .kv-title {
     font-size: 2.25rem;
