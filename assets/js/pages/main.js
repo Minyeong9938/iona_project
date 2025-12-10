@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const kvSwiper = new Swiper('.kv-swiper', {
     loop: true,
-    // autoplay: {
-    //     delay: 4000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
     effect: 'fade',
     fadeEffect: {
         crossFade: true,
