@@ -350,6 +350,7 @@ body {
 
     .container {
         width: 100%;
+        height: 100%;
         max-width: 1484px;
         position: absolute;
         top: rem(100);
@@ -716,35 +717,38 @@ body {
 
     .global-sec {
         height: 80vh;
-        position: relative;
 
         .container {
 
             .global-text {
+                margin-bottom: 0;
+
                 h2 {
                     font-size: rem(28);
                 }
             }
 
-            .global-stats {
-                position: absolute;
-                bottom: 5%;
+        }
 
-                .stat-item {
-                    .count-wrap {
-                        .count {
-                            font-size: rem(40);
-                            min-width: rem(120);
-                        }
+        .global-stats {
+            position: absolute;
+            bottom: 20%;
 
-                        span {
-                            font-size: rem(40);
-                        }
+            .stat-item {
+                .count-wrap {
+                    .count {
+                        font-size: rem(40);
+                        min-width: rem(120);
+                    }
+
+                    span {
+                        font-size: rem(40);
                     }
                 }
             }
         }
     }
+
 
     .banner-sec {
         height: 60vh;
