@@ -716,6 +716,7 @@ body {
 
     .global-sec {
         height: 70vh;
+        position: relative;
 
         .container {
 
@@ -726,6 +727,9 @@ body {
             }
 
             .global-stats {
+                position: absolute;
+                bottom: 20%;
+
                 .stat-item {
                     .count-wrap {
                         .count {
