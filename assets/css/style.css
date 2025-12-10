@@ -1042,6 +1042,10 @@ body {
   .global-sec .container .global-stats {
     bottom: 30%;
   }
+  .global-sec .container .global-stats .stat-item p {
+    font-size: 1rem;
+    color: #FFA347;
+  }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 1.75rem;
     min-width: 5rem;
@@ -1051,6 +1055,88 @@ body {
   }
   .banner-sec .banner-bg .banner-text h2 {
     font-size: 1.75rem;
+  }
+}
+@media (max-width: 580px) {
+  .global-sec {
+    height: 90vh;
+  }
+  .global-sec .global-stats {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .kv-sec .kv-text .kv-title {
+    font-size: 1.75rem;
+  }
+  .kv-sec .kv-text .kv-subtitle {
+    font-size: 1.25rem;
+  }
+  .kv-sec .kv-text .kv-desc {
+    font-size: 0.875rem;
+  }
+  .kv-sec .more-btn {
+    width: 6.25rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.625rem;
+  }
+  .margin-top {
+    margin-top: 5rem;
+  }
+  .about-sec .about-box .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .about-sec .about-box .about-text .desc {
+    font-size: 1rem;
+    padding-bottom: 1.875rem;
+  }
+  .about-sec .about-box .about-text .btn-wrap .btn-inner button {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+  }
+  .tech-sec .container h2 {
+    font-size: 1.5rem;
+  }
+  .tech-sec .card-info .card01 {
+    width: 150px;
+    height: 300px;
+  }
+  .tech-sec .card-info .card02 {
+    width: 300px;
+    height: 150px;
+  }
+  .tech-sec .card-title {
+    font-size: 1rem;
+  }
+  .global-sec .container .global-text {
+    text-align: center;
+  }
+  .global-sec .container .global-text h2 {
+    font-size: 1.5rem;
+  }
+  .global-sec .container .global-text .desc {
+    font-size: 1rem;
+  }
+  .global-sec .container .global-stats {
+    bottom: 30%;
+  }
+  .global-sec .container .global-stats .stat-item p {
+    font-size: 1rem;
+    color: #FFA347;
+  }
+  .global-sec .container .global-stats .stat-item .count-wrap .count {
+    font-size: 1.75rem;
+    min-width: 5rem;
+  }
+  .global-sec .container .global-stats .stat-item .count-wrap span {
+    font-size: 1.75rem;
+  }
+  .banner-sec .banner-bg .banner-text h2 {
+    font-size: 1.5rem;
+  }
+  .banner-sec .banner-bg .banner-text p {
+    font-size: 1rem;
   }
 }
 .about-kv-sec .image-sec {
