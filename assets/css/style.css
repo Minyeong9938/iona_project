@@ -793,6 +793,7 @@ body {
   z-index: 1;
 }
 .banner-sec .banner-bg .banner-text {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -991,11 +992,8 @@ body {
   }
 }
 @media (max-width: 768px) {
-  body {
-    background-color: aliceblue;
-  }
   .margin-top {
-    margin-top: 5rem;
+    margin-top: 6.25rem;
   }
   .cursor {
     display: none;
