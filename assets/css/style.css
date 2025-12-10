@@ -847,15 +847,15 @@ body {
 }
 @media (max-width: 1024px) {
   .kv-sec .kv-swiper .swiper-wrapper .swiper-slide {
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .kv-sec .kv-text {
     position: relative;
     z-index: 3;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
+    transform: translateY(-30%);
   }
   .kv-sec .kv-text .kv-title {
     font-size: 2.25rem;
