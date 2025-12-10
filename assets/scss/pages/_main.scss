@@ -787,24 +787,108 @@ body {
 }
 
 @media(max-width: 768px) {
+    .kv-sec {
+        .kv-text {
+            top: 30%;
+            transform: translateY(-30%);
+
+            .kv-title {
+                font-size: rem(36);
+            }
+
+            .kv-subtitle {
+                font-size: rem(24);
+            }
+
+            .kv-desc {
+                font-size: rem(20);
+            }
+        }
+
+        .more-btn {
+            width: rem(120);
+            font-size: rem(16);
+            padding: rem(10) rem(15);
+        }
+    }
+
     .margin-top {
         margin-top: rem(100);
+    }
+
+    .about-sec {
+        .about-box {
+            .about-text {
+                h2 {
+                    font-size: rem(28);
+                }
+            }
+        }
     }
 
     .cursor {
         display: none;
     }
 
+    .tech-sec {
+        .container {
+            h2 {
+                font-size: rem(28);
+            }
+        }
+
+        .card-info {
+            .card01 {
+                width: 200px;
+                height: 350px;
+            }
+
+            .card02 {
+                width: 350px;
+                height: 200px;
+            }
+        }
+
+        .card-title {
+            font-size: rem(20);
+        }
+    }
+
     .global-sec {
         .container {
             .global-text {
                 text-align: center;
-                margin-bottom: rem(200)
+
+                h2 {
+                    font-size: rem(28);
+                }
             }
 
             .global-stats {
-                flex-direction: column;
-                gap: rem(50);
+                bottom: 30%;
+
+                .stat-item {
+                    .count-wrap {
+                        .count {
+                            font-size: rem(28);
+                            min-width: rem(80);
+                        }
+
+                        span {
+                            font-size: rem(28);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-sec {
+        .banner-bg {
+            .banner-text {
+                h2 {
+                    font-size: rem(28);
+                }
             }
         }
     }
