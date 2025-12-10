@@ -626,27 +626,23 @@ body {
             transform: translateY(-30%);
 
             .kv-title {
-                font-size: rem(36);
+                font-size: rem(48);
             }
 
             .kv-subtitle {
-                font-size: rem(24);
+                font-size: rem(36);
                 font-weight: 700;
                 margin-top: rem(30);
             }
 
             .kv-desc {
-                font-size: rem(16);
+                font-size: rem(20);
                 margin-top: rem(10);
             }
 
             .btn-wrap {
                 margin-top: rem(30);
             }
-        }
-
-        .more-btn {
-            font-size: rem(16);
         }
     }
 
