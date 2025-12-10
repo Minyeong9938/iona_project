@@ -164,6 +164,9 @@ summary {
 .header .header-menu li a:hover::after {
   width: 100%;
 }
+.header .header-menu li a.active::after {
+  width: 100%;
+}
 
 .hamburger-btn {
   display: none;
@@ -237,8 +240,10 @@ summary {
   .header-nav.on {
     display: block;
   }
-  .header-spacer {
-    height: 10.9375rem;
+  body.menu-open .main-header {
+    background: #1C2E4A !important;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 }
 @media (max-width: 768px) {
@@ -249,9 +254,6 @@ summary {
     width: 60vw;
     padding: 80px 0;
   }
-  .header-spacer {
-    height: 9.6875rem;
-  }
 }
 @media (max-width: 480px) {
   .header .header-menu {
@@ -260,9 +262,6 @@ summary {
   }
   .header-nav {
     padding: 50px 0;
-  }
-  .header-spacer {
-    height: 8.4375rem;
   }
 }
 .footer {
@@ -385,11 +384,11 @@ body {
   color: #121212;
 }
 
-.header {
+.main-header {
   background-color: transparent;
   color: #121212;
 }
-.header.scrolled {
+.main-header.scrolled {
   background-color: #1C2E4A;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -403,14 +402,27 @@ body {
   margin-top: -4.6875rem;
   width: 100%;
   height: 80vh;
-  position: relative;
-  background-image: url("../images/main/kv_image.jpg");
+}
+.kv-sec .kv-swiper {
+  width: 100%;
+  height: 100%;
+}
+.kv-sec .kv-swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.kv-sec .kv-swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
 }
-.kv-sec::after {
+.kv-sec .kv-swiper .swiper-wrapper .swiper-slide::after {
   content: "";
   position: absolute;
   top: 0;
@@ -420,10 +432,22 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
+.kv-sec .kv-swiper .swiper-wrapper .slide01 {
+  background-image: url("../images/main/kv_image01.jpg");
+}
+.kv-sec .kv-swiper .swiper-wrapper .slide02 {
+  background-image: url("../images/main/kv_image02.jpg");
+}
+.kv-sec .kv-swiper .swiper-wrapper .slide03 {
+  background-image: url("../images/main/kv_image03.jpg");
+}
+.kv-sec .kv-swiper .swiper-wrapper .slide04 {
+  background-image: url("../images/main/kv_image04.jpg");
+}
 .kv-sec .kv-text {
   position: relative;
   z-index: 3;
-  padding-top: 230px;
+  padding-top: 14.375rem;
   color: #fff;
 }
 .kv-sec .kv-text .kv-title {
@@ -432,12 +456,28 @@ body {
 .kv-sec .kv-text .kv-subtitle {
   font-size: 2.25rem;
   font-weight: 700;
+  margin-top: 1.875rem;
 }
 .kv-sec .kv-text .kv-desc {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  margin-top: 0.625rem;
 }
 .kv-sec .kv-text .btn-wrap {
-  margin-top: 1.5625rem;
+  margin-top: 1.875rem;
+}
+.kv-sec .swiper-pagination.kv-pagination {
+  bottom: 1.875rem;
+}
+.kv-sec .swiper-pagination.kv-pagination .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0 0.3125rem;
+}
+.kv-sec .swiper-pagination.kv-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
 }
 .kv-sec .more-btn {
   width: 9.375rem;
@@ -583,6 +623,11 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+.tech-sec .card-info img:hover {
+  opacity: 1;
 }
 .tech-sec .card-info .card01 {
   width: 320px;
@@ -794,13 +839,36 @@ body {
   }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 3rem;
-    min-width: 6.875rem;
+    min-width: 9.375rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
     font-size: 3rem;
   }
 }
 @media (max-width: 1024px) {
+  .kv-sec .kv-text {
+    position: relative;
+    z-index: 3;
+    padding-top: 15.625rem;
+  }
+  .kv-sec .kv-text .kv-title {
+    font-size: 2.25rem;
+  }
+  .kv-sec .kv-text .kv-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1.875rem;
+  }
+  .kv-sec .kv-text .kv-desc {
+    font-size: 1rem;
+    margin-top: 0.625rem;
+  }
+  .kv-sec .kv-text .btn-wrap {
+    margin-top: 1.875rem;
+  }
+  .kv-sec .more-btn {
+    font-size: 1rem;
+  }
   .about-sec .about-box {
     display: flex;
     flex-direction: column;
@@ -1048,12 +1116,17 @@ body {
 .device-wrap .slide04 {
   background-image: url("../images/sub2/device_hisonic.png");
 }
-.device-wrap .slide05,
-.device-wrap .slide06,
-.device-wrap .slide07,
-.device-wrap .slide08,
-.device-wrap .slide09 {
-  background-image: url("../images/sub2/device_v-ems.png");
+.device-wrap .slide05 {
+  background-image: url("../images/sub2/device01.png");
+}
+.device-wrap .slide06 {
+  background-image: url("../images/sub2/device02.png");
+}
+.device-wrap .slide07 {
+  background-image: url("../images/sub2/device03.png");
+}
+.device-wrap .slide08 {
+  background-image: url("../images/sub2/device04.png");
 }
 
 .inno-sec {
@@ -1154,6 +1227,26 @@ body {
   background-size: cover;
 }
 
+.device-tech-sec {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.device-tech-sec .horizontal-wrap {
+  width: 400vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.device-tech-sec .device-bg {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .device-tech-sec .container {
   width: 100%;
   height: 100%;
@@ -1170,7 +1263,6 @@ body {
 }
 .device-tech-sec .container-re {
   flex-direction: row-reverse;
-  color: #fff;
 }
 .device-tech-sec .device-text {
   text-align: right;
@@ -1210,6 +1302,7 @@ body {
 }
 .device02 .device-text {
   text-align: left;
+  color: #fff;
 }
 
 .device03 {
@@ -1219,7 +1312,7 @@ body {
   background-image: url("../images/sub2/device_neotune.png");
 }
 .device03 .device-text {
-  text-align: left;
+  color: #fff;
 }
 
 .device04 {
@@ -1227,6 +1320,9 @@ body {
 }
 .device04 .device04-image {
   background-image: url("../images/sub2/device_hisonic.png");
+}
+.device04 .device-text {
+  text-align: left;
 }
 
 .research-sec {

@@ -56,6 +56,10 @@
                 &:hover::after {
                     width: 100%;
                 }
+
+                &.active::after {
+                    width: 100%;
+                }
             }
         }
     }
@@ -144,8 +148,10 @@
         display: block;
     }
 
-    .header-spacer {
-        height: rem(175);
+    body.menu-open .main-header {
+        background: $navyColor !important;
+        color: $whiteColor;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -161,10 +167,6 @@
         width: 60vw;
         padding: 80px 0;
     }
-
-    .header-spacer {
-        height: rem(155);
-    }
 }
 
 @media(max-width: 480px) {
@@ -177,9 +179,5 @@
 
     .header-nav {
         padding: 50px 0;
-    }
-
-    .header-spacer {
-        height: rem(135);
     }
 }

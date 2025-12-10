@@ -4,9 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const kvSec = document.querySelector('.kv-sec');
 
-    if (!header || !kvSec) return;
+    // 메인 페이지가 아니거나 kvSec이 없으면 스크롤 로직 실행 안 함
+    if (!header || !kvSec || !header.classList.contains('main-header')) return;
 
     function handleHeaderScroll() {
+        // 모바일 메뉴가 열렸을 때는 스크롤 로직을 무시하고 CSS에 배경색 처리를 맡깁니다.
+        if (body.classList.contains('menu-open')) {
+            return; // 메뉴가 열리면 스크롤 클래스 토글을 멈춤
+        }
+
         const kvBottom = kvSec.offsetTop + kvSec.offsetHeight;
 
         if (window.scrollY > kvBottom) {
@@ -16,8 +22,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // 초기 로드 시 및 스크롤 시 실행
     handleHeaderScroll();
     window.addEventListener('scroll', handleHeaderScroll);
+
+    // 햄버거 버튼 클릭 시 handleHeaderScroll을 다시 실행하여 상태 업데이트
+    btn.addEventListener('click', handleHeaderScroll);
+});
+
+const kvSwiper = new Swiper('.kv-swiper', {
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
+    speed: 800,
+
+    pagination: {
+        el: '.kv-pagination',
+        clickable: true,
+    },
 });
 
 // tech section

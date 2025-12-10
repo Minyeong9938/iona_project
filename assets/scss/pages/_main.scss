@@ -4,7 +4,7 @@ body {
     color: $blackColor;
 }
 
-.header {
+.main-header {
     background-color: transparent;
     color: $blackColor;
 
@@ -24,28 +24,58 @@ body {
     margin-top: rem(-75);
     width: 100%;
     height: 80vh;
-    position: relative;
-    background-image: url("../images/main/kv_image.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
+    .kv-swiper {
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-        z-index: 2;
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                @include flex(center, flex-start);
+                height: 100%;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 1;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    z-index: 2;
+                }
+            }
+
+            .slide01 {
+                background-image: url("../images/main/kv_image01.jpg");
+            }
+
+            .slide02 {
+                background-image: url("../images/main/kv_image02.jpg");
+            }
+
+            .slide03 {
+                background-image: url("../images/main/kv_image03.jpg");
+            }
+
+            .slide04 {
+                background-image: url("../images/main/kv_image04.jpg");
+            }
+        }
     }
 
     .kv-text {
         position: relative;
         z-index: 3;
-        padding-top: 230px;
+        padding-top: rem(230);
         color: $whiteColor;
 
         .kv-title {
@@ -55,16 +85,34 @@ body {
         .kv-subtitle {
             font-size: rem(36);
             font-weight: 700;
+            margin-top: rem(30);
         }
 
         .kv-desc {
-            font-size: rem(24);
+            font-size: rem(20);
+            margin-top: rem(10);
         }
 
         .btn-wrap {
-            margin-top: rem(25);
+            margin-top: rem(30);
         }
+    }
 
+    .swiper-pagination.kv-pagination {
+        bottom: rem(30);
+
+        .swiper-pagination-bullet {
+            background: $whiteColor;
+            opacity: 0.5;
+            width: rem(10);
+            height: rem(10);
+            margin: 0 rem(5);
+
+            &-active {
+                background: $whiteColor;
+                opacity: 1;
+            }
+        }
     }
 
     .more-btn {
@@ -239,6 +287,12 @@ body {
             max-width: 100%;
             height: auto;
             object-fit: cover;
+            opacity: 0.9;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
         }
 
         .card01 {
@@ -500,7 +554,7 @@ body {
                     .count-wrap {
                         .count {
                             font-size: rem(48);
-                            min-width: rem(110);
+                            min-width: rem(150);
                         }
 
                         span {
@@ -514,6 +568,37 @@ body {
 }
 
 @media(max-width: 1024px) {
+    .kv-sec {
+        .kv-text {
+            position: relative;
+            z-index: 3;
+            padding-top: rem(250);
+
+            .kv-title {
+                font-size: rem(36);
+            }
+
+            .kv-subtitle {
+                font-size: rem(24);
+                font-weight: 700;
+                margin-top: rem(30);
+            }
+
+            .kv-desc {
+                font-size: rem(16);
+                margin-top: rem(10);
+            }
+
+            .btn-wrap {
+                margin-top: rem(30);
+            }
+        }
+
+        .more-btn {
+            font-size: rem(16);
+        }
+    }
+
     .about-sec {
         .about-box {
             display: flex;

@@ -78,12 +78,20 @@
         background-image: url("../images/sub2/device_hisonic.png");
     }
 
-    .slide05,
-    .slide06,
-    .slide07,
-    .slide08,
-    .slide09 {
-        background-image: url("../images/sub2/device_v-ems.png");
+    .slide05 {
+        background-image: url("../images/sub2/device01.png");
+    }
+
+    .slide06 {
+        background-image: url("../images/sub2/device02.png");
+    }
+
+    .slide07 {
+        background-image: url("../images/sub2/device03.png");
+    }
+
+    .slide08 {
+        background-image: url("../images/sub2/device04.png");
     }
 }
 
@@ -195,6 +203,29 @@
 }
 
 .device-tech-sec {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; // 필수: 수평으로 넘치는 것을 가립니다.
+    position: relative; // pin을 위한 준비
+
+    .horizontal-wrap {
+        // 2. 모든 슬라이드 콘텐츠를 담는 래퍼
+        width: 400vw; // 4개의 device-bg(100vw * 4)를 담을 수 있도록 너비 설정
+        height: 100%;
+        display: flex; // 필수: 하위 요소들을 수평으로 정렬
+        flex-wrap: nowrap;
+    }
+
+    .device-bg {
+        // 3. 각 콘텐츠(슬라이드)는 뷰포트 너비를 가집니다.
+        width: 100vw; // 100%가 아닌 100vw (뷰포트 너비)
+        height: 100vh;
+        flex-shrink: 0; // 필수: 줄어들지 않도록 설정
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     .container {
         width: 100%;
         height: 100%;
@@ -212,7 +243,6 @@
 
     .container-re {
         flex-direction: row-reverse;
-        color: $whiteColor;
     }
 
     .device-text {
@@ -263,6 +293,7 @@
 
     .device-text {
         text-align: left;
+        color: $whiteColor;
     }
 }
 
@@ -274,7 +305,7 @@
     }
 
     .device-text {
-        text-align: left;
+        color: $whiteColor;
     }
 }
 
@@ -283,6 +314,10 @@
 
     .device04-image {
         background-image: url("../images/sub2/device_hisonic.png");
+    }
+
+    .device-text {
+        text-align: left;
     }
 }
 
