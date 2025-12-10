@@ -157,7 +157,6 @@
 
 @media(max-width: 768px) {
     .header {
-
         .header-menu {
             gap: rem(60);
         }
@@ -171,6 +170,23 @@
 
 @media(max-width: 480px) {
     .header {
+        height: rem(60);
+
+        .logo {
+            a {
+                display: block;
+                width: rem(60);
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    display: block;
+                }
+            }
+        }
+
         .header-menu {
             font-size: 18px;
             gap: rem(50);

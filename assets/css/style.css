@@ -256,6 +256,20 @@ summary {
   }
 }
 @media (max-width: 480px) {
+  .header {
+    height: 3.75rem;
+  }
+  .header .logo a {
+    display: block;
+    width: 3.75rem;
+    height: 100%;
+  }
+  .header .logo a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
   .header .header-menu {
     font-size: 18px;
     gap: 3.125rem;
