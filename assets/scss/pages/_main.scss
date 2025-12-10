@@ -569,12 +569,14 @@ body {
 
 @media(max-width: 1024px) {
     .kv-sec {
+        height: 90vh;
+
         .kv-swiper {
             .swiper-wrapper {
                 .swiper-slide {
-                    background-position: center;
+                    background-position: right center;
                     background-repeat: no-repeat;
-                    background-size: cover;
+                    background-size: auto 100%;
                 }
             }
         }
