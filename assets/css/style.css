@@ -1821,6 +1821,28 @@ body {
     opacity: 1;
     max-height: none;
   }
+  .achieve-sec .achieve-right {
+    flex-direction: column;
+  }
+  .achieve-sec .achieve-right h3 {
+    font-size: 1.75rem;
+    width: 100%;
+    margin-bottom: 0.625rem;
+  }
+  .achieve-sec .achieve-right p {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+  }
+  .achieve-sec .achieve-box p {
+    padding: 1.5625rem 1.5625rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .achieve-sec .achieve-box p span {
+    color: #FFA347;
+    font-weight: 700;
+  }
 }
 @media (max-width: 680px) {
   .value-card-wrap .value-card {
@@ -1834,6 +1856,32 @@ body {
   }
   .value-card-wrap .value-card p {
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  .value-sec .value-title {
+    font-size: 1.25rem;
+  }
+  .value-sec .value-title span {
+    font-weight: 700;
+    font-size: rme(24);
+  }
+  .value-card-wrap .value-card {
+    flex-basis: calc((100% - 1.5rem * 1) / 2);
+    min-height: 6.25rem;
+  }
+  .value-card-wrap .value-card h5 {
+    font-size: 1rem;
+  }
+  .achieve-sec .achieve-right h3 {
+    font-size: 1.5rem;
+  }
+  .achieve-sec .achieve-right p {
+    font-size: 0.875rem;
+  }
+  .achieve-sec .achieve-box p {
+    padding: 1.25rem 1.25rem;
+    font-size: 1rem;
   }
 }
 .vision-kv-sec .image-sec {
