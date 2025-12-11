@@ -1772,7 +1772,7 @@ body {
     flex-basis: calc((100% - 1.5rem * 2) / 3);
     flex-grow: 0;
     flex-shrink: 0;
-    min-height: 21.875rem;
+    min-height: 15.625rem;
   }
   .value-card-wrap .value-card-wrap {
     justify-content: center;
