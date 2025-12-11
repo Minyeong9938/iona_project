@@ -52,7 +52,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .my-kv-sec {
         .image-sec {
             .text-sec {
@@ -68,28 +68,12 @@
     }
 }
 
-@media (max-width: 768px) {
-    .my-kv-sec {
-        .image-sec {
-            .text-sec {
-                h2 {
-                    font-size: rem(28);
-                }
-            }
-        }
-    }
-}
-
 @media (max-width: 480px) {
     .my-kv-sec {
         .image-sec {
             .text-sec {
                 h2 {
-                    font-size: rem(24);
-                }
-
-                p {
-                    font-size: rem(16);
+                    font-size: rem(28);
                 }
             }
         }

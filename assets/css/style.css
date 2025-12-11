@@ -406,7 +406,7 @@ summary {
   font-weight: 300;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .my-kv-sec .image-sec .text-sec h2 {
     font-size: 2.25rem;
   }
@@ -414,17 +414,9 @@ summary {
     font-size: 1.25rem;
   }
 }
-@media (max-width: 768px) {
-  .my-kv-sec .image-sec .text-sec h2 {
-    font-size: 1.75rem;
-  }
-}
 @media (max-width: 480px) {
   .my-kv-sec .image-sec .text-sec h2 {
-    font-size: 1.5rem;
-  }
-  .my-kv-sec .image-sec .text-sec p {
-    font-size: 1rem;
+    font-size: 1.75rem;
   }
 }
 body {
