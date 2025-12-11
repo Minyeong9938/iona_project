@@ -2074,9 +2074,6 @@ body {
   .roadmap-sec .content-block p {
     font-size: 1.25rem;
   }
-  .roadmap-sec .roadmap-content {
-    min-height: 70vh;
-  }
 }
 @media (max-width: 768px) {
   .growth-box {
