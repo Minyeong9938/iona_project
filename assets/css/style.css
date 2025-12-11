@@ -1659,7 +1659,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  min-height: 80vh;
+  width: 100%;
   position: relative;
   padding: 6.25rem 0;
 }
