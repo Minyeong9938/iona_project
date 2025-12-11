@@ -1731,6 +1731,9 @@ body {
   .achieve-sec .container {
     flex-direction: column-reverse;
   }
+  .achieve-sec .achieve-sec {
+    background-attachment: scroll;
+  }
   .achieve-sec .achieve-left {
     width: 100%;
     display: flex;

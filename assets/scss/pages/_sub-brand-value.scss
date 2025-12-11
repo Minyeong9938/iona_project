@@ -167,6 +167,10 @@
             flex-direction: column-reverse;
         }
 
+        .achieve-sec {
+            background-attachment: scroll;
+        }
+
         .achieve-left {
             width: 100%;
             @include flex;
