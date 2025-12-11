@@ -406,6 +406,11 @@ summary {
   font-weight: 300;
 }
 
+@media (max-width: 1024px) {
+  .my-kv-sec {
+    height: 45vh;
+  }
+}
 @media (max-width: 768px) {
   .my-kv-sec .image-sec .text-sec h2 {
     font-size: 2.25rem;
