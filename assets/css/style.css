@@ -1797,6 +1797,15 @@ body {
     min-height: 12.5rem;
     flex-direction: row;
   }
+  .value-card-wrap .value-card div {
+    padding-right: 0.625rem;
+  }
+  .value-card-wrap .value-card h5 {
+    font-size: 1.25rem;
+  }
+  .value-card-wrap .value-card h5 span {
+    display: none;
+  }
   .value-card-wrap .value-card p {
     opacity: 1;
     color: #121212;
@@ -1805,10 +1814,26 @@ body {
     transition: none;
     margin-top: 0;
     padding-right: 0;
+    padding-left: 0.625rem;
+    border-left: 1px solid #D1CFC9;
   }
   .value-card-wrap .value-card:hover p {
     opacity: 1;
     max-height: none;
+  }
+}
+@media (max-width: 680px) {
+  .value-card-wrap .value-card {
+    padding: 1.875rem;
+    flex-basis: calc((100% - 1.5rem * 2) / 3);
+    min-height: 12.5rem;
+    pointer-events: none;
+  }
+  .value-card-wrap .value-card div {
+    padding-right: 0;
+  }
+  .value-card-wrap .value-card p {
+    display: none;
   }
 }
 .vision-kv-sec .image-sec {

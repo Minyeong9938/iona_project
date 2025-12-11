@@ -261,6 +261,18 @@
             min-height: rem(200);
             flex-direction: row;
 
+            div {
+                padding-right: rem(10);
+            }
+
+            h5 {
+                font-size: rem(20);
+
+                span {
+                    display: none;
+                }
+            }
+
             p {
                 opacity: 1;
                 color: $blackColor;
@@ -269,6 +281,8 @@
                 transition: none;
                 margin-top: 0;
                 padding-right: 0;
+                padding-left: rem(10);
+                border-left: 1px solid $grayColor;
             }
 
             &:hover {
@@ -276,6 +290,25 @@
                     opacity: 1;
                     max-height: none;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .value-card-wrap {
+        .value-card {
+            padding: rem(30);
+            flex-basis: calc((100% - rem(24) * 2) / 3);
+            min-height: rem(200);
+            pointer-events: none;
+
+            div {
+                padding-right: 0;
+            }
+
+            p {
+                display: none;
             }
         }
     }
