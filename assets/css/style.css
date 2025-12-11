@@ -1899,9 +1899,6 @@ body {
   background-position: center;
 }
 
-.vision-sec .container .vision-wrap {
-  display: flex;
-}
 .vision-sec .container h4 {
   margin-bottom: 1.875rem;
   font-size: 1.25rem;
@@ -2038,21 +2035,49 @@ body {
   border-radius: 0.625rem;
 }
 
-@media (max-width: 767px) {
-  .growth-box {
-    background: #fff;
-    text-align: center;
-    padding: 3.125rem 0;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 1300px) {
+  .container .vision-wrap {
+    width: 100%;
     flex-direction: column;
-    transition: all 0.3s ease-in-out;
+    justify-content: left;
   }
-  .growth-box:hover {
-    background: #fff !important;
-    color: #121212 !important;
+  .container .vision-wrap .vision-left {
+    width: 100%;
+    margin-bottom: 1.875rem;
+  }
+  .container .vision-wrap .vision-right {
+    width: 100%;
+  }
+  .container .vision-wrap .vision-right img {
+    left: -2%;
+  }
+}
+@media (max-width: 1180px) {
+  .growth-sec .growth-box-wrap {
+    flex-wrap: wrap;
+  }
+  .growth-sec .growth-box-wrap .growth-box {
+    flex-basis: calc((100% - 1.5rem * 1) / 2);
+  }
+}
+@media (max-width: 1024px) {
+  .vision-sec .container .vision-left h3 {
+    font-size: 2rem;
+  }
+  .roadmap-sec .year-pin {
+    margin-right: 20%;
+    font-size: 2.25rem;
+  }
+  .roadmap-sec .content-block h4 {
+    font-size: 2rem;
+  }
+  .roadmap-sec .content-block p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .growth-box {
+    pointer-events: none;
   }
   .roadmap-step-wrapper::before {
     display: none;

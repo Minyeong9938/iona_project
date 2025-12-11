@@ -8,11 +8,6 @@
 // vision section
 .vision-sec {
     .container {
-
-        .vision-wrap {
-            display: flex;
-        }
-
         h4 {
             margin-bottom: rem(30);
             font-size: rem(20);
@@ -173,21 +168,74 @@
 }
 
 
+@media (max-width: 1300px) {
+    .container {
 
-@media (max-width: 767px) {
-    .growth-box {
-        background: $whiteColor;
-        text-align: center;
-        padding: rem(50) 0;
-        flex: 1;
-        @include flex;
-        flex-direction: column;
-        transition: all 0.3s ease-in-out;
+        .vision-wrap {
+            width: 100%;
+            flex-direction: column;
+            justify-content: left;
 
-        &:hover {
-            background: $whiteColor !important;
-            color: $blackColor !important;
+            .vision-left {
+                width: 100%;
+                margin-bottom: rem(30);
+            }
+
+            .vision-right {
+                width: 100%;
+
+                img {
+                    left: -2%;
+                }
+            }
         }
+
+    }
+}
+
+@media (max-width: 1180px) {
+    .growth-sec {
+        .growth-box-wrap {
+            flex-wrap: wrap;
+
+            .growth-box {
+                flex-basis: calc((100% - rem(24) * 1) / 2);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .vision-sec {
+        .container {
+            .vision-left {
+                h3 {
+                    font-size: rem(32);
+                }
+            }
+        }
+    }
+
+    .roadmap-sec {
+        .year-pin {
+            margin-right: 20%;
+            font-size: rem(36);
+
+        }
+
+        .content-block h4 {
+            font-size: rem(32);
+        }
+
+        .content-block p {
+            font-size: rem(20);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .growth-box {
+        pointer-events: none;
     }
 
     .roadmap-step-wrapper::before {
