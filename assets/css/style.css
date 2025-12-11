@@ -1867,7 +1867,6 @@ body {
     font-size: rme(24);
   }
   .value-card-wrap .value-card {
-    flex-basis: calc((100% - 1.5rem * 1) / 2);
     min-height: 6.25rem;
   }
   .value-card-wrap .value-card h5 {
