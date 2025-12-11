@@ -1732,7 +1732,7 @@ body {
     flex-direction: column-reverse;
   }
   .achieve-sec .achieve-sec {
-    background-attachment: scroll;
+    background-attachment: unset;
   }
   .achieve-sec .achieve-left {
     width: 100%;
