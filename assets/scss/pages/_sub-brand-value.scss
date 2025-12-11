@@ -246,4 +246,37 @@
     }
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .value-sec {
+        .icon {
+            width: rem(50);
+            height: rem(50);
+        }
+    }
+
+    .value-card-wrap {
+        .value-card {
+            padding: rem(30);
+            flex-basis: calc((100% - rem(24) * 1) / 2);
+            min-height: rem(200);
+            flex-direction: row;
+
+            p {
+                opacity: 1;
+                color: $blackColor;
+                max-height: none;
+                overflow: visible;
+                transition: none;
+                margin-top: 0;
+                padding-right: 0;
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                    max-height: none;
+                }
+            }
+        }
+    }
+}

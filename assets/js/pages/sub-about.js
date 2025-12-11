@@ -1,35 +1,125 @@
 // about section
-const productItems = document.querySelectorAll(".product-item");
-const productImages = document.querySelectorAll(".product-image");
+gsap.registerPlugin(ScrollTrigger);
 
-function updateActiveProduct() {
-    const scrollPosition = window.scrollY + window.innerHeight / 4 * 3;
 
-    productItems.forEach((item) => {
-        const itemTop = item.offsetTop;
-        const itemBottom = itemTop + item.offsetHeight;
-        const productId = item.getAttribute("data-product");
+gsap.to(".text01", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".text01",
+        start: "center 40%",
+        end: "60% 20%",
+        scrub: true,
+    }
+});
 
-        if (scrollPosition >= itemTop && scrollPosition <= itemBottom) {
-            item.classList.add("active");
-            item.classList.remove("passed");
+// 🖼️ img01: text01과 함께 사라짐
+gsap.to(".img01", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".text01",
+        start: "top -10%",
+        end: "bottom 20%",
+        scrub: 1,
+        // markers: true
+    }
+});
 
-            productImages.forEach((img) => {
-                if (img.getAttribute("data-product") === productId) {
-                    img.classList.add("active");
-                } else {
-                    img.classList.remove("active");
-                }
-            });
-        } else if (scrollPosition > itemBottom) {
-            item.classList.remove("active");
-            item.classList.add("passed");
-        } else {
-            item.classList.remove("active");
-            item.classList.remove("passed");
+
+
+// 나타나기
+gsap.fromTo(".text02",
+    { opacity: 0 },
+    {
+        opacity: 1,
+        scrollTrigger: {
+            trigger: ".text02",
+            start: "40% 80%",
+            end: "center 50%",
+            scrub: true,
         }
-    });
-}
+    }
+);
 
-window.addEventListener("scroll", updateActiveProduct);
-updateActiveProduct();
+// 사라지기
+gsap.fromTo(".text02",
+    { opacity: 1 },
+    {
+        opacity: 0,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".text02",
+            start: "center 40%",
+            end: "60% 20%",
+            scrub: true,
+        }
+    }
+);
+
+
+gsap.to(".img02", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".text02",
+        start: "top -10%",
+        end: "bottom 20%",
+        scrub: 1,
+    }
+});
+
+
+
+// 나타나기
+gsap.fromTo(".text03",
+    { opacity: 0 },
+    {
+        opacity: 1,
+        scrollTrigger: {
+            trigger: ".text03",
+            start: "40% 80%",
+            end: "center 50%",
+            scrub: true,
+        }
+    }
+);
+
+// 사라지기
+gsap.fromTo(".text03",
+    { opacity: 1 },
+    {
+        opacity: 0,
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: ".text03",
+            start: "center 40%",
+            end: "60% 20%",
+            scrub: true,
+        }
+    }
+);
+
+
+gsap.to(".img03", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".text03",
+        start: "top -10%",
+        end: "bottom 20%",
+        scrub: 1,
+    }
+});
+
+
+
+gsap.fromTo(".text04",
+    { opacity: 0 },
+    {
+        opacity: 1,
+        scrollTrigger: {
+            trigger: ".text04",
+            start: "40% 80%",
+            end: "center 60%",
+            scrub: true,
+            // markers: true
+        }
+    }
+);

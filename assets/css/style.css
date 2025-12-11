@@ -1189,88 +1189,84 @@ body {
   background-image: url("../images/sub1/kv_image.jpg");
 }
 
-.about-company-sec .side_sect.mo_over {
-  width: 100%;
-}
-.about-company-sec .scroll-section {
+.about-company-sec .container {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
 }
-.about-company-sec .text-content {
-  flex: 1;
+.about-company-sec .text-wrap {
+  width: 37.5rem;
 }
-.about-company-sec .product-item {
-  min-height: 40vh;
-  display: flex;
-  justify-content: start;
-  align-items: left;
-  flex-direction: column;
-  opacity: 0;
-  transform: translateY(0);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.about-company-sec .product-item:first-child {
-  box-sizing: content-box;
-  margin-top: 18.75rem;
-}
-.about-company-sec .product-item:last-child {
-  min-height: auto;
-  padding-bottom: calc((100vh - 510px) / 5 * 2);
-}
-.about-company-sec .product-item h2 {
-  font-size: 2.25rem;
-  margin-bottom: 1.875rem;
-  font-weight: 600;
-}
-.about-company-sec .product-item .desc {
-  font-weight: 300;
-}
-.about-company-sec .product-item.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-.about-company-sec .product-item.passed {
-  opacity: 0;
-  transform: translateY(-100px);
-}
-.about-company-sec .product-item.passed:last-child {
-  opacity: 1;
-  transform: translateY(-100px);
-}
-.about-company-sec .image-content {
-  flex: 1;
-  position: sticky;
-  top: 0;
-  height: 500px;
-  top: calc((100vh - 400px) / 2);
-}
-.about-company-sec .image-wrapper {
+.about-company-sec .panel-text {
   width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 0 0 0 5rem;
-  overflow: hidden;
-  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.15);
-}
-.about-company-sec .product-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease;
+  height: 100vh;
+  padding: 10vh 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.about-company-sec .product-image.active {
+.about-company-sec .panel-text .text01 {
   opacity: 1;
 }
-.about-company-sec .product-image img {
+.about-company-sec .panel-text .text02,
+.about-company-sec .panel-text .text03,
+.about-company-sec .panel-text .text04 {
+  opacity: 0;
+}
+.about-company-sec .text-inner h2 {
+  font-size: 36px;
+}
+.about-company-sec .sub-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.about-company-sec .text-inner h4 {
+  font-size: 20px;
+}
+.about-company-sec .desc {
+  font-size: 20px;
+  font-weight: 300;
+}
+.about-company-sec .img-container {
+  position: sticky;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  max-width: 37.5rem;
+}
+.about-company-sec .img-wrap {
+  position: relative;
+  margin: 20vh 0;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 0 0 0 5rem;
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.15);
+}
+.about-company-sec .img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-company-sec .img01 {
+  background-image: url("../images/sub1/about_image01.jpg");
+  z-index: 4;
+}
+.about-company-sec .img02 {
+  background-image: url("../images/sub1/about_image02.jpg");
+  z-index: 3;
+}
+.about-company-sec .img03 {
+  background-image: url("../images/sub1/about_image03.jpg");
+  z-index: 2;
+}
+.about-company-sec .img04 {
+  background-image: url("../images/sub1/about_image04.jpg");
+  z-index: 1;
 }
 
 .tech-kv-sec .image-sec {
@@ -1788,6 +1784,31 @@ body {
   .achieve-sec .achieve-box p span {
     color: #FFA347;
     font-weight: 700;
+  }
+}
+@media (max-width: 768px) {
+  .value-sec .icon {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+  .value-card-wrap .value-card {
+    padding: 1.875rem;
+    flex-basis: calc((100% - 1.5rem * 1) / 2);
+    min-height: 12.5rem;
+    flex-direction: row;
+  }
+  .value-card-wrap .value-card p {
+    opacity: 1;
+    color: #121212;
+    max-height: none;
+    overflow: visible;
+    transition: none;
+    margin-top: 0;
+    padding-right: 0;
+  }
+  .value-card-wrap .value-card:hover p {
+    opacity: 1;
+    max-height: none;
   }
 }
 .vision-kv-sec .image-sec {
