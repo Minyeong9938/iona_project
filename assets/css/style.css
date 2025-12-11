@@ -1728,11 +1728,11 @@ body {
     width: 5rem;
     height: 5rem;
   }
+  .achieve-sec {
+    background-attachment: scroll;
+  }
   .achieve-sec .container {
     flex-direction: column-reverse;
-  }
-  .achieve-sec .achieve-sec {
-    background-attachment: unset;
   }
   .achieve-sec .achieve-left {
     width: 100%;

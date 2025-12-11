@@ -163,12 +163,10 @@
     }
 
     .achieve-sec {
+        background-attachment: scroll;
+
         .container {
             flex-direction: column-reverse;
-        }
-
-        .achieve-sec {
-            background-attachment: unset;
         }
 
         .achieve-left {
