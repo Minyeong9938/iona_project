@@ -1860,7 +1860,7 @@ body {
 }
 @media (max-width: 480px) {
   .value-sec .value-title {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .value-sec .value-title span {
     font-weight: 700;
