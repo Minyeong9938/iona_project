@@ -1860,11 +1860,11 @@ body {
 }
 @media (max-width: 480px) {
   .value-sec .value-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   .value-sec .value-title span {
     font-weight: 700;
-    font-size: rme(24);
+    font-size: 1.5rem;
   }
   .value-card-wrap .value-card {
     min-height: 6.25rem;
@@ -1881,6 +1881,11 @@ body {
   .achieve-sec .achieve-box p {
     padding: 1.25rem 1.25rem;
     font-size: 1rem;
+  }
+}
+@media (max-width: 440px) {
+  .value-card-wrap .value-card {
+    padding: 1.25rem;
   }
 }
 .vision-kv-sec .image-sec {
