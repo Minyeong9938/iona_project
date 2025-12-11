@@ -1885,7 +1885,7 @@ body {
 }
 @media (max-width: 440px) {
   .value-card-wrap .value-card {
-    padding: 1.25rem;
+    padding: 1.875rem 1.25rem;
   }
 }
 .vision-kv-sec .image-sec {
