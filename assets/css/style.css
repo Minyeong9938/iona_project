@@ -344,6 +344,18 @@ summary {
     width: 100%;
   }
 }
+@media (max-width: 480px) {
+  .footer .footer-brand a {
+    display: block;
+    width: 3.75rem;
+    height: 100%;
+  }
+  .footer .footer-brand a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
 
 .container {
   width: 100%;
@@ -1141,11 +1153,11 @@ body {
     color: #FFA347;
   }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
-    font-size: 1.5rem;
-    min-width: 4.375rem;
+    font-size: 1.75rem;
+    min-width: 5rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   .banner-sec .banner-bg .banner-text h2 {
     font-size: 1.5rem;
@@ -1575,6 +1587,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   width: 100%;
   align-items: stretch;
@@ -1589,7 +1602,7 @@ body {
   border: 1px solid #D1CFC9;
   border-radius: 1.25rem;
   padding: 3.125rem 0;
-  min-height: 21.875rem;
+  min-height: 25rem;
   transition: all 0.4s ease-in-out;
 }
 .value-card-wrap .value-card h5 {
@@ -1690,6 +1703,58 @@ body {
   font-weight: 700;
 }
 
+@media (max-width: 1300px) {
+  .value-sec .value-title {
+    font-size: 1.5rem;
+  }
+  .value-sec .value-title span {
+    font-weight: 700;
+    font-size: rme(32);
+  }
+  .value-sec .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .achieve-sec .container {
+    flex-direction: column-reverse;
+  }
+  .achieve-sec .achieve-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .achieve-sec .achieve-right {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 1.875rem;
+  }
+  .achieve-sec .achieve-right h3 {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .achieve-sec .achieve-right p {
+    width: 50%;
+    text-align: right;
+  }
+}
+@media (max-width: 1024px) {
+  .value-card-wrap .value-card {
+    flex-basis: calc((100% - 1.5rem * 2) / 3);
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-height: 21.875rem;
+  }
+  .value-card-wrap .value-card-wrap {
+    justify-content: center;
+  }
+}
 .vision-kv-sec .image-sec {
   background-image: url("../images/sub4/kv_image.jpg");
   background-position: center;
