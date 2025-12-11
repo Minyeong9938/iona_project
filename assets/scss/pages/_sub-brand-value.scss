@@ -352,6 +352,13 @@
                 font-weight: 700;
                 font-size: rem(24);
             }
+
+            img {
+                position: relative;
+                top: -20px;
+                left: 5px;
+                width: rem(15);
+            }
         }
     }
 

@@ -1866,6 +1866,12 @@ body {
     font-weight: 700;
     font-size: 1.5rem;
   }
+  .value-sec .value-title img {
+    position: relative;
+    top: -20px;
+    left: 5px;
+    width: 0.9375rem;
+  }
   .value-card-wrap .value-card {
     min-height: 6.25rem;
   }
