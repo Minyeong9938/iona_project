@@ -1642,7 +1642,7 @@ body {
   background-attachment: fixed;
   min-height: 80vh;
   position: relative;
-  padding: 6.25rem;
+  padding: 6.25rem 0;
 }
 .achieve-sec::after {
   position: absolute;
@@ -1704,13 +1704,6 @@ body {
 }
 
 @media (max-width: 1300px) {
-  .value-sec .value-title {
-    font-size: 1.5rem;
-  }
-  .value-sec .value-title span {
-    font-weight: 700;
-    font-size: rme(32);
-  }
   .value-sec .icon {
     width: 5rem;
     height: 5rem;
@@ -1745,6 +1738,13 @@ body {
   }
 }
 @media (max-width: 1024px) {
+  .value-sec .value-title {
+    font-size: 1.5rem;
+  }
+  .value-sec .value-title span {
+    font-weight: 700;
+    font-size: rme(32);
+  }
   .value-card-wrap .value-card {
     flex-basis: calc((100% - 1.5rem * 2) / 3);
     flex-grow: 0;
@@ -1753,6 +1753,18 @@ body {
   }
   .value-card-wrap .value-card-wrap {
     justify-content: center;
+  }
+  .achieve-sec .achieve-right h3 {
+    font-size: 2rem;
+  }
+  .achieve-sec .achieve-box p {
+    padding: 1.5625rem 1.5625rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .achieve-sec .achieve-box p span {
+    color: #FFA347;
+    font-weight: 700;
   }
 }
 .vision-kv-sec .image-sec {

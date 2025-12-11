@@ -85,7 +85,7 @@
     background-attachment: fixed;
     min-height: 80vh;
     position: relative;
-    padding: rem(100);
+    padding: rem(100) 0;
 
     &::after {
         position: absolute;
@@ -155,15 +155,6 @@
 
 @media (max-width: 1300px) {
     .value-sec {
-        .value-title {
-            font-size: rem(24);
-
-            span {
-                font-weight: 700;
-                font-size: rme(32);
-            }
-        }
-
         .icon {
             width: rem(80);
             height: rem(80);
@@ -203,6 +194,17 @@
 }
 
 @media (max-width: 1024px) {
+    .value-sec {
+        .value-title {
+            font-size: rem(24);
+
+            span {
+                font-weight: 700;
+                font-size: rme(32);
+            }
+        }
+    }
+
     .value-card-wrap {
         .value-card {
             flex-basis: calc((100% - #{rem(24)} * 2) / 3);
@@ -220,4 +222,25 @@
             justify-content: center;
         }
     }
+
+    .achieve-sec {
+        .achieve-right {
+            h3 {
+                font-size: rem(32);
+            }
+        }
+
+        .achieve-box p {
+            padding: rem(25) rem(25);
+            font-size: rem(20);
+            font-weight: 500;
+
+            span {
+                color: $primaryColor;
+                font-weight: 700;
+            }
+        }
+    }
 }
+
+@media(max-width: 768px) {}
