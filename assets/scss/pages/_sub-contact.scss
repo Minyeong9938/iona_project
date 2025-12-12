@@ -22,7 +22,8 @@
 
 .wrap {
     display: flex;
-    gap: rem(48);
+    gap: rem(24);
+    margin-top: rem(50);
 
     .contact-sec {
         width: 50%;
@@ -41,7 +42,7 @@
             display: flex;
             flex-direction: row;
             gap: rem(24);
-            margin-bottom: rem(30);
+            margin-bottom: rem(24);
         }
 
         .company,
@@ -102,8 +103,11 @@
 
             p {
                 font-size: rem(16);
-                padding: rem(10) 0;
             }
+        }
+
+        .map-list p:last-child {
+            margin-bottom: 0;
         }
 
         .sns-list {
@@ -116,11 +120,18 @@
 
 
 @media (max-width: 1024px) {
+    .connect {
+        h3 {
+            font-size: rem(32);
+        }
+    }
+
     .wrap {
         flex-direction: column;
 
         .contact-sec {
             width: 100%;
+            margin-bottom: rem(50);
 
             .form-row {
                 flex-direction: column;
@@ -131,6 +142,10 @@
             .form-row input[type="tel"] {
                 flex: 1;
             }
+
+            .submit-button {
+                padding: rem(15) rem(30);
+            }
         }
 
         .map {
@@ -138,4 +153,30 @@
         }
     }
 
+}
+
+@media (max-width: 768px) {
+    .connect {
+        h3 {
+            font-size: rem(28);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .connect {
+        h3 {
+            font-size: rem(24);
+        }
+    }
+
+    .wrap {
+        flex-direction: column;
+
+        .contact-sec {
+            .submit-button {
+                padding: rem(15) rem(25);
+            }
+        }
+    }
 }

@@ -2153,7 +2153,8 @@ body {
 
 .wrap {
   display: flex;
-  gap: 3rem;
+  gap: 1.5rem;
+  margin-top: 3.125rem;
 }
 .wrap .contact-sec {
   width: 50%;
@@ -2169,7 +2170,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.5rem;
 }
 .wrap .contact-sec .company,
 .wrap .contact-sec .person,
@@ -2221,7 +2222,9 @@ body {
 }
 .wrap .map .map-list p {
   font-size: 1rem;
-  padding: 0.625rem 0;
+}
+.wrap .map .map-list p:last-child {
+  margin-bottom: 0;
 }
 .wrap .map .sns-list {
   display: flex;
@@ -2230,11 +2233,15 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .connect h3 {
+    font-size: 2rem;
+  }
   .wrap {
     flex-direction: column;
   }
   .wrap .contact-sec {
     width: 100%;
+    margin-bottom: 3.125rem;
   }
   .wrap .contact-sec .form-row {
     flex-direction: column;
@@ -2244,7 +2251,26 @@ body {
   .wrap .contact-sec .form-row input[type=tel] {
     flex: 1;
   }
+  .wrap .contact-sec .submit-button {
+    padding: 0.9375rem 1.875rem;
+  }
   .wrap .map {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .connect h3 {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .connect h3 {
+    font-size: 1.5rem;
+  }
+  .wrap {
+    flex-direction: column;
+  }
+  .wrap .contact-sec .submit-button {
+    padding: 0.9375rem 1.5625rem;
   }
 }
