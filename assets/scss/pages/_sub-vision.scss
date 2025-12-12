@@ -187,26 +187,32 @@
 }
 
 @media (max-width: 1300px) {
-    .container {
-        .vision-wrap {
-            width: 100%;
-            flex-direction: column;
-            justify-content: left;
-
-            .vision-left {
-                width: 100%;
-                margin-bottom: rem(30);
+    .vision-sec {
+        .container {
+            h4 {
+                margin-bottom: rem(20);
             }
 
-            .vision-right {
+            .vision-wrap {
                 width: 100%;
+                flex-direction: column;
+                justify-content: left;
 
-                img {
-                    left: -2%;
+                .vision-left {
+                    width: 100%;
+                    margin-bottom: rem(30);
+                }
+
+                .vision-right {
+                    width: 100%;
+
+                    img {
+                        left: -2%;
+                    }
                 }
             }
-        }
 
+        }
     }
 }
 
@@ -278,6 +284,72 @@
 
             img {
                 width: rem(80);
+            }
+        }
+    }
+
+    .roadmap-sec {
+        .year-pin {
+            position: relative !important;
+            top: auto !important;
+            margin-right: 0;
+            margin-bottom: 1rem;
+            font-size: rem(28);
+            margin-bottom: 0;
+        }
+
+        .content-block h4 {
+            font-size: rem(28);
+        }
+
+        .content-block p {
+            font-size: rem(16);
+        }
+    }
+
+    .roadmap-step-wrapper::before {
+        display: none;
+    }
+
+    .roadmap-step-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5vh;
+    }
+
+    .roadmap-content {
+        padding-left: 0;
+        border-left: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .growth-sec {
+        .growth-box-wrap {
+            .growth-box {
+                min-height: rem(330);
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .vision-sec {
+        .container {
+            .vision-left {
+                h3 {
+                    font-size: rem(24);
+                }
+            }
+        }
+    }
+
+    .growth-sec {
+        .growth-box-wrap {
+            .growth-box {
+                flex-basis: calc((100% - rem(24)) / 1);
+                min-height: auto;
             }
         }
     }
