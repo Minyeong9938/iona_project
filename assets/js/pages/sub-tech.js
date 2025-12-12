@@ -33,10 +33,10 @@ gsap.registerPlugin(ScrollTrigger);
 const ani = gsap.timeline();
 
 const delay = "+=3";
-const moveDist = 300;
+const moveDist = 250;
 
 const animDuration = 2;
-const animEase = "power2.inOut";
+const animEase = "power1.inOut";
 
 ani.from("#tech-about .t1", {
     autoAlpha: 0,
@@ -64,8 +64,8 @@ ScrollTrigger.create({
     animation: ani,
     trigger: "#tech-about",
     start: "top top",
-    end: "+=3000",
-    scrub: true,
+    end: "+=3200",
+    scrub: 0.3,
     pin: true,
     anticipatePin: 1,
     // markers: true
@@ -107,7 +107,7 @@ aniResearch.from("#research-about .r1", {
         duration: animDuration,
         y: -moveDist,
         ease: animEase
-    }, delay)
+    }, "+=3.5")
     .from("#research-about .r2", {
         autoAlpha: 0,
         duration: animDuration,
@@ -120,7 +120,7 @@ aniResearch.from("#research-about .r1", {
         duration: animDuration,
         y: -moveDist,
         ease: animEase
-    }, "+=3")
+    }, "+=3.5")
     .from("#research-about .r3", {
         autoAlpha: 0,
         duration: animDuration,
@@ -133,14 +133,14 @@ aniResearch.from("#research-about .r1", {
         duration: animDuration,
         y: -moveDist,
         ease: animEase
-    }, "+=3");
+    }, "+=3.5");
 
 ScrollTrigger.create({
     animation: aniResearch,
     trigger: "#research-about",
     start: "top top",
-    end: "+=4000",
-    scrub: true,
+    end: "+=5000",
+    scrub: 0.2,
     pin: true,
     anticipatePin: 1,
     // markers: true

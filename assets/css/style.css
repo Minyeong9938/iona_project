@@ -1566,6 +1566,7 @@ body {
 }
 .research-sec .parallax__item__text {
   z-index: 2;
+  margin-bottom: 6.25rem;
 }
 .research-sec .parallax__item__text h3 {
   font-size: 4rem;
