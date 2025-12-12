@@ -2127,30 +2127,10 @@ body {
     min-height: auto;
   }
   .roadmap-sec .year-pin {
-    position: relative !important;
-    top: auto !important;
-    margin-right: 0;
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-    margin-bottom: 0;
+    font-size: 1.25rem;
   }
   .roadmap-sec .content-block h4 {
-    font-size: 1.75rem;
-  }
-  .roadmap-sec .content-block p {
-    font-size: 1rem;
-  }
-  .roadmap-step-wrapper::before {
-    display: none;
-  }
-  .roadmap-step-wrapper {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5vh;
-  }
-  .roadmap-content {
-    padding-left: 0;
-    border-left: none;
+    font-size: 1.5rem;
   }
 }
 .contact-kv-sec .image-sec {
