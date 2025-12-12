@@ -1808,13 +1808,8 @@ body {
     height: 3.125rem;
   }
   .value-card-wrap .value-card {
-    padding: 1.25rem 0.625rem;
-  }
-  .value-card-wrap .value-card div {
-    padding-right: 0.625rem;
-  }
-  .value-card-wrap .value-card h5 {
-    font-size: 1.25rem;
+    padding: 1.875rem 0.625rem;
+    flex-basis: calc((100% - 1.5rem * 1) / 2);
   }
   .achieve-sec .achieve-right {
     flex-direction: column;
@@ -1839,18 +1834,6 @@ body {
     font-weight: 700;
   }
 }
-@media (max-width: 680px) {
-  .value-card-wrap .value-card {
-    padding: 1.875rem;
-    flex-basis: calc((100% - 1.5rem * 2) / 3);
-  }
-  .value-card-wrap .value-card div {
-    padding-right: 0;
-  }
-  .value-card-wrap .value-card p {
-    display: none;
-  }
-}
 @media (max-width: 480px) {
   .value-sec .value-title {
     font-size: 1rem;
@@ -1865,11 +1848,14 @@ body {
     left: 5px;
     width: 0.9375rem;
   }
-  .value-card-wrap .value-card {
-    min-height: 6.25rem;
-  }
   .value-card-wrap .value-card h5 {
     font-size: 1rem;
+  }
+  .value-card-wrap .value-card h5 span {
+    display: none;
+  }
+  .value-card-wrap .value-card p {
+    font-size: 0.8125rem;
   }
   .achieve-sec .achieve-right h3 {
     font-size: 1.5rem;
@@ -1880,11 +1866,6 @@ body {
   .achieve-sec .achieve-box p {
     padding: 1.25rem 1.25rem;
     font-size: 1rem;
-  }
-}
-@media (max-width: 440px) {
-  .value-card-wrap .value-card {
-    padding: 1.875rem 1.25rem;
   }
 }
 .vision-kv-sec .image-sec {
