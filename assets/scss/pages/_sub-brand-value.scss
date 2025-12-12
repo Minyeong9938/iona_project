@@ -210,11 +210,14 @@
 
     .value-card-wrap {
         .value-card {
+            display: block;
             flex-basis: calc((100% - rem(24) * 2) / 3);
             flex-grow: 0;
             flex-shrink: 0;
             pointer-events: none;
-            padding: rem(30) rem(20);
+            padding: rem(50) rem(20);
+            height: auto;
+            min-height: auto;
 
             p {
                 opacity: 1;
@@ -273,8 +276,8 @@
 
     .value-card-wrap {
         .value-card {
-            padding: rem(30);
-            flex-basis: calc((100% - rem(24) * 1) / 2);
+            padding: rem(20) rem(10);
+            // flex-basis: calc((100% - rem(24) * 1) / 2);
 
             div {
                 padding-right: rem(10);
