@@ -135,18 +135,21 @@
     }
 
     .header-nav {
-        position: absolute;
+        position: fixed;
         top: rem(75);
         right: 0;
         width: 40vw;
         height: 100vh;
         background-color: $darknavyColor;
-        display: none;
+        // display: none;
         z-index: 40;
+        transform: translateX(100%);
+        /* 애니메이션 효과 추가 */
+        transition: transform 0.4s ease-in-out;
     }
 
     .header-nav.on {
-        display: block;
+        transform: translateX(0);
     }
 
     body.menu-open .main-header {

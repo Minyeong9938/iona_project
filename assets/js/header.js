@@ -30,7 +30,7 @@ let menuLinks = document.querySelectorAll(".header-menu li a");
 let btnIcon = btn.querySelector('i');
 
 function toggleMenu() {
-    menu.classList.toggle("on");
+    menu.classList.toggle("on"); // 이 클래스가 CSS 애니메이션을 트리거합니다.
     body.classList.toggle("menu-open");
 
     if (menu.classList.contains("on")) {

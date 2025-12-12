@@ -229,17 +229,19 @@ summary {
     display: block;
   }
   .header-nav {
-    position: absolute;
+    position: fixed;
     top: 4.6875rem;
     right: 0;
     width: 40vw;
     height: 100vh;
     background-color: #0F1A2B;
-    display: none;
     z-index: 40;
+    transform: translateX(100%);
+    /* 애니메이션 효과 추가 */
+    transition: transform 0.4s ease-in-out;
   }
   .header-nav.on {
-    display: block;
+    transform: translateX(0);
   }
   body.menu-open .main-header {
     background: #1C2E4A !important;
