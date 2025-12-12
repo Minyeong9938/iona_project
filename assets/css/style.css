@@ -254,7 +254,7 @@ summary {
     padding: 1.875rem 0;
   }
   .header-nav {
-    width: 60vw;
+    width: 50vw;
   }
 }
 @media (max-width: 480px) {
