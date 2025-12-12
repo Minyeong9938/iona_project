@@ -1768,7 +1768,19 @@ body {
     flex-basis: calc((100% - 1.5rem * 2) / 3);
     flex-grow: 0;
     flex-shrink: 0;
-    min-height: 15.625rem;
+    pointer-events: none;
+  }
+  .value-card-wrap .value-card p {
+    opacity: 1;
+    color: #121212;
+    max-height: none;
+    overflow: visible;
+    transition: none;
+    padding: 0;
+  }
+  .value-card-wrap .value-card:hover p {
+    opacity: 1;
+    max-height: none;
   }
   .value-card-wrap .value-card-wrap {
     justify-content: center;
@@ -1794,32 +1806,12 @@ body {
   .value-card-wrap .value-card {
     padding: 1.875rem;
     flex-basis: calc((100% - 1.5rem * 1) / 2);
-    min-height: 12.5rem;
-    flex-direction: row;
   }
   .value-card-wrap .value-card div {
     padding-right: 0.625rem;
   }
   .value-card-wrap .value-card h5 {
     font-size: 1.25rem;
-  }
-  .value-card-wrap .value-card h5 span {
-    display: none;
-  }
-  .value-card-wrap .value-card p {
-    opacity: 1;
-    color: #121212;
-    max-height: none;
-    overflow: visible;
-    transition: none;
-    margin-top: 0;
-    padding-right: 0;
-    padding-left: 0.625rem;
-    border-left: 1px solid #D1CFC9;
-  }
-  .value-card-wrap .value-card:hover p {
-    opacity: 1;
-    max-height: none;
   }
   .achieve-sec .achieve-right {
     flex-direction: column;
@@ -1848,8 +1840,6 @@ body {
   .value-card-wrap .value-card {
     padding: 1.875rem;
     flex-basis: calc((100% - 1.5rem * 2) / 3);
-    min-height: 12.5rem;
-    pointer-events: none;
   }
   .value-card-wrap .value-card div {
     padding-right: 0;
