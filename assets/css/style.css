@@ -1769,6 +1769,7 @@ body {
     flex-grow: 0;
     flex-shrink: 0;
     pointer-events: none;
+    padding: 1.875rem 1.25rem;
   }
   .value-card-wrap .value-card p {
     opacity: 1;
