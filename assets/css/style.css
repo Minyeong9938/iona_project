@@ -217,7 +217,7 @@ summary {
     display: block;
     text-align: center;
     border-bottom: 1px solid #1C2E4A;
-    padding: 3.125rem 0;
+    padding: 2.5rem 0;
   }
   .header .header-menu li a::after {
     display: none;
@@ -250,6 +250,9 @@ summary {
   }
 }
 @media (max-width: 768px) {
+  .header .header-menu li a {
+    padding: 1.875rem 0;
+  }
   .header-nav {
     width: 60vw;
   }
@@ -259,9 +262,7 @@ summary {
     height: 3.75rem;
   }
   .header .logo a {
-    display: block;
     width: 3.75rem;
-    height: 100%;
   }
   .header .logo a img {
     width: 100%;

@@ -116,7 +116,7 @@
                     display: block;
                     text-align: center;
                     border-bottom: 1px solid $navyColor;
-                    padding: rem(50) 0;
+                    padding: rem(40) 0;
 
                     &::after {
                         display: none;
@@ -161,7 +161,13 @@
 
 @media(max-width: 768px) {
     .header {
-        .header-menu {}
+        .header-menu {
+            li {
+                a {
+                    padding: rem(30) 0;
+                }
+            }
+        }
     }
 
     .header-nav {
@@ -175,9 +181,7 @@
 
         .logo {
             a {
-                display: block;
                 width: rem(60);
-                height: 100%;
 
                 img {
                     width: 100%;
