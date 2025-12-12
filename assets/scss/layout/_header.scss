@@ -40,7 +40,7 @@
                 text-decoration: none;
                 color: $whiteColor;
                 position: relative;
-                padding: rem(5) 0;
+                padding-bottom: rem(5);
 
                 &::after {
                     content: "";
@@ -107,7 +107,7 @@
             flex-direction: column;
             font-size: 20px;
             width: 100%;
-            gap: rem(90);
+            gap: 0;
 
             li {
                 width: 100%;
@@ -115,6 +115,8 @@
                 a {
                     display: block;
                     text-align: center;
+                    border-bottom: 1px solid $navyColor;
+                    padding: rem(50) 0;
 
                     &::after {
                         display: none;
@@ -141,7 +143,6 @@
         background-color: $darknavyColor;
         display: none;
         z-index: 40;
-        padding: 100px 0;
     }
 
     .header-nav.on {
@@ -157,14 +158,11 @@
 
 @media(max-width: 768px) {
     .header {
-        .header-menu {
-            gap: rem(60);
-        }
+        .header-menu {}
     }
 
     .header-nav {
         width: 60vw;
-        padding: 80px 0;
     }
 }
 
@@ -189,12 +187,10 @@
 
         .header-menu {
             font-size: 18px;
-            gap: rem(50);
         }
     }
 
     .header-nav {
-        padding: 50px 0;
         top: rem(60);
     }
 }
