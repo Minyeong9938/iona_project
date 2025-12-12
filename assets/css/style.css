@@ -1848,6 +1848,9 @@ body {
     left: 5px;
     width: 0.9375rem;
   }
+  .value-card-wrap .value-card {
+    min-height: 16.25rem;
+  }
   .value-card-wrap .value-card h5 {
     font-size: 1rem;
   }
