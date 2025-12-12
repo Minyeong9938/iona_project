@@ -1939,7 +1939,7 @@ body {
 .growth-sec .growth-box-wrap .growth-box {
   background: #fff;
   text-align: center;
-  padding: 3.125rem 0;
+  padding: 3.125rem 1.25rem;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -1952,10 +1952,16 @@ body {
   color: #fff;
 }
 .growth-sec .growth-box-wrap h4 {
+  font-size: 1.5rem;
   margin-bottom: 1.25rem;
+  font-weight: 700;
 }
 .growth-sec .growth-box-wrap img {
   margin-bottom: 1.25rem;
+}
+.growth-sec .growth-box-wrap p {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .roadmap-sec .timeline-wrap {
@@ -2012,6 +2018,14 @@ body {
   border-radius: 0.625rem;
 }
 
+@media (max-width: 1340px) {
+  .growth-sec .growth-box-wrap {
+    flex-wrap: wrap;
+  }
+  .growth-sec .growth-box-wrap .growth-box {
+    flex-basis: calc((100% - 1.5rem * 1) / 2);
+  }
+}
 @media (max-width: 1300px) {
   .container .vision-wrap {
     width: 100%;
@@ -2029,17 +2043,12 @@ body {
     left: -2%;
   }
 }
-@media (max-width: 1180px) {
-  .growth-sec .growth-box-wrap {
-    flex-wrap: wrap;
-  }
-  .growth-sec .growth-box-wrap .growth-box {
-    flex-basis: calc((100% - 1.5rem * 1) / 2);
-  }
-}
 @media (max-width: 1024px) {
   .vision-sec .container .vision-left h3 {
     font-size: 2rem;
+  }
+  .growth-box {
+    pointer-events: none;
   }
   .roadmap-sec .year-pin {
     margin-right: 20%;
@@ -2053,8 +2062,39 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .growth-box {
+  .vision-sec .container .vision-left h3 {
+    font-size: 1.75rem;
+  }
+  .vision-sec .container .vision-right img {
+    top: -15%;
+    left: -2%;
+    width: 0.9375rem;
+  }
+  .vision-sec .container .vision-right p {
+    font-size: 1rem;
+  }
+  .growth-sec .growth-box-wrap .growth-box {
     pointer-events: none;
+  }
+  .growth-sec .growth-box-wrap h4 {
+    font-size: 1.25rem;
+  }
+  .growth-sec .growth-box-wrap img {
+    width: 5rem;
+  }
+  .roadmap-sec .year-pin {
+    position: relative !important;
+    top: auto !important;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+  .roadmap-sec .content-block h4 {
+    font-size: 1.75rem;
+  }
+  .roadmap-sec .content-block p {
+    font-size: 1rem;
   }
   .roadmap-step-wrapper::before {
     display: none;
@@ -2063,12 +2103,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 5vh;
-  }
-  .year-pin {
-    position: relative !important;
-    top: auto !important;
-    margin-right: 0;
-    margin-bottom: 1rem;
   }
   .roadmap-content {
     padding-left: 0;
