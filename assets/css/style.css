@@ -1533,6 +1533,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 .tech-about-section .tech-about__text {
   color: #fff;

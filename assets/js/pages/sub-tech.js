@@ -33,19 +33,63 @@ gsap.registerPlugin(ScrollTrigger);
 let techAboutContents = document.querySelectorAll('#tech-about .tech-about-content');
 
 techAboutContents.forEach((el, index) => {
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: el,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: 1.5,
-        }
-    });
+    // let tl = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: el,
+    //         start: 'top center',
+    //         end: 'bottom center',
+    //         scrub: 1.5,
+    //     }
+    // });
 
-    tl.to(el, {
-        opacity: 0,
-        y: -100,
-    })
+    // tl.to(el, {
+    //     opacity: 0,
+    //     y: -100,
+    // })
+    if (index === techAboutContents.length - 1) {
+        gsap.set(el, { opacity: 0 });
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: el,
+                start: '30% 80%',
+                end: 'center center',
+                scrub: 1.5,
+                // markers: true,
+            }
+        });
+
+        tl.to(el, {
+            opacity: 1,
+        });
+    } else {
+        gsap.fromTo(el,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    // markers: true,
+                    start: '30% 80%',
+                    end: 'center center',
+                    scrub: 1.5,
+                }
+            });
+
+        gsap.fromTo(el,
+            { opacity: 1 },
+            {
+                opacity: 0,
+                imgmediateRender: false,
+                scrollTrigger: {
+                    trigger: el,
+                    // markers: true,
+                    start: 'center 40%',
+                    end: '70% 30%',
+                    scrub: 1.5,
+                }
+            });
+    }
 });
 
 // device-tech section

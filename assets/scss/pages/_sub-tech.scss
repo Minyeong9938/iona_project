@@ -192,6 +192,7 @@
         position: relative;
         z-index: 2;
         @include flex;
+        opacity: 0;
     }
 
     .tech-about__text {
