@@ -92,47 +92,28 @@ researchContents.forEach((el, index) => {
             }
         });
 
-        // top center에서 bottom center까지 0 → 1로 변함
-        // 이후는 자동으로 1로 유지됨
         tl.to(el, {
             opacity: 1,
         });
     } else {
-        // 다른 항목들: 기존 애니메이션
-        // let tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: el,
-        //         start: '30% center',
-        //         end: '70% center',
-        //         scrub: 1.5,
-        //         markers: true,
-        //     }
-        // });
-
-        // tl.to(el, {
-        //     opacity: 0,
-        //     // y: -100,
-        // });
         gsap.fromTo(el,
             { opacity: 0 },
             {
                 opacity: 1,
                 scrollTrigger: {
                     trigger: el,
-                    markers: true,
+                    // markers: true,
                     start: '30% 80%',
                     end: 'center center',
                     scrub: 1.5,
                 }
             });
 
-        // 세번째 영역이 사라질 때
         gsap.fromTo(el,
             { opacity: 1 },
             {
                 opacity: 0,
                 imgmediateRender: false,
-                // 충돌 방지. 스크롤 해서 해당 구간에 도착할 때까지 기다림
                 scrollTrigger: {
                     trigger: el,
                     // markers: true,
