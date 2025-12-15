@@ -136,3 +136,11 @@
         }
     }
 }
+
+@media (max-width: 950px) {
+    .about-company-sec {
+        .text-wrap {
+            width: rem(300);
+        }
+    }
+}

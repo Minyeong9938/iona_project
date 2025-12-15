@@ -1293,6 +1293,11 @@ body {
     height: 45vh;
   }
 }
+@media (max-width: 950px) {
+  .about-company-sec .text-wrap {
+    width: 18.75rem;
+  }
+}
 .tech-kv-sec .image-sec {
   background-image: url("../images/sub2/kv_image.jpg");
   background-position: center;
