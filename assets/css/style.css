@@ -1500,6 +1500,9 @@ body {
 .inno-sec .inno-text p {
   font-weight: 300;
 }
+.inno-sec .inno-text p br {
+  display: none;
+}
 
 .tech-about-section {
   width: 100%;
@@ -1522,7 +1525,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .tech-about-section .tech-about__text {
   color: #fff;
@@ -1673,7 +1675,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .research-section .research__text {
   color: #fff;
@@ -1692,6 +1693,68 @@ body {
   margin-bottom: 0;
 }
 
+@media (max-width: 1024px) {
+  .inno-sec .text-sec h3 {
+    font-size: 2.25rem;
+  }
+  .inno-sec .text-sec .sub-title {
+    font-size: 1.25rem;
+  }
+  .inno-sec .inno-text h4 {
+    font-size: 1.5rem;
+  }
+  .inno-sec .inno-text h4 span {
+    display: none;
+  }
+  .inno-sec .inno-text p br {
+    display: block;
+  }
+  .tech-about-section .tech-about__text h3 {
+    font-size: 2rem;
+  }
+  .device-tech-sec .container .device-image {
+    width: 50%;
+    height: 50%;
+  }
+  .device-tech-sec .device-text h3 {
+    font-size: 2.25rem;
+  }
+  .device-tech-sec .device-text p {
+    font-size: 1.25rem;
+  }
+  .device-tech-sec .device-text .desc {
+    font-size: 1.5rem;
+  }
+  .device-tech-sec .device-video img {
+    width: 20%;
+    height: auto;
+  }
+  .research-section .research__text h3 {
+    font-size: 2.25rem;
+  }
+  .research-section .research__text p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .inno-sec .text-sec h3 {
+    font-size: 1.75rem;
+  }
+  .inno-sec .text-sec .sub-title {
+    font-size: 1rem;
+  }
+  .inno-sec .inno-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .inno-sec .inno-text-wrap {
+    width: calc(50% - 0.75rem);
+    margin-top: -3.125rem;
+  }
+}
 .value-kv-sec .image-sec {
   background-image: url("../images/sub3/kv_image.png");
   background-position: bottom;

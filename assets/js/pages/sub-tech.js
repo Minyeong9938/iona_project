@@ -62,7 +62,7 @@ gsap.to(horizontalItems, {
     scrollTrigger: {
         trigger: '.device-tech-sec',
         pin: true, // 섹션을 화면에 고정
-        scrub: 1, // 스크롤에 따라 부드럽게 애니메이션
+        scrub: 3, // 스크롤에 따라 부드럽게 애니메이션
         // end: "+=4000", // 스크롤 길이 설정 (4000px 동안 애니메이션 진행)
         end: () => `+=${numItems * 1000}`, // 슬라이드 개수에 비례하여 스크롤 길이 설정 (선택 사항)
         // markers: true // 디버깅용 마커 (필요 없으면 주석 처리)

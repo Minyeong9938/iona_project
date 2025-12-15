@@ -157,6 +157,10 @@
 
         p {
             font-weight: 300;
+
+            br {
+                display: none;
+            }
         }
     }
 }
@@ -182,7 +186,6 @@
         position: relative;
         z-index: 2;
         @include flex;
-        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .tech-about__text {
@@ -359,7 +362,6 @@
         position: relative;
         z-index: 2;
         @include flex;
-        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .research__text {
@@ -379,6 +381,112 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .inno-sec {
+        .text-sec {
+            h3 {
+                font-size: rem(36);
+            }
+
+            .sub-title {
+                font-size: rem(20);
+            }
+        }
+
+        .inno-text {
+            h4 {
+                font-size: rem(24);
+
+                span {
+                    display: none;
+                }
+            }
+
+            p {
+                br {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .tech-about-section {
+        .tech-about__text {
+            h3 {
+                font-size: rem(32);
+            }
+        }
+    }
+
+    .device-tech-sec {
+        .container {
+            .device-image {
+                width: 50%;
+                height: 50%;
+            }
+
+        }
+
+        .device-text {
+            h3 {
+                font-size: rem(36);
+            }
+
+            p {
+                font-size: rem(20);
+            }
+
+            .desc {
+                font-size: rem(24);
+            }
+        }
+
+        .device-video {
+            img {
+                width: 20%;
+                height: auto;
+            }
+        }
+    }
+
+    .research-section {
+        .research__text {
+            h3 {
+                font-size: rem(36);
+            }
+
+            p {
+                font-size: rem(20);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .inno-sec {
+        .text-sec {
+            h3 {
+                font-size: rem(28);
+            }
+
+            .sub-title {
+                font-size: rem(16);
+            }
+        }
+
+        .inno-desc {
+            @include flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .inno-text-wrap {
+            width: calc(50% - rem(12));
+            margin-top: rem(-50);
         }
     }
 }
