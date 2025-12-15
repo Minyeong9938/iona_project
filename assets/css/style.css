@@ -1781,11 +1781,7 @@ body {
   }
   .device-tech-sec .device-text {
     width: 100%;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
+    text-align: center;
   }
   .device-tech-sec .device-text h3 {
     font-size: 1.75rem;
@@ -1797,15 +1793,7 @@ body {
     font-size: 1.25rem;
   }
   .device-tech-sec .device-text .device-video {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .device-tech-sec .device-text .device-video img {
-    width: 50%;
-    height: 100%;
+    display: none;
   }
   .research-section .research__text h3 {
     font-size: 1.75rem;
@@ -1821,11 +1809,8 @@ body {
   .inno-sec .text-sec h3 {
     font-size: 1.5rem;
   }
-  .inno-sec .inno-text-wrap {
-    width: calc(50% - 0.75rem / 2);
-  }
   .inno-sec .inno-text-wrap:last-child {
-    margin-top: 0;
+    margin-top: -1.875rem;
   }
   .inno-sec .inno-text h4 {
     font-size: 1.25rem;

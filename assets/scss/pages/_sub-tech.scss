@@ -522,9 +522,7 @@
 
         .device-text {
             width: 100%;
-            text-align: left;
-            @include flex;
-            flex-direction: row-reverse;
+            text-align: center;
 
             h3 {
                 font-size: rem(28);
@@ -539,14 +537,7 @@
             }
 
             .device-video {
-                width: 40%;
-                height: 100%;
-                @include flex;
-
-                img {
-                    width: 50%;
-                    height: 100%;
-                }
+                display: none;
             }
         }
     }
@@ -574,12 +565,8 @@
             }
         }
 
-        .inno-text-wrap {
-            width: calc(50% - rem(12)/ 2);
-        }
-
         .inno-text-wrap:last-child {
-            margin-top: 0;
+            margin-top: rem(-30);
         }
 
         .inno-text {
