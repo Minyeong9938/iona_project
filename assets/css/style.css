@@ -1501,34 +1501,37 @@ body {
   font-weight: 300;
 }
 
-.parallax__item {
+.tech-about-section {
+  width: 100%;
+  position: relative;
+}
+.tech-about-section .tech-about-video {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+}
+.tech-about-section .tech-about-content {
   width: 100%;
   height: 100vh;
   position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
-.parallax__item .tech-about-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.parallax__item .parallax__item__text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.tech-about-section .tech-about__text {
   color: #fff;
   width: 100%;
   text-align: center;
 }
-.parallax__item .parallax__item__text h3 {
+.tech-about-section .tech-about__text h3 {
   font-size: 2.25rem;
   line-height: 1.5;
-  margin-bottom: 3.125rem;
 }
 
 .device-bg {
@@ -1637,41 +1640,55 @@ body {
   text-align: left;
 }
 
-.research-sec {
+.research-section {
+  width: 100%;
+  position: relative;
+}
+.research-section .research-bg {
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("../images/sub2/tech05.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 0;
+  display: block;
 }
-.research-sec::before {
+.research-section .research-bg::after {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
 }
-.research-sec .parallax__item__text {
+.research-section .research-content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
   z-index: 2;
-  margin-bottom: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
-.research-sec .parallax__item__text h3 {
+.research-section .research__text {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.research-section .research__text h3 {
   font-size: 4rem;
   margin-bottom: 1.25rem;
 }
-.research-sec .parallax__item__text p {
+.research-section .research__text p {
   font-size: 1.75rem;
   margin-bottom: 1.25rem;
 }
-.research-sec .parallax__item__text p:last-child {
+.research-section .research__text p:last-child {
   margin-bottom: 0;
 }
 

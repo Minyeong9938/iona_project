@@ -162,25 +162,30 @@
 }
 
 // tech-about section
-.parallax__item {
+.tech-about-section {
     width: 100%;
-    height: 100vh;
     position: relative;
-    @include flex;
 
     .tech-about-video {
-        position: absolute;
+        position: sticky;
+        top: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         object-fit: cover;
         display: block;
+        z-index: 0;
     }
 
-    .parallax__item__text {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+    .tech-about-content {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        z-index: 2;
+        @include flex;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .tech-about__text {
         color: $whiteColor;
         width: 100%;
         text-align: center;
@@ -188,7 +193,6 @@
         h3 {
             font-size: rem(36);
             line-height: 1.5;
-            margin-bottom: rem(50);
         }
     }
 }
@@ -322,30 +326,46 @@
 }
 
 // research section
-.research-sec {
+.research-section {
     width: 100%;
-    height: 100vh;
     position: relative;
-    @include flex;
-    background-image: url("../images/sub2/tech05.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
+    .research-bg {
+        position: sticky;
         top: 0;
         width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 1;
+        height: 100vh;
+        background-image: url("../images/sub2/tech05.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+        display: block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
     }
 
-    .parallax__item__text {
+    .research-content {
+        width: 100%;
+        height: 100vh;
+        position: relative;
         z-index: 2;
-        margin-bottom: rem(100);
+        @include flex;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .research__text {
+        color: $whiteColor;
+        width: 100%;
+        text-align: center;
 
         h3 {
             font-size: rem(64);

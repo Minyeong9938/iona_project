@@ -30,45 +30,22 @@ const swiper = new Swiper(".mySwiper", {
 // tech-about section
 gsap.registerPlugin(ScrollTrigger);
 
-const ani = gsap.timeline();
+let techAboutContents = document.querySelectorAll('#tech-about .tech-about-content');
 
-const delay = "+=3";
-const moveDist = 250;
+techAboutContents.forEach((el, index) => {
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: el,
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 1.5,
+        }
+    });
 
-const animDuration = 2;
-const animEase = "power1.inOut";
-
-ani.from("#tech-about .t1", {
-    autoAlpha: 0,
-    duration: animDuration,
-    y: moveDist,
-    ease: animEase
-}, "start")
-
-    .to("#tech-about .t1", {
-        autoAlpha: 0,
-        duration: animDuration,
-        y: -moveDist,
-        ease: animEase
-    }, delay)
-    .from("#tech-about .t2", {
-        autoAlpha: 0,
-        duration: animDuration,
-        y: moveDist,
-        ease: animEase
-    }, "<")
-
-    .to("#tech-about .t2", { autoAlpha: 1, duration: animDuration, y: -moveDist, ease: animEase }, delay);
-
-ScrollTrigger.create({
-    animation: ani,
-    trigger: "#tech-about",
-    start: "top top",
-    end: "+=3200",
-    scrub: 0.3,
-    pin: true,
-    anticipatePin: 1,
-    // markers: true
+    tl.to(el, {
+        opacity: 0,
+        y: -100,
+    })
 });
 
 // device-tech section
@@ -93,55 +70,20 @@ gsap.to(horizontalItems, {
 });
 
 // research section
-const aniResearch = gsap.timeline();
+let researchContents = document.querySelectorAll('#research-about .research-content');
 
-aniResearch.from("#research-about .r1", {
-    autoAlpha: 0,
-    duration: animDuration,
-    y: moveDist,
-    ease: animEase
-}, "start")
+researchContents.forEach((el, index) => {
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: el,
+            start: 'top center',
+            end: 'bottom center',
+            scrub: 1.5,
+        }
+    });
 
-    .to("#research-about .r1", {
-        autoAlpha: 0,
-        duration: animDuration,
-        y: -moveDist,
-        ease: animEase
-    }, "+=3.5")
-    .from("#research-about .r2", {
-        autoAlpha: 0,
-        duration: animDuration,
-        y: moveDist,
-        ease: animEase
-    }, "< + 0.1")
-
-    .to("#research-about .r2", {
-        autoAlpha: 0,
-        duration: animDuration,
-        y: -moveDist,
-        ease: animEase
-    }, "+=3.5")
-    .from("#research-about .r3", {
-        autoAlpha: 0,
-        duration: animDuration,
-        y: moveDist,
-        ease: animEase
-    }, "< + 0.1")
-
-    .to("#research-about .r3", {
-        autoAlpha: 1,
-        duration: animDuration,
-        y: -moveDist,
-        ease: animEase
-    }, "+=3.5");
-
-ScrollTrigger.create({
-    animation: aniResearch,
-    trigger: "#research-about",
-    start: "top top",
-    end: "+=5000",
-    scrub: 0.2,
-    pin: true,
-    anticipatePin: 1,
-    // markers: true
+    tl.to(el, {
+        opacity: 0,
+        y: -100,
+    })
 });
