@@ -177,13 +177,12 @@
         .swiper-slide img {
             display: block;
             width: 100%;
-            height: 60%;
+            height: 30vh;
             object-fit: cover;
             margin-bottom: rem(20);
         }
 
         .text-wrap-mo {
-            height: 40%;
             text-align: left;
 
             h2 {
@@ -209,9 +208,6 @@
 @media (max-width: 480px) {
     .about-company-sec-mo {
         .text-wrap-mo {
-            height: 40%;
-            text-align: left;
-
             h2 {
                 font-size: rem(24);
             }

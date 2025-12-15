@@ -126,6 +126,12 @@ gsap.fromTo(".text04",
 
 // mobile js
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.3,
+    slidesPerView: 1.1,
     spaceBetween: 24,
+
+    breakpoints: {
+        480: {
+            slidesPerView: 1.3,
+        },
+    },
 });
