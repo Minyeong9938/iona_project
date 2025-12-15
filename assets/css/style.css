@@ -1772,6 +1772,21 @@ body {
   .tech-about-section .tech-about__text h3 {
     font-size: 1.75rem;
   }
+  .device-tech-sec .container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .device-tech-sec .container .device-image {
+    width: 100%;
+  }
+  .device-tech-sec .device-text {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
   .device-tech-sec .device-text h3 {
     font-size: 1.75rem;
   }
@@ -1780,6 +1795,17 @@ body {
   }
   .device-tech-sec .device-text .desc {
     font-size: 1.25rem;
+  }
+  .device-tech-sec .device-text .device-video {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .device-tech-sec .device-text .device-video img {
+    width: 50%;
+    height: 100%;
   }
   .research-section .research__text h3 {
     font-size: 1.75rem;

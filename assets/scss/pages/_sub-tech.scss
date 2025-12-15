@@ -511,7 +511,21 @@
     }
 
     .device-tech-sec {
+        .container {
+            flex-direction: column;
+            justify-content: space-between;
+
+            .device-image {
+                width: 100%;
+            }
+        }
+
         .device-text {
+            width: 100%;
+            text-align: left;
+            @include flex;
+            flex-direction: row-reverse;
+
             h3 {
                 font-size: rem(28);
             }
@@ -522,6 +536,17 @@
 
             .desc {
                 font-size: rem(20);
+            }
+
+            .device-video {
+                width: 40%;
+                height: 100%;
+                @include flex;
+
+                img {
+                    width: 50%;
+                    height: 100%;
+                }
             }
         }
     }
