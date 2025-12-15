@@ -78,17 +78,68 @@ gsap.matchMedia().add("(min-width: 1025px)", () => {
 let researchContents = document.querySelectorAll('#research-about .research-content');
 
 researchContents.forEach((el, index) => {
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: el,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: 1.5,
-        }
-    });
+    if (index === researchContents.length - 1) {
+        // 마지막 항목: 처음엔 opacity 0, 중앙에서 1로, 이후 1 유지
+        gsap.set(el, { opacity: 0 }); // 초기값 0으로 설정
 
-    tl.to(el, {
-        opacity: 0,
-        y: -100,
-    })
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: el,
+                start: '30% 80%',
+                end: 'center center',
+                scrub: 1.5,
+                // markers: true,
+            }
+        });
+
+        // top center에서 bottom center까지 0 → 1로 변함
+        // 이후는 자동으로 1로 유지됨
+        tl.to(el, {
+            opacity: 1,
+        });
+    } else {
+        // 다른 항목들: 기존 애니메이션
+        // let tl = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: el,
+        //         start: '30% center',
+        //         end: '70% center',
+        //         scrub: 1.5,
+        //         markers: true,
+        //     }
+        // });
+
+        // tl.to(el, {
+        //     opacity: 0,
+        //     // y: -100,
+        // });
+        gsap.fromTo(el,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    markers: true,
+                    start: '30% 80%',
+                    end: 'center center',
+                    scrub: 1.5,
+                }
+            });
+
+        // 세번째 영역이 사라질 때
+        gsap.fromTo(el,
+            { opacity: 1 },
+            {
+                opacity: 0,
+                imgmediateRender: false,
+                // 충돌 방지. 스크롤 해서 해당 구간에 도착할 때까지 기다림
+                scrollTrigger: {
+                    trigger: el,
+                    // markers: true,
+                    start: 'center 40%',
+                    end: '70% 30%',
+                    scrub: 1.5,
+                }
+            });
+    }
 });

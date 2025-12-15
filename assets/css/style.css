@@ -1395,11 +1395,17 @@ body {
   color: #121212;
   border-radius: 50%;
   border: 1px solid #D1CFC9;
+  transition: all 0.3s ease-in-out;
 }
 .device-wrap .swiper-button-prev::after,
 .device-wrap .swiper-button-next::after {
   font-size: 1rem;
   font-weight: 800;
+}
+.device-wrap .swiper-button-prev:hover,
+.device-wrap .swiper-button-next:hover {
+  background-color: #D1CFC9;
+  color: #fff;
 }
 .device-wrap .swiper-button-next {
   right: 0;
@@ -1586,7 +1592,7 @@ body {
   width: 50%;
 }
 .device-tech-sec .device-text h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 3.125rem;
 }
@@ -1595,7 +1601,7 @@ body {
   margin-bottom: 3.125rem;
 }
 .device-tech-sec .device-text .desc {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 3.125rem;
 }
@@ -1675,6 +1681,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 .research-section .research__text {
   color: #fff;

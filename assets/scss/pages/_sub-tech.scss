@@ -37,10 +37,16 @@
         color: $blackColor;
         border-radius: 50%;
         border: 1px solid $grayColor;
+        transition: all 0.3s ease-in-out;
 
         &::after {
             font-size: rem(16);
             font-weight: 800;
+        }
+
+        &:hover {
+            background-color: $grayColor;
+            color: $whiteColor;
         }
     }
 
@@ -257,7 +263,7 @@
         width: 50%;
 
         h3 {
-            font-size: rem(64);
+            font-size: rem(48);
             font-weight: 700;
             margin-bottom: rem(50);
         }
@@ -268,7 +274,7 @@
         }
 
         .desc {
-            font-size: rem(36);
+            font-size: rem(28);
             font-weight: 700;
             margin-bottom: rem(50);
         }
@@ -362,6 +368,7 @@
         position: relative;
         z-index: 2;
         @include flex;
+        opacity: 0;
     }
 
     .research__text {

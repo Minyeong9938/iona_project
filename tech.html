@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IONA</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -85,19 +86,19 @@
                     <p>끊임없는 혁신으로 새로운 뷰티 기준을 만듭니다</p>
                 </div>
                 <div class="inno-desc">
-                    <div class="inno-text-wrap">
+                    <div class="inno-text-wrap" data-aos="fade-up" data-aos-duration="1000">
                         <div class="inno-text">
                             <h4>Real Results <span>검증된 성과</span></h4>
                             <p>임상과 사용 데이터를 <br> 기반으로 입증</p>
                         </div>
                     </div>
-                    <div class="inno-text-wrap">
+                    <div class="inno-text-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
                         <div class="inno-text">
                             <h4>Global <span>글로벌 적용</span></h4>
                             <p>다양한 피부 타입과 환경에 <br> 맞춘 솔루션</p>
                         </div>
                     </div>
-                    <div class="inno-text-wrap">
+                    <div class="inno-text-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                         <div class="inno-text">
                             <h4>Sustainable <span>지속가능성</span></h4>
                             <p>친환경 소재와 장기적 안전성을 <br> 고려한 기술</p>
@@ -271,7 +272,14 @@
     </footer>
 
 
+
     <script src="https://kit.fontawesome.com/76f79174b9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
