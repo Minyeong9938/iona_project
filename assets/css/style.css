@@ -1712,6 +1712,20 @@ body {
   .tech-about-section .tech-about__text h3 {
     font-size: 2rem;
   }
+  .device-tech-sec {
+    height: 400vh;
+  }
+  .device-tech-sec .horizontal-wrap {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .device-tech-sec .device-bg {
+    width: 100%;
+    height: 100vh;
+    padding: 3.125rem 0;
+    flex-shrink: 1;
+  }
   .device-tech-sec .container .device-image {
     width: 50%;
     height: 50%;
@@ -1725,10 +1739,6 @@ body {
   .device-tech-sec .device-text .desc {
     font-size: 1.5rem;
   }
-  .device-tech-sec .device-video img {
-    width: 20%;
-    height: auto;
-  }
   .research-section .research__text h3 {
     font-size: 2.25rem;
   }
@@ -1737,6 +1747,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .inno-sec {
+    border-radius: 6.25rem 6.25rem 0 0;
+  }
   .inno-sec .text-sec h3 {
     font-size: 1.75rem;
   }
@@ -1752,7 +1765,69 @@ body {
   }
   .inno-sec .inno-text-wrap {
     width: calc(50% - 0.75rem);
+  }
+  .inno-sec .inno-text-wrap:last-child {
     margin-top: -3.125rem;
+  }
+  .tech-about-section .tech-about__text h3 {
+    font-size: 1.75rem;
+  }
+  .device-tech-sec .device-text h3 {
+    font-size: 1.75rem;
+  }
+  .device-tech-sec .device-text p {
+    font-size: 1rem;
+  }
+  .device-tech-sec .device-text .desc {
+    font-size: 1.25rem;
+  }
+  .research-section .research__text h3 {
+    font-size: 1.75rem;
+  }
+  .research-section .research__text p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .inno-sec {
+    border-radius: 3.125rem 3.125rem 0 0;
+  }
+  .inno-sec .text-sec h3 {
+    font-size: 1.5rem;
+  }
+  .inno-sec .inno-text-wrap {
+    width: calc(50% - 0.75rem / 2);
+  }
+  .inno-sec .inno-text-wrap:last-child {
+    margin-top: 0;
+  }
+  .inno-sec .inno-text h4 {
+    font-size: 1.25rem;
+  }
+  .inno-sec .inno-text p {
+    font-size: 0.875rem;
+  }
+  .tech-about-section .tech-about__text h3 {
+    font-size: 1.5rem;
+  }
+  .device-tech-sec .container .device-image {
+    width: 30%;
+    height: 50%;
+  }
+  .device-tech-sec .device-text h3 {
+    font-size: 1.5rem;
+  }
+  .device-tech-sec .device-text p {
+    font-size: 0.875rem;
+  }
+  .device-tech-sec .device-text .desc {
+    font-size: 1rem;
+  }
+  .research-section .research__text h3 {
+    font-size: 1.5rem;
+  }
+  .research-section .research__text p {
+    font-size: 0.875rem;
   }
 }
 .value-kv-sec .image-sec {
