@@ -1267,6 +1267,10 @@ body {
   z-index: 1;
 }
 
+.about-company-sec-mo {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   .about-company-sec .text-wrap {
     width: 31.25rem;
@@ -1296,6 +1300,71 @@ body {
 @media (max-width: 950px) {
   .about-company-sec .text-wrap {
     width: 18.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-company-sec {
+    display: none;
+  }
+  .margin-bottom {
+    margin-bottom: 6.25rem;
+  }
+  .about-company-sec-mo {
+    display: block;
+  }
+  .about-company-sec-mo .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .about-company-sec-mo .swiper-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  }
+  .about-company-sec-mo .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+  }
+  .about-company-sec-mo .text-wrap-mo {
+    height: 40%;
+    text-align: left;
+  }
+  .about-company-sec-mo .text-wrap-mo h2 {
+    font-size: 1.75rem;
+  }
+  .about-company-sec-mo .text-wrap-mo .sub-title {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+  }
+  .about-company-sec-mo .text-wrap-mo h4 {
+    font-size: 1rem;
+  }
+  .about-company-sec-mo .text-wrap-mo .desc {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .about-company-sec-mo .text-wrap-mo {
+    height: 40%;
+    text-align: left;
+  }
+  .about-company-sec-mo .text-wrap-mo h2 {
+    font-size: 1.5rem;
+  }
+  .about-company-sec-mo .text-wrap-mo .sub-title {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .about-company-sec-mo .text-wrap-mo h4 {
+    font-size: 0.875rem;
+  }
+  .about-company-sec-mo .text-wrap-mo .desc {
+    font-size: 0.875rem;
   }
 }
 .tech-kv-sec .image-sec {
