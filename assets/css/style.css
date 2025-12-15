@@ -1288,6 +1288,10 @@ body {
   .about-company-sec .desc {
     font-size: 1.125rem;
   }
+  .about-company-sec .img-wrap {
+    margin: 30vh 0;
+    height: 45vh;
+  }
 }
 .tech-kv-sec .image-sec {
   background-image: url("../images/sub2/kv_image.jpg");
