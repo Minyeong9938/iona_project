@@ -1267,6 +1267,28 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 1300px) {
+  .about-company-sec .text-wrap {
+    width: 31.25rem;
+  }
+}
+@media (max-width: 1300px) {
+  .about-company-sec .text-wrap {
+    width: 25rem;
+  }
+  .about-company-sec .text-inner h2 {
+    font-size: 2rem;
+  }
+  .about-company-sec .sub-title {
+    font-size: 1.25rem;
+  }
+  .about-company-sec .text-inner h4 {
+    font-size: 1.125rem;
+  }
+  .about-company-sec .desc {
+    font-size: 1.125rem;
+  }
+}
 .tech-kv-sec .image-sec {
   background-image: url("../images/sub2/kv_image.jpg");
   background-position: center;
