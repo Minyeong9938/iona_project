@@ -191,10 +191,11 @@ body {
 
 
                 button {
-                    padding: rem(10) rem(30);
+                    padding: rem(12) rem(30);
                     font-size: rem(20);
                     background-color: $darkgrayColor;
                     color: $whiteColor;
+                    border-radius: rem(30);
                     transition: background-color 0.3s ease, color 0.3s ease;
 
                     &:hover {

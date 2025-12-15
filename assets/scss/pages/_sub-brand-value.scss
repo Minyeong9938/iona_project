@@ -277,7 +277,8 @@
     .value-card-wrap {
         .value-card {
             padding: rem(30) rem(10);
-            flex-basis: calc((100% - rem(24) * 1) / 2);
+            // flex-basis: calc((100% - rem(24) * 1) / 2);
+            flex-basis: 100%;
         }
     }
 
@@ -332,8 +333,6 @@
 
     .value-card-wrap {
         .value-card {
-            min-height: rem(260);
-
             h5 {
                 font-size: rem(16);
 

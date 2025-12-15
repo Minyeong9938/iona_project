@@ -588,10 +588,11 @@ body {
   display: inline-block;
 }
 .about-sec .about-box .about-text .btn-wrap button {
-  padding: 0.625rem 1.875rem;
+  padding: 0.75rem 1.875rem;
   font-size: 1.25rem;
   background-color: #6b6b6b;
   color: #fff;
+  border-radius: 1.875rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .about-sec .about-box .about-text .btn-wrap button:hover {
@@ -2075,7 +2076,7 @@ body {
   }
   .value-card-wrap .value-card {
     padding: 1.875rem 0.625rem;
-    flex-basis: calc((100% - 1.5rem * 1) / 2);
+    flex-basis: 100%;
   }
   .achieve-sec .achieve-right {
     flex-direction: column;
@@ -2113,9 +2114,6 @@ body {
     top: -20px;
     left: 5px;
     width: 0.9375rem;
-  }
-  .value-card-wrap .value-card {
-    min-height: 16.25rem;
   }
   .value-card-wrap .value-card h5 {
     font-size: 1rem;

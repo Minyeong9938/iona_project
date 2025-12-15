@@ -1,6 +1,6 @@
 // device section
 const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
+    slidesPerView: 1.6,
     spaceBetween: 10,
     loop: true,
     navigation: {
@@ -10,11 +10,11 @@ const swiper = new Swiper(".mySwiper", {
 
     breakpoints: {
         640: {
-            slidesPerView: 3,
+            slidesPerView: 2.5,
             spaceBetween: 20,
         },
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 3.5,
             spaceBetween: 30,
         },
 
