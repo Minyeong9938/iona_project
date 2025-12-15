@@ -1774,7 +1774,7 @@ body {
   }
   .device-tech-sec .container {
     flex-direction: column;
-    justify-content: space-between;
+    gap: 3.125rem;
   }
   .device-tech-sec .container .device-image {
     width: 100%;
@@ -1785,12 +1785,15 @@ body {
   }
   .device-tech-sec .device-text h3 {
     font-size: 1.75rem;
+    margin-bottom: 1.25rem;
   }
   .device-tech-sec .device-text p {
     font-size: 1rem;
+    margin-bottom: 0;
   }
   .device-tech-sec .device-text .desc {
     font-size: 1.25rem;
+    margin-bottom: 1.25rem;
   }
   .device-tech-sec .device-text .device-video {
     display: none;

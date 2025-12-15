@@ -513,7 +513,7 @@
     .device-tech-sec {
         .container {
             flex-direction: column;
-            justify-content: space-between;
+            gap: rem(50);
 
             .device-image {
                 width: 100%;
@@ -526,14 +526,17 @@
 
             h3 {
                 font-size: rem(28);
+                margin-bottom: rem(20);
             }
 
             p {
                 font-size: rem(16);
+                margin-bottom: 0;
             }
 
             .desc {
                 font-size: rem(20);
+                margin-bottom: rem(20);
             }
 
             .device-video {
