@@ -15,8 +15,12 @@ body {
     }
 }
 
-.margin-top {
+.margin-top-main {
     margin-top: rem(150);
+}
+
+.margin-top {
+    margin-top: rem(100);
 }
 
 // kv section
@@ -262,7 +266,7 @@ body {
     }
 
     .swiper-slide {
-        width: auto;
+        width: auto !important;
         flex-shrink: 0;
         transition: transform 0.3s ease;
         opacity: 1;
@@ -278,10 +282,10 @@ body {
     }
 
     .card-info {
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: rem(10);
+        width: fit-content;
 
         img {
             display: block;
@@ -297,14 +301,14 @@ body {
         }
 
         .card01 {
-            width: 320px;
-            height: 460px;
+            width: 300px;
+            height: 450px;
             object-fit: cover;
         }
 
         .card02 {
-            width: 490px;
-            height: 280px;
+            width: 450px;
+            height: 300px;
             object-fit: cover;
         }
     }
@@ -363,10 +367,8 @@ body {
         z-index: 2;
 
         .global-text {
-            margin-bottom: rem(350);
-
             h2 {
-                font-size: rem(40);
+                font-size: rem(36);
                 color: $whiteColor;
 
                 span {
@@ -416,6 +418,10 @@ body {
         }
 
         .global-stats {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20%;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -518,7 +524,7 @@ body {
             }
 
             h2 {
-                font-size: rem(40);
+                font-size: rem(36);
                 margin-bottom: rem(50);
 
                 /* h2 활성화 시 애니메이션 및 딜레이 설정 */
@@ -548,12 +554,6 @@ body {
 @media(max-width: 1300px) {
     .global-sec {
         .container {
-            .global-text {
-                h2 {
-                    font-size: rem(36);
-                }
-            }
-
             .global-stats {
                 .stat-item {
                     .count-wrap {
@@ -704,7 +704,7 @@ body {
 
         .card-info {
             .card01 {
-                width: 280px;
+                width: 250px;
                 height: 400px;
             }
 
@@ -731,11 +731,6 @@ body {
         }
 
         .global-stats {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 20%;
-
             .stat-item {
                 .count-wrap {
                     .count {

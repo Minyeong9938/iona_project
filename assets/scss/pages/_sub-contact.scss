@@ -128,10 +128,11 @@
 
     .wrap {
         flex-direction: column;
+        gap: rem(100);
 
         .contact-sec {
             width: 100%;
-            margin-bottom: rem(50);
+            // margin-bottom: rem(50);
 
             .form-row {
                 flex-direction: column;
