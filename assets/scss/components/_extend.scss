@@ -55,6 +55,7 @@
 @media (max-width: 1024px) {
     .my-kv-sec {
         height: 45vh;
+        margin-top: rem(75);
     }
 }
 
@@ -76,10 +77,16 @@
 
 @media (max-width: 480px) {
     .my-kv-sec {
+        margin-top: rem(60);
+
         .image-sec {
             .text-sec {
                 h2 {
                     font-size: rem(28);
+                }
+
+                p {
+                    font-size: rem(16);
                 }
             }
         }

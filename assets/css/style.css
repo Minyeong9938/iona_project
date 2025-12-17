@@ -408,6 +408,7 @@ summary {
 @media (max-width: 1024px) {
   .my-kv-sec {
     height: 45vh;
+    margin-top: 4.6875rem;
   }
 }
 @media (max-width: 768px) {
@@ -419,8 +420,14 @@ summary {
   }
 }
 @media (max-width: 480px) {
+  .my-kv-sec {
+    margin-top: 3.75rem;
+  }
   .my-kv-sec .image-sec .text-sec h2 {
     font-size: 1.75rem;
+  }
+  .my-kv-sec .image-sec .text-sec p {
+    font-size: 1rem;
   }
 }
 body {
@@ -1901,7 +1908,7 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
-  margin-top: 0.9375rem;
+  margin-top: 1.25rem;
   padding: 0 1.25rem;
 }
 .value-card-wrap .value-card:hover {
@@ -2108,11 +2115,10 @@ body {
   }
   .value-sec .value-title span {
     font-weight: 700;
-    font-size: 1.5rem;
   }
   .value-sec .value-title img {
     position: relative;
-    top: -20px;
+    top: -10px;
     left: 5px;
     width: 0.9375rem;
   }
@@ -2123,7 +2129,10 @@ body {
     display: none;
   }
   .value-card-wrap .value-card p {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
+  }
+  .achieve-sec {
+    padding: 5rem 0;
   }
   .achieve-sec .achieve-right h3 {
     font-size: 1.5rem;
@@ -2355,7 +2364,7 @@ body {
     top: auto !important;
     margin-right: 0;
     margin-bottom: 1rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 0;
   }
   .roadmap-sec .content-block h4 {
@@ -2370,7 +2379,7 @@ body {
   .roadmap-step-wrapper {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5vh;
+    margin-bottom: 6.25rem !important;
   }
   .roadmap-content {
     padding-left: 0;
@@ -2387,6 +2396,9 @@ body {
   .vision-sec .container .vision-left h3 {
     font-size: 1.5rem;
   }
+  .growth-sec {
+    padding: 5rem 0;
+  }
   .growth-sec .growth-box-wrap .growth-box {
     flex-basis: calc((100% - 1.5rem) / 1);
     min-height: auto;
@@ -2396,6 +2408,9 @@ body {
   }
   .roadmap-sec .content-block h4 {
     font-size: 1.5rem;
+  }
+  .roadmap-step-wrapper {
+    margin-bottom: 5rem !important;
   }
 }
 .contact-kv-sec .image-sec {
@@ -2534,6 +2549,7 @@ body {
   }
   .wrap {
     flex-direction: column;
+    gap: 5rem;
   }
   .wrap .contact-sec .submit-button {
     padding: 0.9375rem 1.5625rem;

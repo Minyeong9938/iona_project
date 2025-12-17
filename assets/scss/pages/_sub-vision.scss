@@ -294,7 +294,7 @@
             top: auto !important;
             margin-right: 0;
             margin-bottom: 1rem;
-            font-size: rem(28);
+            font-size: rem(24);
             margin-bottom: 0;
         }
 
@@ -314,7 +314,7 @@
     .roadmap-step-wrapper {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 5vh;
+        margin-bottom: rem(100) !important;
     }
 
     .roadmap-content {
@@ -346,6 +346,8 @@
     }
 
     .growth-sec {
+        padding: rem(80) 0;
+
         .growth-box-wrap {
             .growth-box {
                 flex-basis: calc((100% - rem(24)) / 1);
@@ -362,5 +364,9 @@
         .content-block h4 {
             font-size: rem(24);
         }
+    }
+
+    .roadmap-step-wrapper {
+        margin-bottom: rem(80) !important;
     }
 }
