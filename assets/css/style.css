@@ -603,6 +603,7 @@ body {
   width: 55%;
   height: 31.25rem;
   border-radius: 0 0 0 5rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15);
 }
 .about-sec .box2 {
   margin-top: 6.25rem;
@@ -1147,17 +1148,17 @@ body {
   opacity: 0;
 }
 .about-company-sec .text-inner h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 .about-company-sec .sub-title {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 .about-company-sec .text-inner h4 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .about-company-sec .desc {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 .about-company-sec .img-container {
@@ -1212,7 +1213,7 @@ body {
     width: 31.25rem;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
   .about-company-sec .text-wrap {
     width: 25rem;
   }
@@ -1239,11 +1240,11 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .about-company-sec {
-    display: none;
-  }
   .margin-bottom {
     margin-bottom: 6.25rem;
+  }
+  .about-company-sec {
+    display: none;
   }
   .about-company-sec-mo {
     display: block;
@@ -1274,7 +1275,7 @@ body {
   }
   .about-company-sec-mo .text-wrap-mo .sub-title {
     font-size: 1.125rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   .about-company-sec-mo .text-wrap-mo h4 {
     font-size: 1rem;
@@ -1284,12 +1285,14 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .margin-bottom {
+    margin-bottom: 5rem;
+  }
   .about-company-sec-mo .text-wrap-mo h2 {
     font-size: 1.5rem;
   }
   .about-company-sec-mo .text-wrap-mo .sub-title {
     font-size: 1rem;
-    margin-bottom: 20px;
   }
   .about-company-sec-mo .text-wrap-mo h4 {
     font-size: 0.875rem;
@@ -1330,8 +1333,8 @@ body {
   background-color: transparent;
   color: #121212;
   border-radius: 50%;
-  border: 1px solid #D1CFC9;
-  transition: all 0.3s ease-in-out;
+  border: 0.0625rem solid #D1CFC9;
+  transition: all 0.3s ease;
 }
 .device-wrap .swiper-button-prev::after,
 .device-wrap .swiper-button-next::after {
@@ -1357,6 +1360,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 .device-wrap .slide01 {
   background-image: url("../images/sub2/device_v-ems.png");
@@ -1626,7 +1630,7 @@ body {
   text-align: center;
 }
 .research-section .research__text h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1.25rem;
 }
 .research-section .research__text p {
@@ -1755,6 +1759,7 @@ body {
 @media (max-width: 480px) {
   .inno-sec {
     border-radius: 3.125rem 3.125rem 0 0;
+    padding: 5rem 0;
   }
   .inno-sec .text-sec h3 {
     font-size: 1.5rem;
@@ -1801,7 +1806,7 @@ body {
 }
 .value-text-area .value-title span {
   font-weight: 700;
-  font-size: rme(36);
+  font-size: 2.25rem;
 }
 
 .value-card-wrap {
@@ -1820,15 +1825,16 @@ body {
   flex: 1 0 0;
   flex-direction: column;
   text-align: center;
-  border: 1px solid #D1CFC9;
+  border: 0.0625rem solid #D1CFC9;
   border-radius: 1.25rem;
   padding: 3.125rem 0;
   min-height: 25rem;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
 }
 .value-card-wrap .value-card h5 {
   font-size: 1.5rem;
   font-weight: 600;
+  line-height: 1;
 }
 .value-card-wrap .value-card h5 span {
   font-weight: 300;
@@ -1838,19 +1844,16 @@ body {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
   margin-top: 1.25rem;
   padding: 0 1.25rem;
 }
 .value-card-wrap .value-card:hover {
   border-color: #1C2E4A;
   background-color: #1C2E4A;
-}
-.value-card-wrap .value-card:hover h5 {
   color: #fff;
 }
 .value-card-wrap .value-card:hover p {
-  color: #fff;
   opacity: 1;
   max-height: 31.25rem;
 }
@@ -1938,11 +1941,6 @@ body {
   }
   .achieve-sec .achieve-left {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
   }
   .achieve-sec .achieve-right {
     width: 100%;
@@ -1968,7 +1966,10 @@ body {
   }
   .value-sec .value-title span {
     font-weight: 700;
-    font-size: rme(32);
+    font-size: 2rem;
+  }
+  .value-card-wrap {
+    justify-content: center;
   }
   .value-card-wrap .value-card {
     display: block;
@@ -1992,16 +1993,12 @@ body {
     opacity: 1;
     max-height: none;
   }
-  .value-card-wrap .value-card-wrap {
-    justify-content: center;
-  }
   .achieve-sec .achieve-right h3 {
     font-size: 2rem;
   }
   .achieve-sec .achieve-box p {
     padding: 1.5625rem 1.5625rem;
     font-size: 1.25rem;
-    font-weight: 500;
   }
   .achieve-sec .achieve-box p span {
     color: #FFA347;
@@ -2033,11 +2030,6 @@ body {
   .achieve-sec .achieve-box p {
     padding: 1.5625rem 1.5625rem;
     font-size: 1.25rem;
-    font-weight: 500;
-  }
-  .achieve-sec .achieve-box p span {
-    color: #FFA347;
-    font-weight: 700;
   }
 }
 @media (max-width: 480px) {
@@ -2045,12 +2037,12 @@ body {
     font-size: 1rem;
   }
   .value-sec .value-title span {
-    font-weight: 700;
+    font-size: 1.125rem;
   }
   .value-sec .value-title img {
     position: relative;
-    top: -10px;
-    left: 5px;
+    top: -0.625rem;
+    left: 0.3125rem;
     width: 0.9375rem;
   }
   .value-card-wrap .value-card h5 {
@@ -2283,6 +2275,7 @@ body {
   }
   .growth-sec .growth-box-wrap .growth-box {
     pointer-events: none;
+    flex-basis: 100%;
   }
   .growth-sec .growth-box-wrap h4 {
     font-size: 1.25rem;
@@ -2293,9 +2286,8 @@ body {
   .roadmap-sec .year-pin {
     position: relative !important;
     top: auto !important;
-    margin-right: 0;
-    margin-bottom: 1rem;
     font-size: 1.5rem;
+    margin-right: 0;
     margin-bottom: 0;
   }
   .roadmap-sec .content-block h4 {
@@ -2317,22 +2309,12 @@ body {
     border-left: none;
   }
 }
-@media (max-width: 620px) {
-  .growth-sec .growth-box-wrap .growth-box {
-    min-height: 20.625rem;
-    justify-content: flex-start;
-  }
-}
 @media (max-width: 480px) {
   .vision-sec .container .vision-left h3 {
     font-size: 1.5rem;
   }
   .growth-sec {
     padding: 5rem 0;
-  }
-  .growth-sec .growth-box-wrap .growth-box {
-    flex-basis: calc((100% - 1.5rem) / 1);
-    min-height: auto;
   }
   .roadmap-sec .year-pin {
     font-size: 1.25rem;
@@ -2349,8 +2331,13 @@ body {
   background-position: center;
 }
 
-.connect {
+.connect-wrapper {
   width: 100%;
+}
+
+.connect {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 .connect p {
   font-size: 1.25rem;
@@ -2365,10 +2352,16 @@ body {
 .wrap {
   display: flex;
   gap: 1.5rem;
-  margin-top: 3.125rem;
+  min-height: 600px;
+}
+.wrap .connect-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 .wrap .contact-sec {
-  width: 50%;
+  width: 100%;
+  flex: 1;
 }
 .wrap .contact-sec .form-title {
   margin-bottom: 1.25rem;
@@ -2421,11 +2414,17 @@ body {
 }
 .wrap .map {
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 .wrap .map h2 {
   margin-bottom: 1.25rem;
   font-size: 1.25rem;
   font-weight: 700;
+}
+.wrap .map #map {
+  flex: 1;
+  min-height: 400px;
 }
 .wrap .map .map-list {
   padding: 1.875rem 0;
@@ -2433,6 +2432,7 @@ body {
 }
 .wrap .map .map-list p {
   font-size: 1rem;
+  margin-bottom: 1.25rem;
 }
 .wrap .map .map-list p:last-child {
   margin-bottom: 0;

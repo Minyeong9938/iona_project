@@ -14,7 +14,7 @@
         <div class="container">
             <h1 class="logo">
                 <a href="index.html">
-                    <img src="./assets/images/IONA_logo.png" alt="">
+                    <img src="./assets/images/IONA_logo.png" alt="logo">
                 </a>
             </h1>
 
@@ -44,7 +44,7 @@
     </header>
 
     <main>
-        <!-- kv section -->
+        <!-- contact kv section -->
         <section class="contact-kv-sec my-kv-sec">
             <div class="image-sec">
                 <div class="text-sec">
@@ -54,59 +54,64 @@
             </div>
         </section>
 
-        <section class="connect margin-top container">
-            <p>CONNECT</p>
-            <h3>IONA는 상생과 협력을 통해<br>
-                더 큰 미래를 그립니다</h3>
-
+        <!-- connect section -->
+        <section class="connect-wrapper margin-top container">
             <div class="wrap">
-                <section class="contact-sec">
-                    <div class="form-title">
-                        <h2>문의하기</h2>
+                <div class="connect-left">
+                    <div class="connect">
+                        <p>CONNECT</p>
+                        <h3>IONA는 상생과 협력을 통해<br>
+                            더 큰 미래를 그립니다</h3>
                     </div>
 
-                    <form id="contact-form" onsubmit="handleSubmit(event)">
-                        <div class="form-row">
-                            <input class="company" type="text" id="company" placeholder="회사명" required>
-                            <input class="person" type="text" id="contact_person" placeholder="담당자명" required>
+                    <section class="contact-sec">
+                        <div class="form-title">
+                            <h2>문의하기</h2>
                         </div>
 
-                        <div class="form-row">
-                            <input class="phone" type="tel" id="phone" placeholder="전화번호" required>
-                            <input class="email" type="email" id="email" placeholder="이메일" required>
-                        </div>
+                        <form id="contact-form" onsubmit="handleSubmit(event)">
+                            <div class="form-row">
+                                <input class="company" type="text" id="company" placeholder="회사명" required>
+                                <input class="person" type="text" id="contact_person" placeholder="담당자명" required>
+                            </div>
 
-                        <div class="form-row">
-                            <textarea class="message" id="message" rows="5" placeholder="문의 내용을 상세히 입력해 주세요."
-                                required></textarea>
-                        </div>
+                            <div class="form-row">
+                                <input class="phone" type="tel" id="phone" placeholder="전화번호" required>
+                                <input class="email" type="email" id="email" placeholder="이메일" required>
+                            </div>
 
-                        <button type="submit" class="submit-button">
-                            문의 제출하기
-                        </button>
-                    </form>
-                </section>
+                            <div class="form-row">
+                                <textarea class="message" id="message" rows="5" placeholder="문의 내용을 상세히 입력해 주세요."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-button">
+                                문의 제출하기
+                            </button>
+                        </form>
+                    </section>
+                </div>
 
                 <section class="map">
                     <h2>오시는 길</h2>
-                    <div id="map" style="width:100%;height:350px;"></div>
+                    <div id="map" style="width:100%;height:100%;"></div>
                     <div class="map-list">
                         <p>인천광역시 남동구 인주대로 593 엔타스빌딩</p>
                         <p>email: evxioxx@naver.com</p>
                         <p>phone: 010-1234-5678</p>
                     </div>
                     <div class="sns-list">
-                        <li><a href="">
-                                <img src="./assets/images/facebook_b.png" alt="">
+                        <li><a href="#">
+                                <img src="./assets/images/facebook_b.png" alt="facebook">
                             </a></li>
-                        <li><a href="">
-                                <img src="./assets/images/instargram_b.png" alt="">
+                        <li><a href="#">
+                                <img src="./assets/images/instargram_b.png" alt="instargram">
                             </a></li>
-                        <li><a href="">
-                                <img src="./assets/images/youtube_b.png" alt="">
+                        <li><a href="#">
+                                <img src="./assets/images/youtube_b.png" alt="youtube">
                             </a></li>
-                        <li><a href="">
-                                <img src="./assets/images/x_b.png" alt="">
+                        <li><a href="#">
+                                <img src="./assets/images/x_b.png" alt="x">
                             </a></li>
                     </div>
                 </section>
@@ -120,7 +125,7 @@
             <div class="footer-left">
                 <div class="footer-brand">
                     <a href="#">
-                        <img src="./assets/images/IONA_logo.png" alt="">
+                        <img src="./assets/images/IONA_logo.png" alt="footer_logo">
                     </a>
                     <p>피부 속까지 집중케어, 스마트 뷰티 디바이스</p>
                 </div>

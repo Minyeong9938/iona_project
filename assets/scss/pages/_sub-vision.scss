@@ -1,3 +1,4 @@
+// vision kv section
 .vision-kv-sec {
     .image-sec {
         background-image: url("../images/sub4/kv_image.jpg");
@@ -168,7 +169,6 @@
 
     .content-block img {
         width: 100%;
-        // max-width: 800px;
         height: auto;
         border-radius: rem(10);
     }
@@ -217,6 +217,8 @@
 }
 
 @media (max-width: 1024px) {
+
+    // vision section
     .vision-sec {
         .container {
             .vision-left {
@@ -227,10 +229,12 @@
         }
     }
 
+    // growth section
     .growth-box {
         pointer-events: none;
     }
 
+    // roadmap-sec
     .roadmap-sec {
         .year-pin {
             margin-right: 20%;
@@ -250,6 +254,7 @@
 
 @media (max-width: 768px) {
 
+    // vision section
     .vision-sec {
         .container {
             .vision-left {
@@ -272,10 +277,12 @@
         }
     }
 
+    // growth section
     .growth-sec {
         .growth-box-wrap {
             .growth-box {
                 pointer-events: none;
+                flex-basis: 100%;
             }
 
             h4 {
@@ -288,13 +295,13 @@
         }
     }
 
+    // roadmap-sec
     .roadmap-sec {
         .year-pin {
             position: relative !important;
             top: auto !important;
-            margin-right: 0;
-            margin-bottom: 1rem;
             font-size: rem(24);
+            margin-right: 0;
             margin-bottom: 0;
         }
 
@@ -323,18 +330,9 @@
     }
 }
 
-@media (max-width: 620px) {
-    .growth-sec {
-        .growth-box-wrap {
-            .growth-box {
-                min-height: rem(330);
-                justify-content: flex-start;
-            }
-        }
-    }
-}
-
 @media (max-width: 480px) {
+
+    // vision section
     .vision-sec {
         .container {
             .vision-left {
@@ -345,15 +343,9 @@
         }
     }
 
+    // growth section
     .growth-sec {
         padding: rem(80) 0;
-
-        .growth-box-wrap {
-            .growth-box {
-                flex-basis: calc((100% - rem(24)) / 1);
-                min-height: auto;
-            }
-        }
     }
 
     .roadmap-sec {
@@ -366,6 +358,7 @@
         }
     }
 
+    // roadmap-sec
     .roadmap-step-wrapper {
         margin-bottom: rem(80) !important;
     }

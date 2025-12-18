@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const valueCards = document.querySelectorAll('.growth-box');
     const pinElements = document.querySelectorAll('.year-pin');
 
-    let hoverEnabled = false; // 현재 hover 기능 활성 상태
+    let hoverEnabled = false;
 
-    // hover 이벤트 함수 정의
+    // hover 이벤트
     function addHoverEvents() {
         valueCards.forEach(card => {
             const img = card.querySelector('img');
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const originalSrc = img.getAttribute('src');
             const hoverSrc = originalSrc.replace('_primary.png', '_white.png');
 
-            // 저장해두기 (removeEventListener 위해)
             card._enterEvent = () => img.src = hoverSrc;
             card._leaveEvent = () => img.src = originalSrc;
 
@@ -72,12 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // 화면 크기에 따라 활성화/비활성화
     function updateScriptState() {
         if (window.innerWidth <= 767) {
-            // 모바일 → 모두 끄기
             removeHoverEvents();
             disablePinObserver();
             hoverEnabled = false;
         } else {
-            // PC → 켜기
             if (!hoverEnabled) {
                 addHoverEvents();
                 enablePinObserver();
@@ -86,10 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // 초기 실행
     updateScriptState();
 
-    // resize 시 즉시 반영
     window.addEventListener('resize', updateScriptState);
 
 });

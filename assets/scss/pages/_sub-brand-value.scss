@@ -1,3 +1,4 @@
+// brand-value kv section
 .value-kv-sec {
     .image-sec {
         background-image: url("../images/sub3/kv_image.png");
@@ -5,7 +6,6 @@
     }
 
 }
-
 
 // value section
 .value-text-area {
@@ -17,7 +17,7 @@
 
         span {
             font-weight: 700;
-            font-size: rme(36);
+            font-size: rem(36);
         }
     }
 }
@@ -34,15 +34,16 @@
         flex: 1 0 0;
         flex-direction: column;
         text-align: center;
-        border: 1px solid $grayColor;
+        border: rem(1) solid $grayColor;
         border-radius: rem(20);
         padding: rem(50) 0;
         min-height: rem(400);
-        transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease;
 
         h5 {
             font-size: rem(24);
             font-weight: 600;
+            line-height: 1;
 
             span {
                 font-weight: 300;
@@ -54,7 +55,7 @@
             opacity: 0;
             max-height: 0;
             overflow: hidden;
-            transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+            transition: opacity 0.4s ease, max-height 0.4s ease;
             margin-top: rem(20);
             padding: 0 rem(20);
         }
@@ -62,13 +63,9 @@
         &:hover {
             border-color: $navyColor;
             background-color: $navyColor;
-
-            h5 {
-                color: $whiteColor;
-            }
+            color: $whiteColor;
 
             p {
-                color: $whiteColor;
                 opacity: 1;
                 max-height: rem(500);
             }
@@ -155,6 +152,8 @@
 }
 
 @media (max-width: 1300px) {
+
+    // value section
     .value-sec {
         .icon {
             width: rem(80);
@@ -162,6 +161,7 @@
         }
     }
 
+    // achievement section
     .achieve-sec {
         background-attachment: scroll;
 
@@ -171,9 +171,6 @@
 
         .achieve-left {
             width: 100%;
-            @include flex;
-            flex-direction: column;
-            gap: rem(24);
         }
 
         .achieve-right {
@@ -197,18 +194,22 @@
 }
 
 @media (max-width: 1024px) {
+
+    // value section
     .value-sec {
         .value-title {
             font-size: rem(24);
 
             span {
                 font-weight: 700;
-                font-size: rme(32);
+                font-size: rem(32);
             }
         }
     }
 
     .value-card-wrap {
+        justify-content: center;
+
         .value-card {
             display: block;
             flex-basis: calc((100% - rem(24) * 2) / 3);
@@ -235,17 +236,9 @@
                 }
             }
         }
-
-        // .value-card-wrap .value-card:nth-child(4),
-        // .value-card-wrap .value-card:nth-child(5) {
-        //     flex-basis: calc((100% - #{rem(24)}) / 2);
-        // }
-
-        .value-card-wrap {
-            justify-content: center;
-        }
     }
 
+    // achievement section
     .achieve-sec {
         .achieve-right {
             h3 {
@@ -256,7 +249,6 @@
         .achieve-box p {
             padding: rem(25) rem(25);
             font-size: rem(20);
-            font-weight: 500;
 
             span {
                 color: $primaryColor;
@@ -267,6 +259,8 @@
 }
 
 @media(max-width: 768px) {
+
+    // value section
     .value-sec {
         .icon {
             width: rem(50);
@@ -277,11 +271,11 @@
     .value-card-wrap {
         .value-card {
             padding: rem(30) rem(10);
-            // flex-basis: calc((100% - rem(24) * 1) / 2);
             flex-basis: 100%;
         }
     }
 
+    // achievement section
     .achieve-sec {
         .achieve-right {
             flex-direction: column;
@@ -302,29 +296,25 @@
         .achieve-box p {
             padding: rem(25) rem(25);
             font-size: rem(20);
-            font-weight: 500;
-
-            span {
-                color: $primaryColor;
-                font-weight: 700;
-            }
         }
     }
 }
 
 @media(max-width: 480px) {
+
+    // value section
     .value-sec {
         .value-title {
             font-size: rem(16);
 
             span {
-                font-weight: 700;
+                font-size: rem(18);
             }
 
             img {
                 position: relative;
-                top: -10px;
-                left: 5px;
+                top: rem(-10);
+                left: rem(5);
                 width: rem(15);
             }
         }
@@ -346,6 +336,7 @@
         }
     }
 
+    // achievement section
     .achieve-sec {
         padding: rem(80) 0;
 

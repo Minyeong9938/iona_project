@@ -12,7 +12,7 @@ gsap.to(".text01", {
     }
 });
 
-// 🖼️ img01: text01과 함께 사라짐
+// img01 text01과 함께 사라짐
 gsap.to(".img01", {
     opacity: 0,
     scrollTrigger: {
@@ -23,8 +23,6 @@ gsap.to(".img01", {
         // markers: true
     }
 });
-
-
 
 // 나타나기
 gsap.fromTo(".text02",

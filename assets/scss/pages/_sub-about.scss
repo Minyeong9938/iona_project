@@ -1,11 +1,12 @@
+// about kv section
 .about-kv-sec {
     .image-sec {
         background-image: url("../images/sub1/kv_image.jpg");
     }
 }
 
+// about company section
 .about-company-sec {
-
     .container {
         display: flex;
         justify-content: space-between;
@@ -33,20 +34,20 @@
     }
 
     .text-inner h2 {
-        font-size: 36px;
+        font-size: rem(36);
     }
 
     .sub-title {
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: rem(24);
+        margin-bottom: rem(20);
     }
 
     .text-inner h4 {
-        font-size: 20px;
+        font-size: rem(20);
     }
 
     .desc {
-        font-size: 20px;
+        font-size: rem(20);
         font-weight: 300;
     }
 
@@ -112,7 +113,7 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
     .about-company-sec {
         .text-wrap {
             width: rem(400);
@@ -150,12 +151,12 @@
 }
 
 @media (max-width: 768px) {
-    .about-company-sec {
-        display: none;
-    }
-
     .margin-bottom {
         margin-bottom: rem(100);
+    }
+
+    .about-company-sec {
+        display: none;
     }
 
     .about-company-sec-mo {
@@ -191,7 +192,7 @@
 
             .sub-title {
                 font-size: rem(18);
-                margin-bottom: 20px;
+                margin-bottom: rem(20);
             }
 
             h4 {
@@ -206,6 +207,10 @@
 }
 
 @media (max-width: 480px) {
+    .margin-bottom {
+        margin-bottom: rem(80);
+    }
+
     .about-company-sec-mo {
         .text-wrap-mo {
             h2 {
@@ -214,7 +219,6 @@
 
             .sub-title {
                 font-size: rem(16);
-                margin-bottom: 20px;
             }
 
             h4 {
