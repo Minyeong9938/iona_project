@@ -1,24 +1,20 @@
-body {
-    font-family: 'Pretendard';
-    word-break: keep-all;
-    color: $blackColor;
-}
-
 .main-header {
     background-color: transparent;
     color: $blackColor;
+    box-shadow: none;
 
     &.scrolled {
         background-color: $navyColor;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 }
 
+// 메인 페이지 margin-top
 .margin-top-main {
     margin-top: rem(150);
 }
 
+// 서브 페이지 margin-top
 .margin-top {
     margin-top: rem(100);
 }
@@ -84,6 +80,7 @@ body {
 
         .kv-title {
             font-size: rem(64);
+            font-weight: 700;
         }
 
         .kv-subtitle {
@@ -144,8 +141,6 @@ body {
         }
 
         &:hover {
-            color: $blackColor;
-
             span {
                 transform: translateX(rem(4));
             }
@@ -168,32 +163,20 @@ body {
         .about-text {
             width: 45%;
             padding: rem(30) 0;
-            overflow: hidden;
-
-            span {
-                display: block;
-            }
 
             h2 {
                 font-size: rem(36);
                 font-weight: 700;
                 padding-bottom: rem(30);
-                overflow: hidden;
             }
 
             .desc {
                 font-size: rem(20);
                 font-weight: 300;
                 padding-bottom: rem(50);
-                overflow: hidden;
             }
 
             .btn-wrap {
-                .btn-inner {
-                    display: inline-block;
-                }
-
-
                 button {
                     padding: rem(12) rem(30);
                     font-size: rem(20);
@@ -240,7 +223,7 @@ body {
     width: rem(100);
     height: rem(100);
     border-radius: 50%;
-    background: rgb(15, 26, 43, 0.8);
+    background: $darknavyColor;
     color: $whiteColor;
     font-size: rem(20);
     font-weight: 700;
@@ -249,7 +232,7 @@ body {
     pointer-events: none;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
 }
 
 .tech-sec {
@@ -269,7 +252,6 @@ body {
         width: auto !important;
         flex-shrink: 0;
         transition: transform 0.3s ease;
-        opacity: 1;
         transform: none;
     }
 
@@ -293,7 +275,7 @@ body {
             height: auto;
             object-fit: cover;
             opacity: 0.9;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease;
 
             &:hover {
                 opacity: 1;
@@ -301,22 +283,22 @@ body {
         }
 
         .card01 {
-            width: 300px;
-            height: 450px;
+            width: rem(300);
+            height: rem(450);
             object-fit: cover;
         }
 
         .card02 {
-            width: 450px;
-            height: 300px;
+            width: rem(450);
+            height: rem(300);
             object-fit: cover;
         }
     }
 
     .card-title {
-        margin-top: rem(10);
         font-size: rem(24);
         font-weight: 600;
+        padding: rem(10) 0; // 호버 시 텍스트 잘림 방지용 padding
     }
 }
 
@@ -324,9 +306,9 @@ body {
 
 // global section
 .global-sec {
-    position: relative;
     width: 100%;
     height: 100vh;
+    position: relative;
     overflow: hidden;
 
     .background {
@@ -359,14 +341,16 @@ body {
     .container {
         width: 100%;
         height: 100%;
-        max-width: 1484px;
+        max-width: rem(1484);
         position: absolute;
-        top: rem(100);
+        top: 0;
         left: 50%;
         transform: translate(-50%);
         z-index: 2;
 
         .global-text {
+            margin-top: rem(100);
+
             h2 {
                 font-size: rem(36);
                 color: $whiteColor;
@@ -379,29 +363,28 @@ body {
             .desc {
                 margin-top: rem(20);
                 font-size: rem(18);
-                line-height: 1.6;
-                color: rgba(255, 255, 255, 0.85);
+                line-height: 1.5;
+                color: $grayColor;
             }
 
             .more-btn {
                 font-size: rem(14);
-                position: relative;
-                display: inline-block;
                 color: $whiteColor;
                 padding: rem(10) rem(30);
-                box-sizing: border-box;
+                margin-top: rem(20);
+                display: inline-block;
+                position: relative;
                 width: auto;
-                border: 1px solid $whiteColor;
+                border: rem(1) solid $whiteColor;
                 border-radius: rem(30);
                 background: transparent;
                 transition: all 0.3s ease;
-                margin-top: rem(20);
 
                 i {
                     position: absolute;
                     top: 50%;
-                    right: rem(25); // 버튼 오른쪽 끝
                     transform: translateY(-50%);
+                    right: rem(25); // 버튼 오른쪽 끝
                     opacity: 0;
                     transition: all 0.3s ease;
                 }
@@ -418,13 +401,13 @@ body {
         }
 
         .global-stats {
+            width: 100%;
             position: absolute;
+            bottom: rem(100);
             left: 50%;
             transform: translateX(-50%);
-            bottom: 20%;
             display: flex;
             justify-content: space-between;
-            width: 100%;
             text-align: center;
 
             .stat-item {
@@ -440,18 +423,16 @@ body {
                     justify-content: center;
                     align-items: center;
                     font-weight: 700;
-                    letter-spacing: -1px;
 
                     .count {
                         font-size: rem(64);
                         color: $whiteColor;
-                        min-width: rem(178);
+                        min-width: rem(185);
                         text-align: center;
                     }
 
                     span {
                         font-size: rem(64);
-                        // font-weight: 700;
                         color: $whiteColor;
                         white-space: nowrap;
                     }
@@ -493,7 +474,7 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.25);
+            background: rgba(0, 0, 0, 0.3);
             z-index: 1;
         }
 
@@ -505,21 +486,17 @@ body {
             transform: translate(-50%, -50%);
             text-align: center;
             color: $whiteColor;
-            padding: 0 20px;
             z-index: 2;
 
-            /* 텍스트 클리핑 및 초기 상태 설정 */
+            // 텍스트 클리핑
             .text-clip {
                 overflow: hidden;
-                /* 텍스트를 자르는 마스크 역할 */
                 position: relative;
                 line-height: 1.5;
-                /* 줄 높이 설정 */
 
                 span {
                     display: block;
                     transform: translateY(100%);
-                    /* 초기 상태: 아래로 숨김 */
                 }
             }
 
@@ -527,9 +504,7 @@ body {
                 font-size: rem(36);
                 margin-bottom: rem(50);
 
-                /* h2 활성화 시 애니메이션 및 딜레이 설정 */
                 &.animated span {
-                    /* duration을 1.5초로 증가 */
                     animation: slideUpClip 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
                     animation-delay: 0.3s;
                 }
@@ -540,9 +515,7 @@ body {
                 font-weight: 300;
                 color: $whiteColor;
 
-                /* p 활성화 시 애니메이션 및 딜레이 설정 (h2보다 늦게 시작) */
                 &.animated span {
-                    /* duration을 1.5초로 증가 */
                     animation: slideUpClip 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
                     animation-delay: 0.6s;
                 }
@@ -573,34 +546,16 @@ body {
 }
 
 @media(max-width: 1024px) {
+
+    // kv section
     .kv-sec {
         height: 90vh;
 
         .kv-swiper {
-            width: 100%;
-            height: 100%;
 
             .swiper-wrapper {
+
                 .swiper-slide {
-                    @include flex(center, flex-start);
-                    height: 100%;
-                    width: 100%;
-
-                    background-position: bottom;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.2);
-                        z-index: 2;
-                    }
-
                     &.slide01 {
                         background: url('../images/main/kv_image01.jpg') no-repeat bottom / contain,
                             linear-gradient(to right, #A8A6CD, #D9D2E4);
@@ -625,8 +580,6 @@ body {
         }
 
         .kv-text {
-            position: relative;
-            z-index: 3;
             top: 30%;
             transform: translateY(-30%);
 
@@ -636,26 +589,18 @@ body {
 
             .kv-subtitle {
                 font-size: rem(36);
-                font-weight: 700;
-                margin-top: rem(30);
             }
 
             .kv-desc {
                 font-size: rem(20);
-                margin-top: rem(10);
-            }
-
-            .btn-wrap {
-                margin-top: rem(30);
             }
         }
     }
 
+    // about section
     .about-sec {
         .about-box {
-            display: flex;
             flex-direction: column;
-            gap: rem(30);
 
             .about-text {
                 width: 100%;
@@ -695,6 +640,8 @@ body {
         }
     }
 
+
+    // tech section
     .tech-sec {
         .container {
             h2 {
@@ -704,13 +651,13 @@ body {
 
         .card-info {
             .card01 {
-                width: 250px;
-                height: 400px;
+                width: rem(250);
+                height: rem(400);
             }
 
             .card02 {
-                width: 400px;
-                height: 250px;
+                width: rem(400);
+                height: rem(250);
             }
         }
 
@@ -719,17 +666,9 @@ body {
         }
     }
 
+
+    // global section
     .global-sec {
-        height: 80vh;
-
-        .container {
-
-            .global-text {
-                margin-bottom: 0;
-            }
-
-        }
-
         .global-stats {
             .stat-item {
                 .count-wrap {
@@ -746,10 +685,8 @@ body {
         }
     }
 
-
+    // banner section
     .banner-sec {
-        height: 80vh;
-
         .banner-bg {
             .banner-text {
                 h2 {
@@ -769,7 +706,7 @@ body {
                     .count-wrap {
                         .count {
                             font-size: rem(36);
-                            min-width: rem(100);
+                            min-width: rem(110);
                         }
 
                         span {
@@ -783,11 +720,13 @@ body {
 }
 
 @media(max-width: 768px) {
+    .margin-top-main {
+        margin-top: rem(100);
+    }
+
+    // kv section
     .kv-sec {
         .kv-text {
-            top: 30%;
-            transform: translateY(-30%);
-
             .kv-title {
                 font-size: rem(36);
             }
@@ -808,10 +747,7 @@ body {
         }
     }
 
-    .margin-top {
-        margin-top: rem(100);
-    }
-
+    // about section
     .about-sec {
         .about-box {
             .about-text {
@@ -822,10 +758,12 @@ body {
         }
     }
 
+    // custom cursor 안보이게
     .cursor {
         display: none;
     }
 
+    // tech section
     .tech-sec {
         .container {
             h2 {
@@ -835,13 +773,13 @@ body {
 
         .card-info {
             .card01 {
-                width: 200px;
-                height: 350px;
+                width: rem(200);
+                height: rem(350);
             }
 
             .card02 {
-                width: 350px;
-                height: 200px;
+                width: rem(350);
+                height: rem(200);
             }
         }
 
@@ -850,6 +788,7 @@ body {
         }
     }
 
+    // global section
     .global-sec {
         .container {
             .global-text {
@@ -861,18 +800,15 @@ body {
             }
 
             .global-stats {
-                bottom: 30%;
-
                 .stat-item {
                     p {
                         font-size: rem(16);
-                        color: $primaryColor;
                     }
 
                     .count-wrap {
                         .count {
                             font-size: rem(28);
-                            min-width: rem(80);
+                            min-width: rem(90);
                         }
 
                         span {
@@ -884,6 +820,7 @@ body {
         }
     }
 
+    // banner section
     .banner-sec {
         .banner-bg {
             .banner-text {
@@ -897,8 +834,6 @@ body {
 
 @media(max-width: 580px) {
     .global-sec {
-        height: 90vh;
-
         .global-stats {
             flex-wrap: wrap;
             gap: rem(20);
@@ -907,6 +842,15 @@ body {
 }
 
 @media(max-width: 480px) {
+    .margin-top-main {
+        margin-top: rem(80);
+    }
+
+    .margin-top {
+        margin-top: rem(80);
+    }
+
+    // kv section
     .kv-sec {
         .kv-text {
             .kv-title {
@@ -929,10 +873,7 @@ body {
         }
     }
 
-    .margin-top {
-        margin-top: rem(80);
-    }
-
+    // about section
     .about-sec {
         .about-box {
             .about-text {
@@ -957,23 +898,23 @@ body {
         }
     }
 
+    // tech section
     .tech-sec {
         .container {
             h2 {
                 font-size: rem(24);
             }
-
         }
 
         .card-info {
             .card01 {
-                width: 150px;
-                height: 300px;
+                width: rem(150);
+                height: rem(300);
             }
 
             .card02 {
-                width: 300px;
-                height: 150px;
+                width: rem(300);
+                height: rem(150);
             }
         }
 
@@ -982,10 +923,11 @@ body {
         }
     }
 
+    // globacl section
     .global-sec {
         .container {
             .global-text {
-                text-align: center;
+                margin-top: rem(80);
 
                 h2 {
                     font-size: rem(24);
@@ -997,7 +939,7 @@ body {
             }
 
             .global-stats {
-                bottom: 30%;
+                bottom: rem(80);
 
                 .stat-item {
                     p {

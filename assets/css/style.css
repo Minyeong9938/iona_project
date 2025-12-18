@@ -1,58 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2") format("woff2");
-  font-weight: 100;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2") format("woff2");
-  font-weight: 200;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-display: swap;
-}
 * {
   margin: 0;
   padding: 0;
@@ -109,6 +55,65 @@ summary {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+body {
+  font-family: "Pretendard";
+  color: #121212;
+}
+
 .header {
   width: 100%;
   height: 4.6875rem;
@@ -117,6 +122,7 @@ summary {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .header .logo a {
   display: block;
@@ -430,19 +436,13 @@ summary {
     font-size: 1rem;
   }
 }
-body {
-  font-family: "Pretendard";
-  word-break: keep-all;
-  color: #121212;
-}
-
 .main-header {
   background-color: transparent;
   color: #121212;
+  box-shadow: none;
 }
 .main-header.scrolled {
   background-color: #1C2E4A;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -508,6 +508,7 @@ body {
 }
 .kv-sec .kv-text .kv-title {
   font-size: 4rem;
+  font-weight: 700;
 }
 .kv-sec .kv-text .kv-subtitle {
   font-size: 2.25rem;
@@ -559,9 +560,6 @@ body {
   transform: translateX(0);
   transition: transform 0.3s ease;
 }
-.kv-sec .more-btn:hover {
-  color: #121212;
-}
 .kv-sec .more-btn:hover span {
   transform: translateX(0.25rem);
 }
@@ -579,25 +577,16 @@ body {
 .about-sec .about-box .about-text {
   width: 45%;
   padding: 1.875rem 0;
-  overflow: hidden;
-}
-.about-sec .about-box .about-text span {
-  display: block;
 }
 .about-sec .about-box .about-text h2 {
   font-size: 2.25rem;
   font-weight: 700;
   padding-bottom: 1.875rem;
-  overflow: hidden;
 }
 .about-sec .about-box .about-text .desc {
   font-size: 1.25rem;
   font-weight: 300;
   padding-bottom: 3.125rem;
-  overflow: hidden;
-}
-.about-sec .about-box .about-text .btn-wrap .btn-inner {
-  display: inline-block;
 }
 .about-sec .about-box .about-text .btn-wrap button {
   padding: 0.75rem 1.875rem;
@@ -634,7 +623,7 @@ body {
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%;
-  background: rgba(15, 26, 43, 0.8);
+  background: #0F1A2B;
   color: #fff;
   font-size: 1.25rem;
   font-weight: 700;
@@ -645,7 +634,7 @@ body {
   pointer-events: none;
   z-index: 10;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
 .tech-sec .container h2 {
@@ -660,7 +649,6 @@ body {
   width: auto !important;
   flex-shrink: 0;
   transition: transform 0.3s ease;
-  opacity: 1;
   transform: none;
 }
 .tech-sec .swiper-slide:hover {
@@ -681,31 +669,31 @@ body {
   height: auto;
   object-fit: cover;
   opacity: 0.9;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease;
 }
 .tech-sec .card-info img:hover {
   opacity: 1;
 }
 .tech-sec .card-info .card01 {
-  width: 300px;
-  height: 450px;
+  width: 18.75rem;
+  height: 28.125rem;
   object-fit: cover;
 }
 .tech-sec .card-info .card02 {
-  width: 450px;
-  height: 300px;
+  width: 28.125rem;
+  height: 18.75rem;
   object-fit: cover;
 }
 .tech-sec .card-title {
-  margin-top: 0.625rem;
   font-size: 1.5rem;
   font-weight: 600;
+  padding: 0.625rem 0;
 }
 
 .global-sec {
-  position: relative;
   width: 100%;
   height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 .global-sec .background {
@@ -735,12 +723,15 @@ body {
 .global-sec .container {
   width: 100%;
   height: 100%;
-  max-width: 1484px;
+  max-width: 92.75rem;
   position: absolute;
-  top: 6.25rem;
+  top: 0;
   left: 50%;
   transform: translate(-50%);
   z-index: 2;
+}
+.global-sec .container .global-text {
+  margin-top: 6.25rem;
 }
 .global-sec .container .global-text h2 {
   font-size: 2.25rem;
@@ -752,28 +743,27 @@ body {
 .global-sec .container .global-text .desc {
   margin-top: 1.25rem;
   font-size: 1.125rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  color: #D1CFC9;
 }
 .global-sec .container .global-text .more-btn {
   font-size: 0.875rem;
-  position: relative;
-  display: inline-block;
   color: #fff;
   padding: 0.625rem 1.875rem;
-  box-sizing: border-box;
+  margin-top: 1.25rem;
+  display: inline-block;
+  position: relative;
   width: auto;
-  border: 1px solid #fff;
+  border: 0.0625rem solid #fff;
   border-radius: 1.875rem;
   background: transparent;
   transition: all 0.3s ease;
-  margin-top: 1.25rem;
 }
 .global-sec .container .global-text .more-btn i {
   position: absolute;
   top: 50%;
-  right: 1.5625rem;
   transform: translateY(-50%);
+  right: 1.5625rem;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -784,13 +774,13 @@ body {
   opacity: 1;
 }
 .global-sec .container .global-stats {
+  width: 100%;
   position: absolute;
+  bottom: 6.25rem;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 20%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   text-align: center;
 }
 .global-sec .container .global-stats .stat-item {
@@ -805,12 +795,11 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  letter-spacing: -1px;
 }
 .global-sec .container .global-stats .stat-item .count-wrap .count {
   font-size: 4rem;
   color: #fff;
-  min-width: 11.125rem;
+  min-width: 11.5625rem;
   text-align: center;
 }
 .global-sec .container .global-stats .stat-item .count-wrap span {
@@ -847,7 +836,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 .banner-sec .banner-bg .banner-text {
@@ -858,29 +847,22 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  padding: 0 20px;
   z-index: 2;
-  /* 텍스트 클리핑 및 초기 상태 설정 */
 }
 .banner-sec .banner-bg .banner-text .text-clip {
   overflow: hidden;
-  /* 텍스트를 자르는 마스크 역할 */
   position: relative;
   line-height: 1.5;
-  /* 줄 높이 설정 */
 }
 .banner-sec .banner-bg .banner-text .text-clip span {
   display: block;
   transform: translateY(100%);
-  /* 초기 상태: 아래로 숨김 */
 }
 .banner-sec .banner-bg .banner-text h2 {
   font-size: 2.25rem;
   margin-bottom: 3.125rem;
-  /* h2 활성화 시 애니메이션 및 딜레이 설정 */
 }
 .banner-sec .banner-bg .banner-text h2.animated span {
-  /* duration을 1.5초로 증가 */
   animation: slideUpClip 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   animation-delay: 0.3s;
 }
@@ -888,10 +870,8 @@ body {
   font-size: 1.125rem;
   font-weight: 300;
   color: #fff;
-  /* p 활성화 시 애니메이션 및 딜레이 설정 (h2보다 늦게 시작) */
 }
 .banner-sec .banner-bg .banner-text p.animated span {
-  /* duration을 1.5초로 증가 */
   animation: slideUpClip 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   animation-delay: 0.6s;
 }
@@ -909,30 +889,6 @@ body {
   .kv-sec {
     height: 90vh;
   }
-  .kv-sec .kv-swiper {
-    width: 100%;
-    height: 100%;
-  }
-  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-    width: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .kv-sec .kv-swiper .swiper-wrapper .swiper-slide::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 2;
-  }
   .kv-sec .kv-swiper .swiper-wrapper .swiper-slide.slide01 {
     background: url("../images/main/kv_image01.jpg") no-repeat bottom/contain, linear-gradient(to right, #A8A6CD, #D9D2E4);
   }
@@ -946,8 +902,6 @@ body {
     background: url("../images/main/kv_image04.jpg") no-repeat bottom/contain, linear-gradient(to right, #5E7292, #BFCADB);
   }
   .kv-sec .kv-text {
-    position: relative;
-    z-index: 3;
     top: 30%;
     transform: translateY(-30%);
   }
@@ -956,20 +910,12 @@ body {
   }
   .kv-sec .kv-text .kv-subtitle {
     font-size: 2.25rem;
-    font-weight: 700;
-    margin-top: 1.875rem;
   }
   .kv-sec .kv-text .kv-desc {
     font-size: 1.25rem;
-    margin-top: 0.625rem;
-  }
-  .kv-sec .kv-text .btn-wrap {
-    margin-top: 1.875rem;
   }
   .about-sec .about-box {
-    display: flex;
     flex-direction: column;
-    gap: 1.875rem;
   }
   .about-sec .about-box .about-text {
     width: 100%;
@@ -1001,21 +947,15 @@ body {
     font-size: 2rem;
   }
   .tech-sec .card-info .card01 {
-    width: 250px;
-    height: 400px;
+    width: 15.625rem;
+    height: 25rem;
   }
   .tech-sec .card-info .card02 {
-    width: 400px;
-    height: 250px;
+    width: 25rem;
+    height: 15.625rem;
   }
   .tech-sec .card-title {
     font-size: 1.25rem;
-  }
-  .global-sec {
-    height: 80vh;
-  }
-  .global-sec .container .global-text {
-    margin-bottom: 0;
   }
   .global-sec .global-stats .stat-item .count-wrap .count {
     font-size: 2.5rem;
@@ -1024,9 +964,6 @@ body {
   .global-sec .global-stats .stat-item .count-wrap span {
     font-size: 2.5rem;
   }
-  .banner-sec {
-    height: 80vh;
-  }
   .banner-sec .banner-bg .banner-text h2 {
     font-size: 2.25rem;
   }
@@ -1034,16 +971,15 @@ body {
 @media (max-width: 870px) {
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 2.25rem;
-    min-width: 6.25rem;
+    min-width: 6.875rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
     font-size: 2.25rem;
   }
 }
 @media (max-width: 768px) {
-  .kv-sec .kv-text {
-    top: 30%;
-    transform: translateY(-30%);
+  .margin-top-main {
+    margin-top: 6.25rem;
   }
   .kv-sec .kv-text .kv-title {
     font-size: 2.25rem;
@@ -1059,9 +995,6 @@ body {
     font-size: 1rem;
     padding: 0.625rem 0.9375rem;
   }
-  .margin-top {
-    margin-top: 6.25rem;
-  }
   .about-sec .about-box .about-text h2 {
     font-size: 1.75rem;
   }
@@ -1072,12 +1005,12 @@ body {
     font-size: 1.75rem;
   }
   .tech-sec .card-info .card01 {
-    width: 200px;
-    height: 350px;
+    width: 12.5rem;
+    height: 21.875rem;
   }
   .tech-sec .card-info .card02 {
-    width: 350px;
-    height: 200px;
+    width: 21.875rem;
+    height: 12.5rem;
   }
   .tech-sec .card-title {
     font-size: 1.25rem;
@@ -1088,16 +1021,12 @@ body {
   .global-sec .container .global-text h2 {
     font-size: 1.75rem;
   }
-  .global-sec .container .global-stats {
-    bottom: 30%;
-  }
   .global-sec .container .global-stats .stat-item p {
     font-size: 1rem;
-    color: #FFA347;
   }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 1.75rem;
-    min-width: 5rem;
+    min-width: 5.625rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
     font-size: 1.75rem;
@@ -1107,15 +1036,18 @@ body {
   }
 }
 @media (max-width: 580px) {
-  .global-sec {
-    height: 90vh;
-  }
   .global-sec .global-stats {
     flex-wrap: wrap;
     gap: 1.25rem;
   }
 }
 @media (max-width: 480px) {
+  .margin-top-main {
+    margin-top: 5rem;
+  }
+  .margin-top {
+    margin-top: 5rem;
+  }
   .kv-sec .kv-text .kv-title {
     font-size: 1.75rem;
   }
@@ -1129,9 +1061,6 @@ body {
     width: 6.25rem;
     font-size: 0.875rem;
     padding: 0.5rem 0.625rem;
-  }
-  .margin-top {
-    margin-top: 5rem;
   }
   .about-sec .about-box .about-text h2 {
     font-size: 1.5rem;
@@ -1148,18 +1077,18 @@ body {
     font-size: 1.5rem;
   }
   .tech-sec .card-info .card01 {
-    width: 150px;
-    height: 300px;
+    width: 9.375rem;
+    height: 18.75rem;
   }
   .tech-sec .card-info .card02 {
-    width: 300px;
-    height: 150px;
+    width: 18.75rem;
+    height: 9.375rem;
   }
   .tech-sec .card-title {
     font-size: 1rem;
   }
   .global-sec .container .global-text {
-    text-align: center;
+    margin-top: 5rem;
   }
   .global-sec .container .global-text h2 {
     font-size: 1.5rem;
@@ -1168,7 +1097,7 @@ body {
     font-size: 0.875rem;
   }
   .global-sec .container .global-stats {
-    bottom: 30%;
+    bottom: 5rem;
   }
   .global-sec .container .global-stats .stat-item p {
     font-size: 0.875rem;
