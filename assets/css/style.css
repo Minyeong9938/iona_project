@@ -1087,6 +1087,9 @@ body {
   .tech-sec .card-title {
     font-size: 1rem;
   }
+  .global-sec {
+    height: 80vh;
+  }
   .global-sec .container .global-text {
     margin-top: 5rem;
   }
