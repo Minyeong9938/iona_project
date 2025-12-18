@@ -2346,13 +2346,12 @@ body {
 }
 .connect h3 {
   font-size: 2.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .wrap {
   display: flex;
   gap: 1.5rem;
-  min-height: 600px;
 }
 .wrap .connect-left {
   width: 50%;
@@ -2380,21 +2379,21 @@ body {
 .wrap .contact-sec .person,
 .wrap .contact-sec .phone,
 .wrap .contact-sec .email,
-.wrap .contact-sec .message {
+.wrap .contact-sec .message-box {
   width: 100%;
   padding: 0.9375rem;
-  border: 1px solid #D1CFC9;
+  border: 0.0625rem solid #D1CFC9;
   border-radius: 0.625rem;
   font-size: 1rem;
   font-weight: 300;
-  transition: border-color 0.15s;
+  transition: border-color 0.3s;
   outline: none;
 }
 .wrap .contact-sec input:focus,
 .wrap .contact-sec textarea:focus {
   border-color: #1C2E4A;
 }
-.wrap .contact-sec .message {
+.wrap .contact-sec .message-box {
   min-height: 11.875rem;
   max-height: 18.75rem;
 }
@@ -2403,13 +2402,14 @@ body {
   color: #fff;
   padding: 0.9375rem 3.125rem;
   border-radius: 2.5rem;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
   outline: none;
   border: none;
   cursor: pointer;
   font-size: 1rem;
 }
 .wrap .contact-sec .submit-button:hover {
+  scale: 1.01;
   background-color: #0F1A2B;
 }
 .wrap .map {
@@ -2424,11 +2424,11 @@ body {
 }
 .wrap .map #map {
   flex: 1;
-  min-height: 400px;
+  min-height: 18.75rem;
 }
 .wrap .map .map-list {
   padding: 1.875rem 0;
-  border-bottom: 1px solid #D1CFC9;
+  border-bottom: 0.0625rem solid #D1CFC9;
 }
 .wrap .map .map-list p {
   font-size: 1rem;
@@ -2464,6 +2464,9 @@ body {
   }
   .wrap .contact-sec .submit-button {
     padding: 0.9375rem 1.875rem;
+  }
+  .wrap .connect-left {
+    width: 100%;
   }
   .wrap .map {
     width: 100%;
