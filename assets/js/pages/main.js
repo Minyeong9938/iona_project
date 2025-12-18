@@ -1,16 +1,14 @@
-// --- main.js 파일에 추가할 코드 ---
-
+// main kv-sec header
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const kvSec = document.querySelector('.kv-sec');
 
-    // 메인 페이지가 아니거나 kvSec이 없으면 스크롤 로직 실행 안 함
+    // 메인 페이지, kv-Sec에서만 실행
     if (!header || !kvSec || !header.classList.contains('main-header')) return;
 
     function handleHeaderScroll() {
-        // 모바일 메뉴가 열렸을 때는 스크롤 로직을 무시하고 CSS에 배경색 처리를 맡깁니다.
         if (body.classList.contains('menu-open')) {
-            return; // 메뉴가 열리면 스크롤 클래스 토글을 멈춤
+            return; // 메뉴 열리면 스크롤 클래스 토글 멈춤
         }
 
         const kvBottom = kvSec.offsetTop + kvSec.offsetHeight;
@@ -30,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', handleHeaderScroll);
 });
 
+// kv-sec swiper
 const kvSwiper = new Swiper('.kv-swiper', {
     loop: true,
     autoplay: {
@@ -48,11 +47,13 @@ const kvSwiper = new Swiper('.kv-swiper', {
     },
 });
 
-// tech section
+
+
+// tech-sec
 const techSec = document.querySelector(".tech-sec");
 const cursor = document.querySelector(".cursor");
 
-// tech section이 존재할 때만 실행
+// tech-sec이 존재할 때만 실행
 if (techSec && cursor) {
 
     let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
@@ -99,8 +100,10 @@ if (techSec && cursor) {
         }
     }
 
+    // tech-sec swiper & animation
     gsap.registerPlugin(ScrollTrigger);
 
+    // swiper
     const swiper = new Swiper('.mySwiper', {
         slidesPerView: 'auto',
         spaceBetween: 24,
@@ -118,6 +121,7 @@ if (techSec && cursor) {
             },
         },
 
+        // animation
         on: {
             init: function () {
                 const slides = gsap.utils.toArray(this.slides);
@@ -158,6 +162,7 @@ if (techSec && cursor) {
     updateSwiperOffsets();
     window.addEventListener('resize', updateSwiperOffsets);
 
+    // custom cursor
     const swiperEl = swiper.el;
 
     swiperEl.addEventListener("pointerdown", () => {
@@ -193,10 +198,12 @@ if (techSec && cursor) {
     animateCursor();
 }
 
-// global section (video + counter)
+// global-sec video & counter
+// video
 const video = document.getElementById("bgVideo");
 if (video) video.playbackRate = 0.75;
 
+// count
 const counters = document.querySelectorAll(".count");
 if (counters.length > 0) {
 
@@ -239,7 +246,7 @@ if (counters.length > 0) {
     }
 }
 
-// banner section
+// banner-sec 클리핑 효과
 const bannerSec = document.querySelector('.banner-sec');
 if (bannerSec) {
 

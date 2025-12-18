@@ -946,13 +946,12 @@
                 .stat-item {
                     p {
                         font-size: rem(14);
-                        color: $primaryColor;
                     }
 
                     .count-wrap {
                         .count {
                             font-size: rem(28);
-                            min-width: rem(80);
+                            min-width: rem(90);
                         }
 
                         span {
@@ -964,6 +963,7 @@
         }
     }
 
+    // banner section
     .banner-sec {
         .banner-bg {
             .banner-text {

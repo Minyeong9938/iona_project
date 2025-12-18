@@ -1104,11 +1104,10 @@ body {
   }
   .global-sec .container .global-stats .stat-item p {
     font-size: 0.875rem;
-    color: #FFA347;
   }
   .global-sec .container .global-stats .stat-item .count-wrap .count {
     font-size: 1.75rem;
-    min-width: 5rem;
+    min-width: 5.625rem;
   }
   .global-sec .container .global-stats .stat-item .count-wrap span {
     font-size: 1.75rem;
